@@ -17,7 +17,7 @@
   <body>
     <!-- Nav -->
     <nav>
-      <a href="">
+      <a href="" class="logo">
         <h3>SHOP.CO</h3>
       </a>
       <ul>
@@ -79,6 +79,7 @@
       <div class="header-image-area">
         <img src="/Assets/Images/man-and-woman-1.jpeg" alt="" />
         <svg
+          class="header-svg"
           width="56"
           height="56"
           viewBox="0 0 56 56"
@@ -91,6 +92,7 @@
           />
         </svg>
         <svg
+          class="header-svg"
           width="56"
           height="56"
           viewBox="0 0 56 56"
@@ -107,7 +109,7 @@
     <!-- /Header -->
 
     <!-- Banner -->
-    <div class="banner-container" id="hidden">
+    <div class="banner-container">
       <img src="/Assets/Images/Versace.png" alt="" />
       <img src="/Assets/Images/Zara.png" alt="" />
       <img src="/Assets/Images/Gucci.png" alt="" />
@@ -117,11 +119,13 @@
     <!-- /Banner -->
 
     <!-- Product 1 -->
-    <div class="product-content" id="hidden">
+    <div class="product-content">
       <h2>new arrivals</h2>
-      <div class="product-cotainer">
+      <div class="product-container">
         <div class="single-product">
-          <img src="/Assets/Images/blacktshirt-1.png" alt="" />
+          <div class="product-image">
+            <img src="/Assets/Images/blacktshirt-1.png" alt="" />
+          </div>
           <div class="product-information">
             <h6>T-shirt with Tape Details</h6>
             <div class="product-reviews-container">
@@ -143,7 +147,9 @@
           </div>
         </div>
         <div class="single-product">
-          <img src="/Assets/Images/pants-image-2-jean.png" alt="" />
+          <div class="product-image">
+            <img src="/Assets/Images/pants-image-2-jean.png" alt="" />
+          </div>
           <div class="product-information">
             <h6>Skinny Fit Jeans</h6>
             <div class="product-reviews-container">
@@ -166,7 +172,9 @@
           </div>
         </div>
         <div class="single-product">
-          <img src="/Assets/Images/plaid-shirt-1.png" alt="" />
+          <div class="product-image">
+            <img src="/Assets/Images/plaid-shirt-1.png" alt="" />
+          </div>
           <div class="product-information">
             <h6>Checkered Shirt</h6>
             <div class="product-reviews-container">
@@ -188,7 +196,9 @@
           </div>
         </div>
         <div class="single-product">
-          <img src="/Assets/Images/orange-tshirt-2.png" alt="" />
+          <div class="product-image">
+            <img src="/Assets/Images/orange-tshirt-2.png" alt="" />
+          </div>
           <div class="product-information">
             <h6>Sleeve Striped T-shirt</h6>
             <div class="product-reviews-container">
@@ -212,18 +222,20 @@
           </div>
         </div>
       </div>
-      <button>View All</button>
+      <button class="button-2"><a href="">View All</a></button>
     </div>
     <!-- /Product 1 -->
 
     <!-- To Selling Product -->
-    <div id="hidden">
-      <h2>top selling</h2>
-      <div class="product-content">
+    <div class="product-content">
+      <h2>top seller</h2>
+      <div class="product-container">
         <div class="single-product">
-          <img src="/Assets/Images/plaid-shirt-2.png" alt="" />
+          <div class="product-image">
+            <img src="/Assets/Images/plaid-shirt-2.png" />
+          </div>
           <div class="product-information">
-            <h6>Vertical Stripped Shirt</h6>
+            <h6>vertical stripped shirt</h6>
             <div class="product-reviews-container">
               <div class="stars-container">
                 <i class="fa-solid fa-star"></i>
@@ -233,7 +245,7 @@
                 <i class="fa-solid fa-star"></i>
               </div>
               <span class="review-note"
-                >5.0/
+                >5.5/
                 <p>5</p></span
               >
             </div>
@@ -245,9 +257,11 @@
           </div>
         </div>
         <div class="single-product">
-          <img src="/Assets/Images/orange-tshirt-1.png" alt="" />
+          <div class="product-image">
+            <img src="/Assets/Images/orange-tshirt-1.png" alt="" />
+          </div>
           <div class="product-information">
-            <h6>Courage Graphic T-shirt</h6>
+            <h6>courage graphic t-shirt</h6>
             <div class="product-reviews-container">
               <div class="stars-container">
                 <i class="fa-solid fa-star"></i>
@@ -266,9 +280,11 @@
           </div>
         </div>
         <div class="single-product">
-          <img src="/Assets/Images/blue-jean-shorts.png" alt="" />
+          <div class="product-image">
+            <img src="/Assets/Images/blue-jean-shorts.png" alt="" />
+          </div>
           <div class="product-information">
-            <h6>Loose Fit Bermuda Shorts</h6>
+            <h6>loose fit bermuda shorts</h6>
             <div class="product-reviews-container">
               <div class="stars-container">
                 <i class="fa-solid fa-star"></i>
@@ -286,9 +302,11 @@
           </div>
         </div>
         <div class="single-product">
-          <img src="/Assets/Images/pants-image-1.png" alt="" />
+          <div class="product-image">
+            <img src="/Assets/Images/pants-image-1.png" alt="" />
+          </div>
           <div class="product-information">
-            <h6>Faded Skinny Jeans</h6>
+            <h6>faded skinny jeans</h6>
             <div class="product-reviews-container">
               <div class="stars-container">
                 <i class="fa-solid fa-star"></i>
@@ -298,7 +316,7 @@
                 <i class="fa-solid fa-star-half"></i>
               </div>
               <span class="review-note"
-                >4.5
+                >4.5/
                 <p>5</p></span
               >
             </div>
@@ -308,12 +326,12 @@
           </div>
         </div>
       </div>
-      <button>View All</button>
+      <button class="button-2"><a href="">View All</a></button>
     </div>
     <!-- /To Selling Product -->
 
     <!-- Browse By Dress Style  -->
-    <div class="clothes-type-container" id="hidden">
+    <div class="clothes-type-container">
       <h2>browse by dress style</h2>
       <div class="browse-img-container">
         <div class="browse-img">
@@ -337,15 +355,17 @@
     <!-- /Browse By Dress Style  -->
 
     <!-- Customers Reviews  -->
-    <div id="hidden">
+    <div class="customers-reviews-parts-container">
       <div class="customers-reviews-part1">
         <h2>our happy customers</h2>
-        <button>
-          <i class="fa-solid fa-arrow-left"></i>
-        </button>
-        <button>
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
+        <div class="customers-reviews-arrow-container">
+          <button>
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
       </div>
 
       <div class="customers-reviews-part2">
@@ -422,12 +442,161 @@
             is not only diverse but also on-point with the latest trends.”
           </p>
         </div>
+
+        <!--  -->
+        <div class="customer-reviews-box">
+          <div class="customer-reviews-note">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="customer-review-name">
+            <h5>alex k.</h5>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <p>
+            "Finding clothes that align with my personal style used to be a
+            challenge until I discovered Shop.co. The range of options they
+            offer is truly remarkable, catering to a variety of tastes and
+            occasions.”
+          </p>
+        </div>
+        <div class="customer-reviews-box">
+          <div class="customer-reviews-note">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="customer-review-name">
+            <h5>sarah m.</h5>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <p>
+            "I'm blown away by the quality and style of the clothes I received
+            from Shop.co. From casual wear to elegant dresses, every piece I've
+            bought has exceeded my expectations.”
+          </p>
+        </div>
+        <div class="customer-reviews-box">
+          <div class="customer-reviews-note">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="customer-review-name">
+            <h5>james l.</h5>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <p>
+            "As someone who's always on the lookout for unique fashion pieces,
+            I'm thrilled to have stumbled upon Shop.co. The selection of clothes
+            is not only diverse but also on-point with the latest trends.”
+          </p>
+        </div>
+        <div class="customer-reviews-box">
+          <div class="customer-reviews-note">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="customer-review-name">
+            <h5>mooen</h5>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <p>
+            "As someone who's always on the lookout for unique fashion pieces,
+            I'm thrilled to have stumbled upon Shop.co. The selection of clothes
+            is not only diverse but also on-point with the latest trends.”
+          </p>
+        </div>
+        <div class="customer-reviews-box">
+          <div class="customer-reviews-note">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="customer-review-name">
+            <h5>alex k.</h5>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <p>
+            "Finding clothes that align with my personal style used to be a
+            challenge until I discovered Shop.co. The range of options they
+            offer is truly remarkable, catering to a variety of tastes and
+            occasions.”
+          </p>
+        </div>
+        <div class="customer-reviews-box">
+          <div class="customer-reviews-note">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="customer-review-name">
+            <h5>sarah m.</h5>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <p>
+            "I'm blown away by the quality and style of the clothes I received
+            from Shop.co. From casual wear to elegant dresses, every piece I've
+            bought has exceeded my expectations.”
+          </p>
+        </div>
+        <div class="customer-reviews-box">
+          <div class="customer-reviews-note">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="customer-review-name">
+            <h5>james l.</h5>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <p>
+            "As someone who's always on the lookout for unique fashion pieces,
+            I'm thrilled to have stumbled upon Shop.co. The selection of clothes
+            is not only diverse but also on-point with the latest trends.”
+          </p>
+        </div>
+        <div class="customer-reviews-box">
+          <div class="customer-reviews-note">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="customer-review-name">
+            <h5>mooen</h5>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <p>
+            "As someone who's always on the lookout for unique fashion pieces,
+            I'm thrilled to have stumbled upon Shop.co. The selection of clothes
+            is not only diverse but also on-point with the latest trends.”
+          </p>
+        </div>
+        <!--  -->
       </div>
     </div>
     <!-- /Customers Reviews  -->
 
     <!-- Contact Banner  -->
-    <div class="contact-banner" id="hidden">
+    <div class="contact-banner">
       <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
       <div class="contact-banner-inputs">
         <div class="input-container">
@@ -440,9 +609,9 @@
     <!-- /Contact Banner  -->
 
     <!-- Footer  -->
-    <footer id="hidden">
+    <footer>
       <div class="footer-1">
-        <a href="">
+        <a href="" class="logo">
           <h3>SHOP.CO</h3>
         </a>
         <p>
@@ -474,49 +643,51 @@
       </div>
       <ul>
         <h5>company</h5>
-        <li>about</li>
-        <li>features</li>
-        <li>works</li>
-        <li>career</li>
+        <li title="about"><a href="">about</a></li>
+        <li title="features"><a href="">features</a></li>
+        <li title="works"><a href="">works</a></li>
+        <li title="career"><a href="">career</a></li>
       </ul>
       <ul>
         <h5>help</h5>
-        <li>customer support</li>
-        <li>delivery details</li>
-        <li>terms & conditions</li>
-        <li>privacy policy</li>
+        <li title="customer"><a href="">customer support</a></li>
+        <li title="delivery details"><a href="">delivery details</a></li>
+        <li title="terms & conditions"><a href="">terms & conditions</a></li>
+        <li title="privacy policy"><a href="">privacy policy</a></li>
       </ul>
       <ul>
         <h5>faq</h5>
-        <li>account</li>
-        <li>manage deliveries</li>
-        <li>orders</li>
-        <li>payments</li>
+        <li title="account"><a href="">account</a></li>
+        <li title="manage deliveries"><a href="">manage deliveries</a></li>
+        <li title="orders"><a href="">orders</a></li>
+        <li title="payments"><a href="">payments</a></li>
       </ul>
       <ul>
         <h5>resources</h5>
-        <li>free eBook</li>
-        <li>development tutorial</li>
-        <li>how to - blog</li>
-        <li>youtube playlist</li>
+        <li title="free eBook"><a href="">free eBook</a></li>
+        <li title="development tutorial">
+          <a href="">development tutorial</a>
+        </li>
+        <li title="how to"><a href="">how to - blog</a></li>
+        <li title="youtube playlist"><a href="">youtube playlist</a></li>
       </ul>
     </footer>
-    <div class="under-footer" id="hidden">
+    <div class="under-footer">
       <p>Shop.co © 2000-2023, All Rights Reserved</p>
       <div class="payment-icons">
-        <button>
+        <button title="Visa">
           <img src="/Assets/Images/Visa.png" alt="" />
         </button>
-        <button>
+        <button title="Master Card">
           <img src="/Assets/Images/Master-card.png" alt="" />
         </button>
-        <button>
+        <button title="Paypal">
           <img src="/Assets/Images/Paypal.png" alt="" />
         </button>
-        <button>
+        <button title="Apple Pay">
           <img src="/Assets/Images/Apple-pay.png" alt="" />
         </button>
-        <button>
+        <button title="Google Pay">
           <img src="/Assets/Images/Google-Pay.png" alt="" />
         </button>
       </div>

@@ -13,6 +13,7 @@ li {
 input {
   outline: none;
   border: none;
+  font-family: var(--font-sat-M);
 }
 button {
   background-color: transparent;
@@ -21,4 +22,15 @@ button {
 p {
   color: gray;
   font-family: var(--font-sat-L);
+}
+::selection {
+  background-color: black;
+  color: white;
+}
+h2 {
+  letter-spacing: 2px;
+}
+.logo {
+  letter-spacing: 1.2px;
+  font-family: var(--font-int-M);
 }
