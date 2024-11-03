@@ -24,12 +24,12 @@
         <li>
           <ul>
             <li>shop</li>
-            <div class="sub-menu">
+            <!-- <div class="sub-menu">
               <li>shop 1</li>
               <li>shop 2</li>
               <li>shop 3</li>
               <li>shop 4</li>
-            </div>
+            </div> -->
           </ul>
         </li>
         <li>on sale</li>
@@ -40,15 +40,19 @@
           <input type="text" placeholder="Seach for products..." />
         </div>
         <div class="nav-icons">
-          <i class="lni lni-cart-2"></i>
-          <i class="lni lni-user-4"></i>
+          <button>
+            <i class="lni lni-cart-2"></i>
+          </button>
+          <button>
+            <i class="lni lni-user-4"></i>
+          </button>
         </div>
       </ul>
     </nav>
     <!--/ Nav -->
 
     <!-- Header -->
-    <div>
+    <div class="header-container">
       <div class="header-text-area">
         <h1>FIND CLOTHES THAT MATCHES YOU STYLE</h1>
         <p>
@@ -57,7 +61,7 @@
           style.
         </p>
         <button class="button-1">shop now</button>
-        <div>
+        <div class="header-num-container">
           <div>
             <h4>200+</h4>
             <p>International Brands</p>
@@ -74,7 +78,6 @@
       </div>
       <div class="header-image-area">
         <img src="/Assets/Images/man-and-woman-1.jpeg" alt="" />
-
         <svg
           width="56"
           height="56"
@@ -104,7 +107,7 @@
     <!-- /Header -->
 
     <!-- Banner -->
-    <div class="banner-container">
+    <div class="banner-container" id="hidden">
       <img src="/Assets/Images/Versace.png" alt="" />
       <img src="/Assets/Images/Zara.png" alt="" />
       <img src="/Assets/Images/Gucci.png" alt="" />
@@ -114,7 +117,7 @@
     <!-- /Banner -->
 
     <!-- Product 1 -->
-    <div class="product-content">
+    <div class="product-content" id="hidden">
       <h2>new arrivals</h2>
       <div class="product-cotainer">
         <div class="single-product">
@@ -214,7 +217,7 @@
     <!-- /Product 1 -->
 
     <!-- To Selling Product -->
-    <div>
+    <div id="hidden">
       <h2>top selling</h2>
       <div class="product-content">
         <div class="single-product">
@@ -310,7 +313,7 @@
     <!-- /To Selling Product -->
 
     <!-- Browse By Dress Style  -->
-    <div class="clothes-type-container">
+    <div class="clothes-type-container" id="hidden">
       <h2>browse by dress style</h2>
       <div class="browse-img-container">
         <div class="browse-img">
@@ -334,7 +337,7 @@
     <!-- /Browse By Dress Style  -->
 
     <!-- Customers Reviews  -->
-    <div>
+    <div id="hidden">
       <div class="customers-reviews-part1">
         <h2>our happy customers</h2>
         <button>
@@ -424,7 +427,7 @@
     <!-- /Customers Reviews  -->
 
     <!-- Contact Banner  -->
-    <div class="contact-banner">
+    <div class="contact-banner" id="hidden">
       <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
       <div class="contact-banner-inputs">
         <div class="input-container">
@@ -437,7 +440,7 @@
     <!-- /Contact Banner  -->
 
     <!-- Footer  -->
-    <footer>
+    <footer id="hidden">
       <div class="footer-1">
         <a href="">
           <h3>SHOP.CO</h3>
@@ -498,7 +501,7 @@
         <li>youtube playlist</li>
       </ul>
     </footer>
-    <div class="under-footer">
+    <div class="under-footer" id="hidden">
       <p>Shop.co © 2000-2023, All Rights Reserved</p>
       <div class="payment-icons">
         <button>

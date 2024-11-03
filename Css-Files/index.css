@@ -1,6 +1,17 @@
+/* Integral */
 @font-face {
   font-family: integral-Medium;
   src: url(/Assets/Fonts/Integral/Fontspring-DEMO-integralcf-medium.otf);
+}
+/* Satoshi */
+
+@font-face {
+  font-family: Satoshi-Medium;
+  src: url(/Assets/Fonts/Satoshi/Satoshi-Medium.otf);
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url(/Assets/Fonts/Satoshi/Satoshi-Light.otf);
 }
 :root {
   --black-color: #000000;
@@ -9,7 +20,113 @@
   --product-bg: #f0eeed;
   --product-bg: #f0eeed;
   --font-int-M: integral-Medium;
+  --font-sat-M: Satoshi-Medium;
+  --font-sat-L: Satoshi-Light;
 }
 body {
   font-family: var(--font-int-M);
+}
+
+/* Deafult Styles */
+.button-1 {
+  background-color: black;
+  color: white;
+  border-radius: 1000px;
+  width: 150px;
+  height: 40px;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  font-family: var(--font-sat-M);
+}
+/* /Deafult Styles */
+
+/* Nav */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding-block: 20px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+nav ul li {
+  font-family: var(--font-sat-L);
+  text-transform: capitalize;
+  font-size: 0.9rem;
+}
+nav ul .nav-search-container {
+  background-color: var(--input-bg);
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  width: 400px;
+  height: 30px;
+  background-color: var(--input-bg);
+  border-radius: 100px;
+}
+nav ul .nav-search-container input {
+  width: 95%;
+  height: 100%;
+  background-color: transparent;
+  padding-inline: 5px;
+  font-family: var(--font-sat-L);
+  font-size: 0.8rem;
+}
+nav ul .nav-search-container i {
+  width: calc(100% - 95%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+}
+nav ul .nav-icons {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+}
+nav ul .nav-icons button {
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* /Nav */
+
+/* Header */
+.header-container {
+  display: flex;
+  align-items: first baseline;
+  justify-content: center;
+  background-color: red;
+  height: 600px;
+}
+
+.header-text-area .header-num-container {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+.header-text-area .header-num-container h4 {
+  font-family: var(--font-sat-M);
+  font-size: 1.9rem;
+}
+.header-text-area .header-num-container p {
+  font-size: 0.9rem;
+}
+
+.header-image-area img {
+  width: 50%;
+}
+.header-image-area svg {
+  display: none;
+}
+/* /Header */
+
+#hidden {
+  display: none;
 }
