@@ -96,8 +96,32 @@
             <h4>Price</h4>
             <i class="fa-solid fa-angle-right"></i>
           </div>
-          <div class="category-price-container">
-            <input type="range" />
+          <div class="category-price-range-c">
+            <div class="price-range-container">
+              <span class="price-value">0 $</span>
+              <input
+                type="range"
+                class="range-price-min"
+                min="0"
+                max="240"
+                value="0"
+                oninput="priceRange(this)"
+              />
+              <button onclick="applyPrice()">
+                <i class="fa-solid fa-check"></i>
+              </button>
+            </div>
+            <!-- <div class="price-range-container">
+              <span class="price-value">0 $</span>
+              <input
+                type="range"
+                class="range-price-max"
+                min="0"
+                max="240"
+                value="0"
+                oninput="priceRange(this)"
+              />
+            </div> -->
           </div>
         </div>
         <div class="category-colors left-nav-items">
@@ -168,9 +192,9 @@
             </a>
           </ul>
         </div>
-        <button class="apply-filter button-1 left-nav-items">
+        <!-- <button class="apply-filter button-1 left-nav-items">
           Apply Filter
-        </button>
+        </button> -->
       </div>
       <!-- /Left Nav Category -->
 
@@ -221,7 +245,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price">$145</h4>
+                <h4 class="product-current-price" value="145">$145</h4>
               </div>
             </div>
           </div>
@@ -250,7 +274,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price">$180</h4>
+                <h4 class="product-current-price" value="180">$180</h4>
               </div>
             </div>
           </div>
@@ -279,7 +303,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price">$120</h4>
+                <h4 class="product-current-price" value="120">$120</h4>
                 <h4 class="product-old-price">$150</h4>
                 <span class="discount">-30%</span>
               </div>
@@ -309,7 +333,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price">$240</h4>
+                <h4 class="product-current-price" value="240">$240</h4>
                 <h4 class="product-old-price">$260</h4>
                 <span class="discount">-20%</span>
               </div>
@@ -340,7 +364,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price">$180</h4>
+                <h4 class="product-current-price" value="180">$180</h4>
               </div>
             </div>
           </div>
@@ -369,7 +393,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price">$130</h4>
+                <h4 class="product-current-price" value="130">$130</h4>
                 <h4 class="product-old-price">$160</h4>
                 <span class="discount">-30%</span>
               </div>
@@ -400,7 +424,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price">$212</h4>
+                <h4 class="product-current-price" value="212">$212</h4>
                 <h4 class="product-old-price">$232</h4>
                 <span class="discount">-20%</span>
               </div>
@@ -430,7 +454,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price">$145</h4>
+                <h4 class="product-current-price" value="145">$145</h4>
               </div>
             </div>
           </div>
@@ -457,7 +481,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price">$80</h4>
+                <h4 class="product-current-price" value="80">$80</h4>
               </div>
             </div>
           </div>

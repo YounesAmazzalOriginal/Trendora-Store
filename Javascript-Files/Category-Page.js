@@ -85,3 +85,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 // /Products Color Sorting
+
+// Price Range
+function priceRange(target) {
+  target.previousElementSibling.innerHTML = `${target.value} $`;
+
+  document
+    .querySelectorAll(".product-container .single-product")
+    .forEach((each_singleProduct) => {
+      // each_singleProduct.style.display = "none";
+      each_singleProduct.style.backgroundColor = "blue";
+    });
+}
+// /Price Range
+
+// Range Product
+function applyPrice() {
+  // Single Product
+  document
+    .querySelectorAll(".product-container .single-product")
+    .forEach((each_singleProduct) => {
+      //  Price
+      document
+        .querySelectorAll(".product-current-price")
+        .forEach((each_ProductPrice) => {
+          const min_price = parseFloat(
+            document.querySelector(".range-price-min").value
+          );
+
+          if (each_ProductPrice.value < min_price) {
+            each_singleProduct.style.backgroundColor = "red";
+          }
+          //
+          else {
+            each_singleProduct.style.backgroundColor = "orange";
+          }
+        });
+      //  /Price
+    });
+
+  // /Single Product
+}
+// /Range Product
