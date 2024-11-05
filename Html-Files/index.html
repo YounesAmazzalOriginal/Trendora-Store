@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SHOP.CO</title>
+    <title>Trendora - Home</title>
     <link rel="stylesheet" href="/Css-Files/index.css" />
     <link rel="stylesheet" href="/Css-Files/Shared-Styles.css" />
+    <script src="/Javascript-Files/index.js"></script>
 
     <!-- Font Cdn -->
     <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
@@ -13,12 +14,20 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <!-- Favicon -->
+    <link
+      id="Favicon"
+      rel="icon"
+      type="image/x-icon"
+      href="/Assets/Images/favicon-32x32-lightMode.png"
+    />
   </head>
   <body>
     <!-- Nav -->
     <nav>
       <a href="" class="logo">
-        <h3>SHOP.CO</h3>
+        <h3>Trendora</h3>
       </a>
       <ul>
         <li>
@@ -359,10 +368,10 @@
       <div class="customers-reviews-part1">
         <h2>our happy customers</h2>
         <div class="customers-reviews-arrow-container">
-          <button>
+          <button onclick="customers_leftArrow()">
             <i class="fa-solid fa-arrow-left"></i>
           </button>
-          <button>
+          <button onclick="customers_rightArrow()">
             <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
@@ -442,155 +451,6 @@
             is not only diverse but also on-point with the latest trends.”
           </p>
         </div>
-
-        <!--  -->
-        <div class="customer-reviews-box">
-          <div class="customer-reviews-note">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <div class="customer-review-name">
-            <h5>alex k.</h5>
-            <i class="fa-solid fa-circle-check"></i>
-          </div>
-          <p>
-            "Finding clothes that align with my personal style used to be a
-            challenge until I discovered Shop.co. The range of options they
-            offer is truly remarkable, catering to a variety of tastes and
-            occasions.”
-          </p>
-        </div>
-        <div class="customer-reviews-box">
-          <div class="customer-reviews-note">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <div class="customer-review-name">
-            <h5>sarah m.</h5>
-            <i class="fa-solid fa-circle-check"></i>
-          </div>
-          <p>
-            "I'm blown away by the quality and style of the clothes I received
-            from Shop.co. From casual wear to elegant dresses, every piece I've
-            bought has exceeded my expectations.”
-          </p>
-        </div>
-        <div class="customer-reviews-box">
-          <div class="customer-reviews-note">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <div class="customer-review-name">
-            <h5>james l.</h5>
-            <i class="fa-solid fa-circle-check"></i>
-          </div>
-          <p>
-            "As someone who's always on the lookout for unique fashion pieces,
-            I'm thrilled to have stumbled upon Shop.co. The selection of clothes
-            is not only diverse but also on-point with the latest trends.”
-          </p>
-        </div>
-        <div class="customer-reviews-box">
-          <div class="customer-reviews-note">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <div class="customer-review-name">
-            <h5>mooen</h5>
-            <i class="fa-solid fa-circle-check"></i>
-          </div>
-          <p>
-            "As someone who's always on the lookout for unique fashion pieces,
-            I'm thrilled to have stumbled upon Shop.co. The selection of clothes
-            is not only diverse but also on-point with the latest trends.”
-          </p>
-        </div>
-        <div class="customer-reviews-box">
-          <div class="customer-reviews-note">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <div class="customer-review-name">
-            <h5>alex k.</h5>
-            <i class="fa-solid fa-circle-check"></i>
-          </div>
-          <p>
-            "Finding clothes that align with my personal style used to be a
-            challenge until I discovered Shop.co. The range of options they
-            offer is truly remarkable, catering to a variety of tastes and
-            occasions.”
-          </p>
-        </div>
-        <div class="customer-reviews-box">
-          <div class="customer-reviews-note">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <div class="customer-review-name">
-            <h5>sarah m.</h5>
-            <i class="fa-solid fa-circle-check"></i>
-          </div>
-          <p>
-            "I'm blown away by the quality and style of the clothes I received
-            from Shop.co. From casual wear to elegant dresses, every piece I've
-            bought has exceeded my expectations.”
-          </p>
-        </div>
-        <div class="customer-reviews-box">
-          <div class="customer-reviews-note">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <div class="customer-review-name">
-            <h5>james l.</h5>
-            <i class="fa-solid fa-circle-check"></i>
-          </div>
-          <p>
-            "As someone who's always on the lookout for unique fashion pieces,
-            I'm thrilled to have stumbled upon Shop.co. The selection of clothes
-            is not only diverse but also on-point with the latest trends.”
-          </p>
-        </div>
-        <div class="customer-reviews-box">
-          <div class="customer-reviews-note">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <div class="customer-review-name">
-            <h5>mooen</h5>
-            <i class="fa-solid fa-circle-check"></i>
-          </div>
-          <p>
-            "As someone who's always on the lookout for unique fashion pieces,
-            I'm thrilled to have stumbled upon Shop.co. The selection of clothes
-            is not only diverse but also on-point with the latest trends.”
-          </p>
-        </div>
-        <!--  -->
       </div>
     </div>
     <!-- /Customers Reviews  -->
@@ -612,29 +472,29 @@
     <footer>
       <div class="footer-1">
         <a href="" class="logo">
-          <h3>SHOP.CO</h3>
+          <h3>Trendora</h3>
         </a>
         <p>
           We have clothes that suits your style and which you’re proud to wear.
           From women to men.
         </p>
         <div class="footer-media-links">
-          <a href="">
+          <a href="https://wa.me/212635303129">
             <button>
-              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-whatsapp"></i>
             </button>
           </a>
-          <a href="">
+          <a href="https://www.linkedin.com/in/younes-amazzal-3152042b0/">
             <button>
-              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
             </button>
           </a>
-          <a href="">
+          <a href="https://www.instagram.com/amzprod2">
             <button>
               <i class="fa-brands fa-instagram"></i>
             </button>
           </a>
-          <a href="">
+          <a href="https://github.com/YounesAmazzalOriginal">
             <button>
               <i class="fa-brands fa-github"></i>
             </button>
@@ -673,7 +533,7 @@
       </ul>
     </footer>
     <div class="under-footer">
-      <p>Shop.co © 2000-2023, All Rights Reserved</p>
+      <p>Website Created By Younes AMAZZAL</p>
       <div class="payment-icons">
         <button title="Visa">
           <img src="/Assets/Images/Visa.png" alt="" />

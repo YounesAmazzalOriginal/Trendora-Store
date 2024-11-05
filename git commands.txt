@@ -1,0 +1,4 @@
+git status                   # Check current status (optional)
+git add .                    # Stage all changes
+git commit -m "Update message"  # Commit with a descriptive message
+git push origin main         # Push to GitHub
