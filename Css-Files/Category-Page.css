@@ -100,7 +100,7 @@
   cursor: pointer;
 }
 .left-nav-category .colors-inputs-container input:nth-child(1) {
-  background-color: #00c12b;
+  background-color: green;
 }
 .left-nav-category .colors-inputs-container input:checked::after {
   content: "\f00c";
@@ -114,31 +114,40 @@
   color: white;
 }
 .left-nav-category .colors-inputs-container input:nth-child(2) {
-  background-color: #f50606;
+  background-color: red;
 }
 .left-nav-category .colors-inputs-container input:nth-child(3) {
-  background-color: #f5dd06;
+  background-color: yellow;
 }
 .left-nav-category .colors-inputs-container input:nth-child(4) {
-  background-color: #f57906;
+  background-color: orange;
 }
 .left-nav-category .colors-inputs-container input:nth-child(5) {
-  background-color: #06caf5;
+  background-color: cyan;
 }
 .left-nav-category .colors-inputs-container input:nth-child(6) {
-  background-color: #063af5;
+  background-color: blue;
 }
 .left-nav-category .colors-inputs-container input:nth-child(7) {
-  background-color: #7d06f5;
+  background-color: purple;
 }
 .left-nav-category .colors-inputs-container input:nth-child(8) {
-  background-color: #f506a4;
+  background-color: deeppink;
 }
 .left-nav-category .colors-inputs-container input:nth-child(9) {
-  background-color: #ffffff;
+  background-color: white;
 }
 .left-nav-category .colors-inputs-container input:nth-child(10) {
-  background-color: #000000;
+  background-color: black;
+}
+.left-nav-category .remove-color-sort {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .left-nav-category .category-size .category-size-buttons-container {
