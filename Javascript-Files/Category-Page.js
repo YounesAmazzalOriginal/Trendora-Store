@@ -97,28 +97,46 @@ document.addEventListener("DOMContentLoaded", () => {
 // /Products Color Sorting
 
 // Range Product
-// function applyPrice() {
-//   const minPrice = parseFloat(
-//     document.querySelector(".price-select-min").value
-//   );
-//   const maxPrice = parseFloat(
-//     document.querySelector(".price-select-max").value
-//   );
+// range input
+function priceRange() {
+  const spanMin = document.querySelector(".range-spans .minValue");
+  const spanMax = document.querySelector(".range-spans .maxValue");
+  const range1 = document.querySelector(".range-input-1");
+  const range2 = document.querySelector(".range-input-2");
 
-//   document.querySelectorAll(".single-product").forEach((singleProduct) => {
-//     document.querySelectorAll(".product-current-price").forEach((eachPrice) => {
-//       const productPrice = eachPrice.innerHTML;
+  spanMin.innerHTML = `${range1.value} $`;
+  spanMax.innerHTML = `${range2.value} $`;
+}
+// btn
+function applyPrice() {
+  const spanMin = document.querySelector(".range-spans .minValue");
+  const spanMax = document.querySelector(".range-spans .maxValue");
 
-//       if (productPrice >= minPrice && productPrice <= maxPrice) {
-//         singleProduct.style.backgroundColor = "deeppink";
-//         singleProduct.style.transform = "scale(0.5)";
-//       } else {
-//         singleProduct.style.backgroundColor = "";
-//         singleProduct.style.transform = "";
-//       }
-//     });
-//   });
-// }
+  document.addEventListener("DOMContentLoaded", () => {
+    document
+      .querySelectorAll(".single-product")
+      .forEach((each_SingleProduct) => {
+        document
+          .querySelectorAll(".product-current-price")
+          .forEach((each_CurrentPrice) => {
+            const range_input_1 = document.querySelector(".range-input-1");
+            const range_input_2 = document.querySelector(".range-input-2");
+            const priceInner = parseFloat(each_CurrentPrice.innerHTML);
+
+            if (
+              priceInner >= range_input_1.value &&
+              priceInner <= range_input_2.value
+            ) {
+              each_SingleProduct.style.backgroundColor = "red";
+            }
+            //
+            // else {
+            //   each_SingleProduct.style.backgroundColor = "blue";
+            // }
+          });
+      });
+  });
+}
 // /Range Product
 
 // Product Type Filter
@@ -126,7 +144,7 @@ function productSingleType(target) {
   document.querySelectorAll(".single-product").forEach((eachSingleProduct) => {
     const product_Type = eachSingleProduct.getAttribute("data-product-type");
     const Item_product_Type = target.getAttribute("data-product-type");
-    const remove_Type_Sort = document.querySelector(".remove-type-sort");
+    const banIcon_1 = document.querySelector(".ban-icon-1");
 
     document
       .querySelectorAll(".product-type-link")
@@ -136,7 +154,7 @@ function productSingleType(target) {
     target.style.color = "black";
     //
 
-    remove_Type_Sort.style.display = "block";
+    banIcon_1.style.display = "block";
     eachSingleProduct.style.display = "none";
 
     if (Item_product_Type == product_Type) {

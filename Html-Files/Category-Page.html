@@ -111,7 +111,10 @@
             <li>jeans</li>
             <i class="fa-solid fa-angle-right"></i>
           </a>
-          <button class="remove-type-sort ban-icon" onclick="remove_TypeSort()">
+          <button
+            class="remove-type-sort ban-icon ban-icon-1"
+            onclick="remove_TypeSort()"
+          >
             <i class="fa-solid fa-ban"></i>
           </button>
         </ul>
@@ -121,45 +124,29 @@
             <i class="fa-solid fa-angle-right"></i>
           </div>
           <div class="category-price-range-c">
-            <p>$</p>
+            <div class="range-spans">
+              <span class="minValue">0 $</span>
+              <span class="maxValue">300 $</span>
+            </div>
             <input
-              class="price-select-min"
-              type="number"
-              placeholder="Min"
-              maxlength="3"
+              type="range"
+              min="0"
+              max="300"
+              value="0"
+              oninput="priceRange()"
+              class="range-input-1"
             />
             <input
-              class="price-select-max"
-              type="number"
-              placeholder="Max"
-              maxlength="3"
+              type="range"
+              min="0"
+              max="300"
+              value="0"
+              oninput="priceRange()"
+              class="range-input-2"
             />
-            <button class="apply button-1" onclick="applyPrice()">apply</button>
-            <!-- <div class="price-range-container">
-              <span class="price-value">0 $</span>
-              <input
-                type="range"
-                class="range-price-min"
-                min="0"
-                max="240"
-                value="0"
-                oninput="priceRange(this)"
-              />
-              <button onclick="applyPrice()">
-                <i class="fa-solid fa-check"></i>
-              </button>
-            </div> -->
-            <!-- <div class="price-range-container">
-              <span class="price-value">0 $</span>
-              <input
-                type="range"
-                class="range-price-max"
-                min="0"
-                max="240"
-                value="0"
-                oninput="priceRange(this)"
-              />
-            </div> -->
+            <button class="button-1 apply-price" onclick="applyPrice()">
+              Apply Price
+            </button>
           </div>
         </div>
         <div class="category-colors left-nav-items">
@@ -670,7 +657,7 @@
         <li title="development tutorial">
           <a href="">development tutorial</a>
         </li>
-        <li title="how to"><a href="">how to - blog</a></li>
+        <li title="how to - blog"><a href="">how to - blog</a></li>
         <li title="youtube playlist"><a href="">youtube playlist</a></li>
       </ul>
     </footer>

@@ -84,18 +84,41 @@
 }
 .left-nav-category .category-price .category-price-range-c {
   margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+.left-nav-category .category-price .category-price-range-c .range-spans {
   display: flex;
-  align-items: center;
-  gap: 5px;
+  justify-content: space-between;
+  font-size: 0.8rem;
 }
 .left-nav-category .category-price .category-price-range-c input {
-  border-radius: 0px;
-  width: 60px;
-  height: 35px;
-  text-align: center;
-  border: 1px solid hsl(0, 0%, 00%);
-  /* border-radius: 3px; */
+  appearance: none;
+  /* background-color: black; */
+  background-color: hsl(0, 0%, 85%);
+  border-radius: 100px;
+  height: 4px;
+  margin-top: 0px;
 }
+.left-nav-category .category-price .category-price-range-c input:nth-child(3) {
+  margin-top: 5px;
+}
+.left-nav-category
+  .category-price
+  .category-price-range-c
+  input::-webkit-slider-thumb {
+  appearance: none;
+  background-color: black;
+  border-radius: 100%;
+  width: 17px;
+  height: 17px;
+  border: 2.2px solid white;
+}
+.left-nav-category .category-price .category-price-range-c .apply-price {
+  width: 100%;
+  margin-top: 20px;
+}
+
 .left-nav-category .category-price .category-price-range-c p {
   font-size: 0.8rem;
   margin-right: 3px;
@@ -170,6 +193,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.ban-icon-1 {
   display: none;
 }
 .remove-DressStyle-sort {
