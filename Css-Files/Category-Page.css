@@ -67,16 +67,6 @@
   gap: 10px;
   padding-top: 15px !important;
 }
-.left-nav-items .remove-type-sort {
-  border-radius: 100%;
-  width: 30px;
-  height: 30px;
-  color: gray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: none;
-}
 .left-nav-category ul a {
   transition: all 0.5s;
 }
@@ -172,7 +162,7 @@
 .left-nav-category .colors-inputs-container input:nth-child(10) {
   background-color: black;
 }
-.left-nav-category .remove-color-sort {
+.ban-icon {
   border-radius: 100%;
   width: 30px;
   height: 30px;
@@ -180,6 +170,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
+}
+.remove-DressStyle-sort {
+  margin-top: 10px;
 }
 
 .left-nav-category .category-size .category-size-buttons-container {
@@ -199,7 +193,7 @@
 .left-nav-category
   .category-size
   .category-size-buttons-container
-  button:focus {
+  button.activeButton {
   background-color: black;
   color: white;
 }

@@ -96,19 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // /Products Color Sorting
 
-// Price Range
-function priceRange(target) {
-  target.previousElementSibling.innerHTML = `${target.value} $`;
-
-  document
-    .querySelectorAll(".product-container .single-product")
-    .forEach((each_singleProduct) => {
-      // each_singleProduct.style.display = "none";
-      each_singleProduct.style.backgroundColor = "blue";
-    });
-}
-// /Price Range
-
 // Range Product
 // function applyPrice() {
 //   const minPrice = parseFloat(
@@ -149,7 +136,7 @@ function productSingleType(target) {
     target.style.color = "black";
     //
 
-    remove_Type_Sort.style.display = "flex";
+    remove_Type_Sort.style.display = "block";
     eachSingleProduct.style.display = "none";
 
     if (Item_product_Type == product_Type) {
@@ -170,3 +157,93 @@ function remove_TypeSort() {
     });
 }
 // /Product Type Filter
+
+// Product Size Filter
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelectorAll(".category-size-buttons-container button")
+    .forEach((eachSizeButton) => {
+      eachSizeButton.addEventListener("click", () => {
+        document
+          .querySelectorAll(".category-size-buttons-container button")
+          .forEach((eachSizeButton) => {
+            eachSizeButton.classList.remove("activeButton");
+          });
+        eachSizeButton.classList.add("activeButton");
+        //
+        document
+          .querySelectorAll(".single-product")
+          .forEach((each_singleProduct) => {
+            const Product_size_data =
+              each_singleProduct.getAttribute("data-product-size");
+            const size_data_button =
+              eachSizeButton.getAttribute("data-product-size");
+
+            each_singleProduct.style.display = "none";
+            if (size_data_button == Product_size_data) {
+              each_singleProduct.style.display = "block";
+            }
+          });
+      });
+    });
+});
+// /Product Size Filter
+
+// Product Dress Style Filter
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelectorAll(".category-dressStyle ul a")
+    .forEach((eachDressStyleLink) => {
+      eachDressStyleLink.addEventListener("click", () => {
+        document
+          .querySelectorAll(".single-product")
+          .forEach((each_singleProduct) => {
+            const Product_size_data = each_singleProduct.getAttribute(
+              "data-product-dressStyle"
+            );
+            const size_data_button = eachDressStyleLink.getAttribute(
+              "data-product-dressStyle"
+            );
+
+            each_singleProduct.style.display = "none";
+            if (size_data_button == Product_size_data) {
+              each_singleProduct.style.display = "block";
+            }
+          });
+      });
+    });
+});
+
+function productSingleDressStyle(target) {
+  document
+    .querySelectorAll(".product-dressStyle-link")
+    .forEach((each_dressStyleLink) => {
+      each_dressStyleLink.style.color = "";
+    });
+  target.style.color = "black";
+
+  const remove_DressStyle_sort = document.querySelector(
+    ".remove-DressStyle-sort"
+  );
+  remove_DressStyle_sort.style.display = "block";
+}
+
+function remove_DressStyleSort() {
+  const remove_DressStyle_sort = document.querySelector(
+    ".remove-DressStyle-sort"
+  );
+  remove_DressStyle_sort.style.display = "none";
+
+  document
+    .querySelectorAll(".product-dressStyle-link")
+    .forEach((each_dressStyleLink) => {
+      each_dressStyleLink.style.color = "";
+    });
+
+  document
+    .querySelectorAll(".product-container .single-product")
+    .forEach((each_singleProduct) => {
+      each_singleProduct.style.display = "block";
+    });
+}
+// /Product Dress Style Filter

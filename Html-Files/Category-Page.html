@@ -111,7 +111,7 @@
             <li>jeans</li>
             <i class="fa-solid fa-angle-right"></i>
           </a>
-          <button class="remove-type-sort" onclick="remove_TypeSort()">
+          <button class="remove-type-sort ban-icon" onclick="remove_TypeSort()">
             <i class="fa-solid fa-ban"></i>
           </button>
         </ul>
@@ -180,7 +180,7 @@
             <input type="radio" value="deeppink" name="select-color" />
             <input type="radio" value="white" name="select-color" />
             <input type="radio" value="black" name="select-color" />
-            <button class="remove-color-sort">
+            <button class="remove-color-sort ban-icon">
               <i class="fa-solid fa-ban"></i>
             </button>
           </div>
@@ -193,15 +193,15 @@
             </button>
           </div>
           <div class="category-size-buttons-container">
-            <button>xx-small</button>
-            <button>s-small</button>
-            <button>small</button>
-            <button>medium</button>
-            <button>large</button>
-            <button>x-large</button>
-            <button>xx-large</button>
-            <button>3x-large</button>
-            <button>4x-large</button>
+            <button data-product-size="xx-small">xx-small</button>
+            <button data-product-size="s-small">s-small</button>
+            <button data-product-size="small">small</button>
+            <button data-product-size="medium">medium</button>
+            <button data-product-size="large">large</button>
+            <button data-product-size="x-large">x-large</button>
+            <button data-product-size="xx-large">xx-large</button>
+            <button data-product-size="3x-large">3x-large</button>
+            <button data-product-size="4x-large">4x-large</button>
           </div>
         </div>
         <div class="category-dressStyle left-nav-items">
@@ -212,23 +212,45 @@
             </button>
           </div>
           <ul>
-            <a href="">
+            <a
+              data-product-dressStyle="casual"
+              onclick="productSingleDressStyle(this)"
+              class="product-dressStyle-link"
+            >
               <li>casual</li>
               <i class="fa-solid fa-angle-right"></i>
             </a>
-            <a href="">
+            <a
+              data-product-dressStyle="formal"
+              onclick="productSingleDressStyle(this)"
+              class="product-dressStyle-link"
+            >
               <li>formal</li>
               <i class="fa-solid fa-angle-right"></i>
             </a>
-            <a href="">
+            <a
+              data-product-dressStyle="party"
+              onclick="productSingleDressStyle(this)"
+              class="product-dressStyle-link"
+            >
               <li>party</li>
               <i class="fa-solid fa-angle-right"></i>
             </a>
-            <a href="">
+            <a
+              data-product-dressStyle="gym"
+              onclick="productSingleDressStyle(this)"
+              class="product-dressStyle-link"
+            >
               <li>gym</li>
               <i class="fa-solid fa-angle-right"></i>
             </a>
           </ul>
+          <button
+            class="remove-DressStyle-sort ban-icon"
+            onclick="remove_DressStyleSort()"
+          >
+            <i class="fa-solid fa-ban"></i>
+          </button>
         </div>
         <!-- <button class="apply-filter button-1 left-nav-items">
           Apply Filter
@@ -264,7 +286,8 @@
             data-productColor="white"
             data-starsRating="3.5"
             data-product-type="t-shirt"
-            data-productSize=""
+            data-product-size="medium"
+            data-product-dressStyle="casual"
           >
             <div class="product-image">
               <img src="/Assets/Images/white-tshirt-2.png" alt="" />
@@ -288,12 +311,14 @@
               </div>
             </div>
           </div>
+
           <div
             class="single-product"
             data-productColor="red"
             data-starsRating="4.5"
             data-product-type="t-shirt"
-            data-productSize=""
+            data-product-size="small"
+            data-product-dressStyle="casual"
           >
             <div class="product-image">
               <img src="/Assets/Images/pink-tshirt-1.png" alt="" />
@@ -318,12 +343,14 @@
               </div>
             </div>
           </div>
+
           <div
             class="single-product"
             data-productColor="black,white"
             data-starsRating="5.0"
             data-product-type="t-shirt"
-            data-productSize=""
+            data-product-size="x-large"
+            data-product-dressStyle="party"
           >
             <div class="product-image">
               <img src="/Assets/Images/white-tshirt-1.png" alt="" />
@@ -350,12 +377,14 @@
               </div>
             </div>
           </div>
+
           <div
             class="single-product"
             data-productColor="blue"
             data-starsRating="3.5"
             data-product-type="jeans"
-            data-productSize=""
+            data-product-size="large"
+            data-product-dressStyle="casual"
           >
             <div class="product-image">
               <img src="/Assets/Images/pants-image-2-jean.png" alt="" />
@@ -381,12 +410,14 @@
               </div>
             </div>
           </div>
+
           <div
             class="single-product"
             data-productColor="black,red,white"
             data-starsRating="4.5"
             data-product-type="shirt"
-            data-productSize=""
+            data-product-size="medium"
+            data-product-dressStyle="formal"
           >
             <div class="product-image">
               <img src="/Assets/Images/plaid-shirt-1.png" alt="" />
@@ -411,12 +442,14 @@
               </div>
             </div>
           </div>
+
           <div
             class="single-product"
             data-productColor="orange,black"
             data-starsRating="4.5"
             data-product-type="t-shirt"
-            data-productSize=""
+            data-product-size="xx-large"
+            data-product-dressStyle="gym"
           >
             <div class="product-image">
               <img src="/Assets/Images/orange-tshirt-2.png" alt="" />
@@ -443,12 +476,14 @@
               </div>
             </div>
           </div>
+
           <div
             class="single-product"
             data-productColor="green"
             data-starsRating="5.0"
             data-product-type="shirt"
-            data-productSize=""
+            data-product-size="3x-large"
+            data-product-dressStyle="formal"
           >
             <div class="product-image">
               <img src="/Assets/Images/plaid-shirt-2.png" alt="" />
@@ -475,12 +510,14 @@
               </div>
             </div>
           </div>
+
           <div
             class="single-product"
             data-productColor="orange"
             data-starsRating="4.0"
             data-product-type="t-shirt"
-            data-productSize=""
+            data-product-size="xx-small"
+            data-product-dressStyle="casual"
           >
             <div class="product-image">
               <img src="/Assets/Images/orange-tshirt-1.png" alt="" />
@@ -504,31 +541,34 @@
               </div>
             </div>
           </div>
+
           <div
             class="single-product"
-            data-productColor="blue"
-            data-starsRating="3.0"
-            data-product-type="shorts"
-            data-productSize=""
+            data-productColor="yellow"
+            data-starsRating="4.0"
+            data-product-type="jeans"
+            data-product-size="small"
+            data-product-dressStyle="casual"
           >
             <div class="product-image">
               <img src="/Assets/Images/blue-jean-shorts.png" alt="" />
             </div>
             <div class="product-information">
-              <h6>loose fit bermuda shorts</h6>
+              <h6>straight leg jeans</h6>
               <div class="product-reviews-container">
                 <div class="stars-container">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
                 </div>
                 <span class="review-note"
-                  >3.0/
+                  >4.0/
                   <p>5</p></span
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price">99$</h4>
+                <h4 class="product-current-price">210$</h4>
               </div>
             </div>
           </div>
