@@ -69,6 +69,16 @@ document.addEventListener("DOMContentLoaded", () => {
               }
               //
               document
+                .querySelectorAll(".product-type-link")
+                .forEach((eachProductTypeLink) => {
+                  eachProductTypeLink.style.color = "";
+                });
+              const remove_type_sort =
+                document.querySelector(".remove-type-sort");
+              remove_type_sort.style.display = "none";
+              //
+              //
+              document
                 .querySelector(".remove-color-sort")
                 .addEventListener("click", () => {
                   document
@@ -100,30 +110,63 @@ function priceRange(target) {
 // /Price Range
 
 // Range Product
-function applyPrice() {
-  // Single Product
-  document
-    .querySelectorAll(".product-container .single-product")
-    .forEach((each_singleProduct) => {
-      //  Price
-      document
-        .querySelectorAll(".product-current-price")
-        .forEach((each_ProductPrice) => {
-          const min_price = parseFloat(
-            document.querySelector(".range-price-min").value
-          );
+// function applyPrice() {
+//   const minPrice = parseFloat(
+//     document.querySelector(".price-select-min").value
+//   );
+//   const maxPrice = parseFloat(
+//     document.querySelector(".price-select-max").value
+//   );
 
-          if (each_ProductPrice.value < min_price) {
-            each_singleProduct.style.backgroundColor = "red";
-          }
-          //
-          else {
-            each_singleProduct.style.backgroundColor = "orange";
-          }
-        });
-      //  /Price
-    });
+//   document.querySelectorAll(".single-product").forEach((singleProduct) => {
+//     document.querySelectorAll(".product-current-price").forEach((eachPrice) => {
+//       const productPrice = eachPrice.innerHTML;
 
-  // /Single Product
-}
+//       if (productPrice >= minPrice && productPrice <= maxPrice) {
+//         singleProduct.style.backgroundColor = "deeppink";
+//         singleProduct.style.transform = "scale(0.5)";
+//       } else {
+//         singleProduct.style.backgroundColor = "";
+//         singleProduct.style.transform = "";
+//       }
+//     });
+//   });
+// }
 // /Range Product
+
+// Product Type Filter
+function productSingleType(target) {
+  document.querySelectorAll(".single-product").forEach((eachSingleProduct) => {
+    const product_Type = eachSingleProduct.getAttribute("data-product-type");
+    const Item_product_Type = target.getAttribute("data-product-type");
+    const remove_Type_Sort = document.querySelector(".remove-type-sort");
+
+    document
+      .querySelectorAll(".product-type-link")
+      .forEach((eachProductTypeLink) => {
+        eachProductTypeLink.style.color = "";
+      });
+    target.style.color = "black";
+    //
+
+    remove_Type_Sort.style.display = "flex";
+    eachSingleProduct.style.display = "none";
+
+    if (Item_product_Type == product_Type) {
+      eachSingleProduct.style.display = "grid";
+    }
+  });
+}
+function remove_TypeSort() {
+  const remove_type_sort = document.querySelector(".remove-type-sort");
+  remove_type_sort.style.display = "none";
+  document.querySelectorAll(".single-product").forEach((eachSingleProduct) => {
+    eachSingleProduct.style.display = "block";
+  });
+  document
+    .querySelectorAll(".product-type-link")
+    .forEach((eachProductTypeLink) => {
+      eachProductTypeLink.style.color = "";
+    });
+}
+// /Product Type Filter

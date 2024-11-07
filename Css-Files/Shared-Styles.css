@@ -109,6 +109,7 @@ nav ul .nav-icons button {
 a {
   text-decoration: none;
   color: initial;
+  cursor: pointer;
 }
 li {
   list-style: none;

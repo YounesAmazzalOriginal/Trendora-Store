@@ -43,8 +43,8 @@
   border-bottom: 1px solid hsl(0, 0%, 90%);
   padding-block: 20px;
 }
-.left-nav-items:nth-child(1),
-.left-nav-items:nth-child(2) {
+.left-nav-items:first-child,
+.left-nav-items:last-child {
   /* background-color: blue; */
   padding-top: 0px;
 }
@@ -67,6 +67,16 @@
   gap: 10px;
   padding-top: 15px !important;
 }
+.left-nav-items .remove-type-sort {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
 .left-nav-category ul a {
   transition: all 0.5s;
 }
@@ -82,57 +92,28 @@
   justify-content: space-between;
   font-size: 0.9rem;
 }
-
 .left-nav-category .category-price .category-price-range-c {
   margin-top: 18px;
-}
-.left-nav-category
-  .category-price
-  .category-price-range-c
-  .price-range-container {
   display: flex;
   align-items: center;
-  gap: 10px;
-  justify-content: center;
-  display: flex;
+  gap: 5px;
 }
-.left-nav-category
-  .category-price
-  .category-price-range-c
-  .price-range-container:nth-child(2) {
-  margin-top: 5px;
+.left-nav-category .category-price .category-price-range-c input {
+  border-radius: 0px;
+  width: 60px;
+  height: 35px;
+  text-align: center;
+  border: 1px solid hsl(0, 0%, 00%);
+  /* border-radius: 3px; */
 }
-
-.left-nav-category
-  .category-price
-  .category-price-range-c
-  .price-range-container
-  input {
-  appearance: none;
-  width: 80%;
-  background-color: hsl(0, 0%, 90%);
-  height: 5px;
+.left-nav-category .category-price .category-price-range-c p {
+  font-size: 0.8rem;
+  margin-right: 3px;
 }
-
-.left-nav-category
-  .category-price
-  .category-price-range-c
-  .price-range-container
-  .price-value {
-  white-space: nowrap;
-}
-
-.left-nav-category
-  .category-price
-  .category-price-range-c
-  .price-range-container
-  input::-webkit-slider-thumb {
-  appearance: none;
-  background-color: black;
-  border-radius: 100%;
-  width: 14px;
-  height: 14px;
-  position: relative;
+.left-nav-category .category-price .category-price-range-c .apply {
+  height: 35px;
+  width: 100%;
+  border-radius: 3px;
 }
 .left-nav-category .colors-inputs-container {
   margin-top: 10px;

@@ -70,26 +70,50 @@
           </button>
         </div>
         <ul class="left-nav-items">
-          <a href="">
+          <a
+            onclick="productSingleType(this)"
+            data-product-type="t-shirt"
+            class="product-type-link"
+          >
             <li>t-shirt</li>
             <i class="fa-solid fa-angle-right"></i>
           </a>
-          <a href="">
+          <a
+            onclick="productSingleType(this)"
+            data-product-type="shorts"
+            class="product-type-link"
+          >
             <li>shorts</li>
             <i class="fa-solid fa-angle-right"></i>
           </a>
-          <a href="">
+
+          <a
+            onclick="productSingleType(this)"
+            data-product-type="shirts"
+            class="product-type-link"
+          >
             <li>shirts</li>
             <i class="fa-solid fa-angle-right"></i>
           </a>
-          <a href="">
+          <a
+            onclick="productSingleType(this)"
+            data-product-type="hoodie"
+            class="product-type-link"
+          >
             <li>hoodie</li>
             <i class="fa-solid fa-angle-right"></i>
           </a>
-          <a href="">
+          <a
+            onclick="productSingleType(this)"
+            data-product-type="jeans"
+            class="product-type-link"
+          >
             <li>jeans</li>
             <i class="fa-solid fa-angle-right"></i>
           </a>
+          <button class="remove-type-sort" onclick="remove_TypeSort()">
+            <i class="fa-solid fa-ban"></i>
+          </button>
         </ul>
         <div class="category-price left-nav-items">
           <div class="category-title">
@@ -97,7 +121,21 @@
             <i class="fa-solid fa-angle-right"></i>
           </div>
           <div class="category-price-range-c">
-            <div class="price-range-container">
+            <p>$</p>
+            <input
+              class="price-select-min"
+              type="number"
+              placeholder="Min"
+              maxlength="3"
+            />
+            <input
+              class="price-select-max"
+              type="number"
+              placeholder="Max"
+              maxlength="3"
+            />
+            <button class="apply button-1" onclick="applyPrice()">apply</button>
+            <!-- <div class="price-range-container">
               <span class="price-value">0 $</span>
               <input
                 type="range"
@@ -110,7 +148,7 @@
               <button onclick="applyPrice()">
                 <i class="fa-solid fa-check"></i>
               </button>
-            </div>
+            </div> -->
             <!-- <div class="price-range-container">
               <span class="price-value">0 $</span>
               <input
@@ -225,6 +263,7 @@
             class="single-product"
             data-productColor="white"
             data-starsRating="3.5"
+            data-product-type="t-shirt"
             data-productSize=""
           >
             <div class="product-image">
@@ -245,7 +284,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price" value="145">$145</h4>
+                <h4 class="product-current-price">145$</h4>
               </div>
             </div>
           </div>
@@ -253,6 +292,7 @@
             class="single-product"
             data-productColor="red"
             data-starsRating="4.5"
+            data-product-type="t-shirt"
             data-productSize=""
           >
             <div class="product-image">
@@ -274,7 +314,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price" value="180">$180</h4>
+                <h4 class="product-current-price">180$</h4>
               </div>
             </div>
           </div>
@@ -282,6 +322,7 @@
             class="single-product"
             data-productColor="black,white"
             data-starsRating="5.0"
+            data-product-type="t-shirt"
             data-productSize=""
           >
             <div class="product-image">
@@ -303,7 +344,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price" value="120">$120</h4>
+                <h4 class="product-current-price">120$</h4>
                 <h4 class="product-old-price">$150</h4>
                 <span class="discount">-30%</span>
               </div>
@@ -313,6 +354,7 @@
             class="single-product"
             data-productColor="blue"
             data-starsRating="3.5"
+            data-product-type="jeans"
             data-productSize=""
           >
             <div class="product-image">
@@ -333,7 +375,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price" value="240">$240</h4>
+                <h4 class="product-current-price">240$</h4>
                 <h4 class="product-old-price">$260</h4>
                 <span class="discount">-20%</span>
               </div>
@@ -343,6 +385,7 @@
             class="single-product"
             data-productColor="black,red,white"
             data-starsRating="4.5"
+            data-product-type="shirt"
             data-productSize=""
           >
             <div class="product-image">
@@ -364,7 +407,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price" value="180">$180</h4>
+                <h4 class="product-current-price">180$</h4>
               </div>
             </div>
           </div>
@@ -372,6 +415,7 @@
             class="single-product"
             data-productColor="orange,black"
             data-starsRating="4.5"
+            data-product-type="t-shirt"
             data-productSize=""
           >
             <div class="product-image">
@@ -393,7 +437,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price" value="130">$130</h4>
+                <h4 class="product-current-price">130$</h4>
                 <h4 class="product-old-price">$160</h4>
                 <span class="discount">-30%</span>
               </div>
@@ -403,6 +447,7 @@
             class="single-product"
             data-productColor="green"
             data-starsRating="5.0"
+            data-product-type="shirt"
             data-productSize=""
           >
             <div class="product-image">
@@ -424,7 +469,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price" value="212">$212</h4>
+                <h4 class="product-current-price">212$</h4>
                 <h4 class="product-old-price">$232</h4>
                 <span class="discount">-20%</span>
               </div>
@@ -434,6 +479,7 @@
             class="single-product"
             data-productColor="orange"
             data-starsRating="4.0"
+            data-product-type="t-shirt"
             data-productSize=""
           >
             <div class="product-image">
@@ -454,7 +500,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price" value="145">$145</h4>
+                <h4 class="product-current-price">145$</h4>
               </div>
             </div>
           </div>
@@ -462,6 +508,7 @@
             class="single-product"
             data-productColor="blue"
             data-starsRating="3.0"
+            data-product-type="shorts"
             data-productSize=""
           >
             <div class="product-image">
@@ -481,7 +528,7 @@
                 >
               </div>
               <div class="product-price-container">
-                <h4 class="product-current-price" value="80">$80</h4>
+                <h4 class="product-current-price">99$</h4>
               </div>
             </div>
           </div>
