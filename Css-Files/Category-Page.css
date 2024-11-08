@@ -43,14 +43,13 @@
   border-bottom: 1px solid hsl(0, 0%, 90%);
   padding-block: 20px;
 }
-.left-nav-items:first-child,
-.left-nav-items:last-child {
+.left-nav-items:first-child {
   /* background-color: blue; */
   padding-top: 0px;
+  padding-bottom: 10px;
 }
-.left-nav-items:nth-child(7) {
+.left-nav-items:last-child {
   border-bottom: 0px;
-  padding: 0px;
 }
 
 .left-nav-category .category-title {
@@ -365,4 +364,3 @@
   height: 40px;
 }
 /* /Content */
-
