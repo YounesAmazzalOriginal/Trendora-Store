@@ -314,7 +314,7 @@ footer ul li {
   text-transform: capitalize;
   color: hsl(0, 0%, 60%);
   font-size: 1rem;
-  /* display: none; */
+  display: none;
 }
 .results-heading span {
   font-family: var(--font-sat-M);
@@ -324,3 +324,9 @@ footer ul li {
 .linksFilter i {
   transition: all 0.5s;
 }
+
+/* --------- */
+#hidden {
+  display: none;
+}
+/* --------- */

@@ -220,15 +220,36 @@
             </button>
           </div>
           <div class="category-size-buttons-container">
-            <button data-product-size="xx-small">xx-small</button>
-            <button data-product-size="s-small">s-small</button>
-            <button data-product-size="small">small</button>
-            <button data-product-size="medium">medium</button>
-            <button data-product-size="large">large</button>
-            <button data-product-size="x-large">x-large</button>
-            <button data-product-size="xx-large">xx-large</button>
-            <button data-product-size="3x-large">3x-large</button>
-            <button data-product-size="4x-large">4x-large</button>
+            <button onclick="SizeFilter(this)" data-product-size="xx-small">
+              xx-small
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="s-small">
+              s-small
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="small">
+              small
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="medium">
+              medium
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="large">
+              large
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="x-large">
+              x-large
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="xx-large">
+              xx-large
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="3x-large">
+              3x-large
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="4x-large">
+              4x-large
+            </button>
+            <button onclick="SizeFilter_All(this)" data-product-size="all">
+              all
+            </button>
           </div>
         </div>
         <div class="category-dressStyle left-nav-items">
@@ -282,9 +303,9 @@
           </ul>
         </div>
         <!-- onclick="()" -->
-        <button class="apply-filter button-1 left-nav-items">
+        <!-- <button class="apply-filter button-1 left-nav-items">
           Apply Filter
-        </button>
+        </button> -->
       </div>
       <!-- /Left Nav Category -->
 
