@@ -305,3 +305,22 @@ footer ul li {
   cursor: default;
 }
 /* /Under Footer */
+
+/* Results Heading */
+.results-heading {
+  font-family: var(--font-sat-L);
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  color: hsl(0, 0%, 60%);
+  font-size: 1rem;
+  /* display: none; */
+}
+.results-heading span {
+  font-family: var(--font-sat-M);
+}
+/* /Results Heading */
+
+.linksFilter i {
+  transition: all 0.5s;
+}
