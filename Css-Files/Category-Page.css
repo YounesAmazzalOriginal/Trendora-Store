@@ -99,6 +99,12 @@
   font-size: 0.8rem;
   margin-right: 3px;
 }
+.left-nav-category .category-price .category-price-range-c .apply-price {
+  border-radius: 5px;
+  width: 95px;
+  height: 35px;
+  font-size: 0.8rem;
+}
 .left-nav-category .colors-inputs-container {
   margin-top: 10px;
   display: flex;

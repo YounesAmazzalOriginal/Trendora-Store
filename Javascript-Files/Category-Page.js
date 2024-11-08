@@ -252,3 +252,49 @@ function productDressStyleLink_All(target) {
   // NullDressStyleFilter()
 }
 // /Product Filtring DressStyle
+
+// Product Filtring Price
+function ApplyPrice() {
+  const MinPrice = parseFloat(
+    document.querySelector(".price-select-min").value
+  );
+  const MaxPrice = parseFloat(
+    document.querySelector(".price-select-max").value
+  );
+
+  document
+    .querySelectorAll(".product-current-price")
+    .productPrice.forEach((eachSinglePrice) => {
+      const priceText = eachSinglePrice.textContent.replace("$", "");
+      const SinglePrice = parseFloat(priceText);
+
+      if (SinglePrice >= MinPrice && SinglePrice <= MaxPrice) {
+        eachSinglePrice.style.backgroundColor = "red";
+      } else {
+        eachSinglePrice.style.backgroundColor = "";
+      }
+    });
+}
+// function ApplyPrice() {
+//   const MinPrice = parseFloat(
+//     document.querySelector(".price-select-min").value
+//   );
+//   const MaxPrice = parseFloat(
+//     document.querySelector(".price-select-max").value
+//   );
+
+//   // Loop through all price elements
+//   document.querySelectorAll(".product-current-price").forEach((eachSinglePrice) => {
+//     const priceText = eachSinglePrice.textContent.replace("$", "").trim();
+//     const SinglePrice = parseFloat(priceText);
+
+//     // Apply background color based on price range
+//     if (SinglePrice >= MinPrice && SinglePrice <= MaxPrice) {
+//       eachSinglePrice.style.backgroundColor = "red";
+//     } else {
+//       eachSinglePrice.style.backgroundColor = "";
+//     }
+//   });
+// }
+
+// /Product Filtring Price
