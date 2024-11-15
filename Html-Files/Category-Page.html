@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trendora - Category Page</title>
+    <link rel="stylesheet" href="/Css-Files/Category-Page.css" />
+    <link rel="stylesheet" href="/Css-Files/Shared-Styles.css" />
+    <script src="/Javascript-Files/Category-Page.js"></script>
+    <script src="/Javascript-Files/Shared-Styles.js"></script>
+
+    <!-- Font Cdn -->
+    <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Favicon -->
+    <link
+      id="Favicon"
+      rel="icon"
+      type="image/x-icon"
+      href="/Assets/Images/favicon-32x32-lightMode.png"
+    />
+  </head>
+  <body>
+    <!-- Nav -->
+    <nav>
+      <a href="/Html-Files/index.html" class="logo">
+        <h3>Trendora</h3>
+      </a>
+      <ul>
+        <li><a href="">home</a></li>
+        <li><a href="">category</a></li>
+        <li><a href="">Page 1</a></li>
+        <li><a href="">Page 2</a></li>
+        <li><a href="">Page 3</a></li>
+        <div class="nav-search-container">
+          <i class="lni lni-search-1"></i>
+          <input type="text" placeholder="Seach for products..." />
+        </div>
+        <div class="nav-icons">
+          <button>
+            <i class="lni lni-cart-2"></i>
+          </button>
+          <button>
+            <i class="lni lni-user-4"></i>
+          </button>
+        </div>
+      </ul>
+    </nav>
+    <!--/ Nav -->
+
+    <div id="content-Id">
+      <!-- Left Nav Category -->
+      <div class="left-nav-category">
+        <div class="category-title left-nav-items">
+          <h4>Filters</h4>
+          <button>
+            <i class="fa-solid fa-filter"></i>
+          </button>
+        </div>
+        <ul class="left-nav-items">
+          <a
+            data-product-type="t-shirt"
+            class="product-type-link"
+            onclick="productTypeLink(this)"
+          >
+            <li>t-shirt</li>
+            <i class="fa-solid fa-angle-right"></i>
+          </a>
+          <a
+            data-product-type="shorts"
+            class="product-type-link"
+            onclick="productTypeLink(this)"
+          >
+            <li>shorts</li>
+            <i class="fa-solid fa-angle-right"></i>
+          </a>
+          <a
+            data-product-type="shirts"
+            class="product-type-link"
+            onclick="productTypeLink(this)"
+          >
+            <li>shirts</li>
+            <i class="fa-solid fa-angle-right"></i>
+          </a>
+          <a
+            data-product-type="hoodie"
+            class="product-type-link"
+            onclick="productTypeLink(this)"
+          >
+            <li>hoodie</li>
+            <i class="fa-solid fa-angle-right"></i>
+          </a>
+          <a
+            data-product-type="jeans"
+            class="product-type-link"
+            onclick="productTypeLink(this)"
+          >
+            <li>jeans</li>
+            <i class="fa-solid fa-angle-right"></i>
+          </a>
+          <a
+            data-product-type="all-types"
+            class="product-type-link"
+            onclick="productTypeLink_All(this)"
+          >
+            <li>all</li>
+            <i class="fa-solid fa-angle-right"></i>
+          </a>
+        </ul>
+        <div class="category-price left-nav-items">
+          <div class="category-title">
+            <h4>Price</h4>
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+          <div class="category-price-range-c">
+            <div class="category-price-range-c">
+              <p>$</p>
+              <input
+                class="price-select-min"
+                type="number"
+                placeholder="Min"
+                maxlength="3"
+              />
+              <input
+                class="price-select-max"
+                type="number"
+                placeholder="Max"
+                maxlength="3"
+              />
+              <button class="button-1 apply-price" onclick="ApplyPrice()">
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="category-colors left-nav-items">
+          <div class="category-title">
+            <h4>Colors</h4>
+            <button>
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+          <div class="colors-inputs-container">
+            <input
+              oninput="RadioColorFilter(this)"
+              type="radio"
+              data-productColor="green"
+              name="select-color"
+            />
+            <input
+              oninput="RadioColorFilter(this)"
+              type="radio"
+              data-productColor="red"
+              name="select-color"
+            />
+            <input
+              oninput="RadioColorFilter(this)"
+              type="radio"
+              data-productColor="yellow"
+              name="select-color"
+            />
+            <input
+              oninput="RadioColorFilter(this)"
+              type="radio"
+              data-productColor="orange"
+              name="select-color"
+            />
+            <input
+              oninput="RadioColorFilter(this)"
+              type="radio"
+              data-productColor="cyan"
+              name="select-color"
+            />
+            <input
+              oninput="RadioColorFilter(this)"
+              type="radio"
+              data-productColor="blue"
+              name="select-color"
+            />
+            <input
+              oninput="RadioColorFilter(this)"
+              type="radio"
+              data-productColor="purple"
+              name="select-color"
+            />
+            <input
+              oninput="RadioColorFilter(this)"
+              type="radio"
+              data-productColor="deeppink"
+              name="select-color"
+            />
+            <input
+              oninput="RadioColorFilter(this)"
+              type="radio"
+              data-productColor="white"
+              name="select-color"
+            />
+            <input
+              oninput="RadioColorFilter(this)"
+              type="radio"
+              data-productColor="black"
+              name="select-color"
+            />
+          </div>
+        </div>
+        <div class="category-size left-nav-items">
+          <div class="category-title">
+            <h4>Size</h4>
+            <button>
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+          <div class="category-size-buttons-container">
+            <button onclick="SizeFilter(this)" data-product-size="xx-small">
+              xx-small
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="s-small">
+              s-small
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="small">
+              small
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="medium">
+              medium
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="large">
+              large
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="x-large">
+              x-large
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="xx-large">
+              xx-large
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="3x-large">
+              3x-large
+            </button>
+            <button onclick="SizeFilter(this)" data-product-size="4x-large">
+              4x-large
+            </button>
+            <button onclick="SizeFilter_All(this)" data-product-size="all">
+              all
+            </button>
+          </div>
+        </div>
+        <div class="category-dressStyle left-nav-items">
+          <div class="category-title">
+            <h4>Dress Style</h4>
+            <button>
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+          <ul>
+            <a
+              data-product-dressStyle="casual"
+              class="product-dressStyle-link"
+              onclick="productDressStyleLink(this)"
+            >
+              <li>casual</li>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+            <a
+              data-product-dressStyle="formal"
+              class="product-dressStyle-link"
+              onclick="productDressStyleLink(this)"
+            >
+              <li>formal</li>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+            <a
+              data-product-dressStyle="party"
+              class="product-dressStyle-link"
+              onclick="productDressStyleLink(this)"
+            >
+              <li>party</li>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+            <a
+              data-product-dressStyle="gym"
+              class="product-dressStyle-link"
+              onclick="productDressStyleLink(this)"
+            >
+              <li>gym</li>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+            <a
+              data-product-dressStyle="all"
+              class="product-dressStyle-link"
+              onclick="productDressStyleLink_All(this)"
+            >
+              <li>all</li>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </ul>
+        </div>
+        <!-- onclick="()" -->
+        <!-- <button class="apply-filter button-1 left-nav-items">
+          Apply Filter
+        </button> -->
+      </div>
+      <!-- /Left Nav Category -->
+
+      <!-- Content -->
+      <div class="content">
+        <div class="title">
+          <h1>Casual</h1>
+          <div class="sort-container">
+            <p>Showing 1-10 of 100 Products</p>
+            <p>Sort by:</p>
+            <select name="rating" id="rating_Select">
+              <option value="all">all stars</option>
+              <option value="1.0">1.0</option>
+              <option value="1.5">1.5</option>
+              <option value="2.0">2.0</option>
+              <option value="2.5">2.5</option>
+              <option value="3.0">3.0</option>
+              <option value="3.5">3.5</option>
+              <option value="4.0">4.0</option>
+              <option value="4.5">4.5</option>
+              <option value="5.0">5.0</option>
+            </select>
+          </div>
+        </div>
+
+        <h1 class="results-heading">"<span>0</span>" of resault</h1>
+
+        <div class="product-container">
+          <a onclick="ProductDetails(this)">
+            <div
+              class="single-product"
+              data-productColor="white"
+              data-starsRating="3.5"
+              data-product-search-type="t-shirt,tshirt"
+              data-product-type="t-shirt"
+              data-product-size="medium"
+              data-product-dressStyle="casual"
+            >
+              <div class="product-image">
+                <img src="/Assets/Images/white-tshirt-2.png" alt="" />
+              </div>
+              <div class="product-information">
+                <h6>gradient graphic t-shirt</h6>
+                <div class="product-reviews-container">
+                  <div class="stars-container">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <span class="review-note"
+                    >3.5/
+                    <p>5</p></span
+                  >
+                </div>
+                <div class="product-price-container">
+                  <h4 class="product-current-price">145$</h4>
+                  <h4 class="product-old-price"></h4>
+                  <span class="discount"></span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a onclick="ProductDetails(this)">
+            <div
+              class="single-product"
+              data-productColor="red"
+              data-starsRating="4.5"
+              data-product-search-type="t-shirt,tshirt"
+              data-product-type="t-shirt"
+              data-product-size="small"
+              data-product-dressStyle="casual"
+            >
+              <div class="product-image">
+                <img src="/Assets/Images/pink-tshirt-1.png" alt="" />
+              </div>
+              <div class="product-information">
+                <h6>polo with tipping details</h6>
+                <div class="product-reviews-container">
+                  <div class="stars-container">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="review-note"
+                    >4.5/
+                    <p>5</p></span
+                  >
+                </div>
+                <div class="product-price-container">
+                  <h4 class="product-current-price">180$</h4>
+                  <h4 class="product-old-price"></h4>
+                  <span class="discount"></span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a onclick="ProductDetails(this)">
+            <div
+              class="single-product"
+              data-productColor="black,white"
+              data-starsRating="5.0"
+              data-product-search-type="t-shirt,tshirt"
+              data-product-type="t-shirt"
+              data-product-size="x-large"
+              data-product-dressStyle="party"
+            >
+              <div class="product-image">
+                <img src="/Assets/Images/white-tshirt-1.png" alt="" />
+              </div>
+              <div class="product-information">
+                <h6>black striped t-shirt</h6>
+                <div class="product-reviews-container">
+                  <div class="stars-container">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="review-note"
+                    >5.0/
+                    <p>5</p></span
+                  >
+                </div>
+                <div class="product-price-container">
+                  <h4 class="product-current-price">120$</h4>
+                  <h4 class="product-old-price">$150</h4>
+                  <span class="discount">-30%</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a onclick="ProductDetails(this)">
+            <div
+              class="single-product"
+              data-productColor="blue"
+              data-starsRating="3.5"
+              data-product-search-type="jeans,jean"
+              data-product-type="jeans"
+              data-product-size="large"
+              data-product-dressStyle="casual"
+            >
+              <div class="product-image">
+                <img src="/Assets/Images/pants-image-2-jean.png" alt="" />
+              </div>
+              <div class="product-information">
+                <h6>skinny fit jeans</h6>
+                <div class="product-reviews-container">
+                  <div class="stars-container">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <span class="review-note"
+                    >3.5/
+                    <p>5</p></span
+                  >
+                </div>
+                <div class="product-price-container">
+                  <h4 class="product-current-price">240$</h4>
+                  <h4 class="product-old-price">$260</h4>
+                  <span class="discount">-20%</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a onclick="ProductDetails(this)">
+            <div
+              class="single-product"
+              data-productColor="black,red,white"
+              data-starsRating="4.5"
+              data-product-search-type="shirt"
+              data-product-type="shirt"
+              data-product-size="medium"
+              data-product-dressStyle="formal"
+            >
+              <div class="product-image">
+                <img src="/Assets/Images/plaid-shirt-1.png" alt="" />
+              </div>
+              <div class="product-information">
+                <h6>checkered shirt</h6>
+                <div class="product-reviews-container">
+                  <div class="stars-container">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="review-note"
+                    >4.5/
+                    <p>5</p></span
+                  >
+                </div>
+                <div class="product-price-container">
+                  <h4 class="product-current-price">180$</h4>
+                  <h4 class="product-old-price"></h4>
+                  <span class="discount"></span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a onclick="ProductDetails(this)">
+            <div
+              class="single-product"
+              data-productColor="orange,black"
+              data-starsRating="4.5"
+              data-product-search-type="t-shirt,tshirt"
+              data-product-type="t-shirt"
+              data-product-size="xx-large"
+              data-product-dressStyle="gym"
+            >
+              <div class="product-image">
+                <img src="/Assets/Images/orange-tshirt-2.png" alt="" />
+              </div>
+              <div class="product-information">
+                <h6>sleeve striped t-shirt</h6>
+                <div class="product-reviews-container">
+                  <div class="stars-container">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="review-note"
+                    >4.5/
+                    <p>5</p></span
+                  >
+                </div>
+                <div class="product-price-container">
+                  <h4 class="product-current-price">130$</h4>
+                  <h4 class="product-old-price">$160</h4>
+                  <span class="discount">-30%</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a onclick="ProductDetails(this)">
+            <div
+              class="single-product"
+              data-productColor="green"
+              data-starsRating="5.0"
+              data-product-search-type="shirt"
+              data-product-type="shirt"
+              data-product-size="3x-large"
+              data-product-dressStyle="formal"
+            >
+              <div class="product-image">
+                <img src="/Assets/Images/plaid-shirt-2.png" alt="" />
+              </div>
+              <div class="product-information">
+                <h6>vertical striped shirt</h6>
+                <div class="product-reviews-container">
+                  <div class="stars-container">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="review-note"
+                    >5.0/
+                    <p>5</p></span
+                  >
+                </div>
+                <div class="product-price-container">
+                  <h4 class="product-current-price">212$</h4>
+                  <h4 class="product-old-price">$232</h4>
+                  <span class="discount">-20%</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a onclick="ProductDetails(this)">
+            <div
+              class="single-product"
+              data-productColor="orange"
+              data-starsRating="4.0"
+              data-product-search-type="t-shirt,tshirt"
+              data-product-type="t-shirt"
+              data-product-size="xx-small"
+              data-product-dressStyle="casual"
+            >
+              <div class="product-image">
+                <img src="/Assets/Images/orange-tshirt-1.png" alt="" />
+              </div>
+              <div class="product-information">
+                <h6>courage graphic t-shirt</h6>
+                <div class="product-reviews-container">
+                  <div class="stars-container">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-regular fa-star"></i>
+                  </div>
+                  <span class="review-note"
+                    >4.0/
+                    <p>5</p></span
+                  >
+                </div>
+                <div class="product-price-container">
+                  <h4 class="product-current-price">145$</h4>
+                  <h4 class="product-old-price"></h4>
+                  <span class="discount"></span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a onclick="ProductDetails(this)">
+            <div
+              class="single-product"
+              data-productColor="yellow"
+              data-starsRating="4.0"
+              data-product-search-type="jeans,jean,shorts,short"
+              data-product-type="jeans"
+              data-product-size="small"
+              data-product-dressStyle="casual"
+            >
+              <div class="product-image">
+                <img src="/Assets/Images/blue-jean-shorts.png" alt="" />
+              </div>
+              <div class="product-information">
+                <h6>straight leg jeans</h6>
+                <div class="product-reviews-container">
+                  <div class="stars-container">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-regular fa-star"></i>
+                  </div>
+                  <span class="review-note"
+                    >4.0/
+                    <p>5</p></span
+                  >
+                </div>
+                <div class="product-price-container">
+                  <h4 class="product-current-price">210$</h4>
+                  <h4 class="product-old-price"></h4>
+                  <span class="discount"></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- <h1 class="results-heading">"<span>0</span>" of resault</h1> -->
+
+        <div class="page-numbers-container">
+          <button class="skip-button">
+            <i class="fa-solid fa-arrow-left-long"></i>
+            <h6>previous</h6>
+          </button>
+          <div class="number-page-buttons">
+            <button class="page-btn-active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>...</button>
+            <button>8</button>
+            <button>9</button>
+            <button>10</button>
+          </div>
+          <button class="skip-button">
+            <h6>next</h6>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+        </div>
+      </div>
+      <!-- /Content -->
+    </div>
+
+    <!-- Contact Banner  -->
+    <div class="contact-banner">
+      <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+      <div class="contact-banner-inputs">
+        <div class="input-container">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="text" placeholder="Enter your email address" />
+        </div>
+        <button>Subscribe to Newsletter</button>
+      </div>
+    </div>
+    <!-- /Contact Banner  -->
+
+    <!-- Footer  -->
+    <footer>
+      <div class="footer-1">
+        <a href="" class="logo">
+          <h3>Trendora</h3>
+        </a>
+        <p>
+          We have clothes that suits your style and which you’re proud to wear.
+          From women to men.
+        </p>
+        <div class="footer-media-links">
+          <a href="https://wa.me/212635303129">
+            <button>
+              <i class="fa-brands fa-whatsapp"></i>
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/in/younes-amazzal-3152042b0/">
+            <button>
+              <i class="fa-brands fa-linkedin-in"></i>
+            </button>
+          </a>
+          <a href="https://www.instagram.com/amzprod2">
+            <button>
+              <i class="fa-brands fa-instagram"></i>
+            </button>
+          </a>
+          <a href="https://github.com/YounesAmazzalOriginal">
+            <button>
+              <i class="fa-brands fa-github"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+      <ul>
+        <h5>company</h5>
+        <li title="about"><a href="">about</a></li>
+        <li title="features"><a href="">features</a></li>
+        <li title="works"><a href="">works</a></li>
+        <li title="career"><a href="">career</a></li>
+      </ul>
+      <ul>
+        <h5>help</h5>
+        <li title="customer"><a href="">customer support</a></li>
+        <li title="delivery details"><a href="">delivery details</a></li>
+        <li title="terms & conditions"><a href="">terms & conditions</a></li>
+        <li title="privacy policy"><a href="">privacy policy</a></li>
+      </ul>
+      <ul>
+        <h5>faq</h5>
+        <li title="account"><a href="">account</a></li>
+        <li title="manage deliveries"><a href="">manage deliveries</a></li>
+        <li title="orders"><a href="">orders</a></li>
+        <li title="payments"><a href="">payments</a></li>
+      </ul>
+      <ul>
+        <h5>resources</h5>
+        <li title="free eBook"><a href="">free eBook</a></li>
+        <li title="development tutorial">
+          <a href="">development tutorial</a>
+        </li>
+        <li title="how to - blog"><a href="">how to - blog</a></li>
+        <li title="youtube playlist"><a href="">youtube playlist</a></li>
+      </ul>
+    </footer>
+    <div class="under-footer">
+      <p>Website Created By Younes AMAZZAL</p>
+      <div class="payment-icons">
+        <button title="Visa">
+          <img src="/Assets/Images/Visa.png" alt="" />
+        </button>
+        <button title="Master Card">
+          <img src="/Assets/Images/Master-card.png" alt="" />
+        </button>
+        <button title="Paypal">
+          <img src="/Assets/Images/Paypal.png" alt="" />
+        </button>
+        <button title="Apple Pay">
+          <img src="/Assets/Images/Apple-pay.png" alt="" />
+        </button>
+        <button title="Google Pay">
+          <img src="/Assets/Images/Google-Pay.png" alt="" />
+        </button>
+      </div>
+    </div>
+    <!-- /Footer  -->
+  </body>
+</html>

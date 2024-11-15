@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trendora - Product Detail Page dynamic</title>
+    <link rel="stylesheet" href="/Css-Files/Product-Detail-Page.css" />
+    <link rel="stylesheet" href="/Css-Files/Shared-Styles.css" />
+    <script src="/Javascript-Files/Product-Detail-Page.js"></script>
+    <script src="/Javascript-Files/Shared-Styles.js"></script>
+
+    <!-- Font Cdn -->
+    <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Favicon -->
+    <link
+      id="Favicon"
+      rel="icon"
+      type="image/x-icon"
+      href="/Assets/Images/favicon-32x32-lightMode.png"
+    />
+  </head>
+  <body>
+    <!-- Nav -->
+    <nav>
+      <a href="/Html-Files/index.html" class="logo">
+        <h3>Trendora</h3>
+      </a>
+      <ul>
+        <li><a href="">home</a></li>
+        <li><a href="">category</a></li>
+        <li><a href="">Page 1</a></li>
+        <li><a href="">Page 2</a></li>
+        <li><a href="">Page 3</a></li>
+        <div class="nav-search-container">
+          <i class="lni lni-search-1"></i>
+          <input type="text" placeholder="Seach for products..." />
+        </div>
+        <div class="nav-icons">
+          <button>
+            <i class="lni lni-cart-2"></i>
+          </button>
+          <button>
+            <i class="lni lni-user-4"></i>
+          </button>
+        </div>
+      </ul>
+    </nav>
+    <!--/ Nav -->
+
+    <!-- Write a Review Controll -->
+    <!--/ Write a Review Controll -->
+
+    <!-- Product Informations Detail -->
+    <div class="product-detail-informations-container">
+      <div class="product-information-sides-images-container">
+        <div class="product-information-side-image-c">
+          <div class="img-c">
+            <!-- src="/Assets/Images/brown-tshirt-1.png" -->
+            <img class="product-information-side-image" src="" alt="" />
+          </div>
+          <div class="img-c">
+            <!-- src="/Assets/Images/brown-tshirt-1-back.png" -->
+            <img class="product-information-side-image" src="" alt="" />
+          </div>
+          <div class="img-c">
+            <!-- src="/Assets/Images/brown-tshirt-1-image.png" -->
+            <img class="product-information-side-image" src="" alt="" />
+          </div>
+        </div>
+        <div class="product-information-main-image">
+          <!-- Product Image -->
+          <img src="" alt="" />
+        </div>
+      </div>
+      <div class="product-information-texts-container">
+        <!-- Product Title -->
+        <h2>one life graphic t-shirt</h2>
+        <div class="product-rating-container">
+          <div class="reviews-container">
+            <div class="stars-container stars-container-details">
+              <!-- <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i> -->
+            </div>
+            <span class="Product-Detail-reviewNote"
+              >4.5/
+              <p>5</p></span
+            >
+          </div>
+          <div class="product-price-container">
+            <h4 class="product-current-price product-current-price-LS">
+              <!-- 260$ -->
+            </h4>
+            <h4 class="product-old-price product-old-price-LS">
+              <!-- $300 -->
+            </h4>
+            <span class="discount discount-LS">
+              <!-- -40% -->
+            </span>
+          </div>
+          <!-- Product Paragraph -->
+          <p class="product-descreption">
+            <!-- This graphic t-shirt which is perfect for any occasion. Crafted from
+            a soft and breathable fabric, it offers superior comfort and style. -->
+            Product Descreption
+          </p>
+
+          <div class="color-product-container">
+            <p>select colors</p>
+            <div class="colors-inputs-container">
+              <!-- <input type="radio" />
+              <input type="radio" />
+              <input type="radio" /> -->
+              <div class="colors-inputs-container">
+                <input
+                  type="radio"
+                  data-productColor="green"
+                  name="select-color"
+                />
+                <input
+                  type="radio"
+                  data-productColor="red"
+                  name="select-color"
+                />
+                <input
+                  type="radio"
+                  data-productColor="yellow"
+                  name="select-color"
+                />
+                <input
+                  type="radio"
+                  data-productColor="orange"
+                  name="select-color"
+                />
+                <input
+                  type="radio"
+                  data-productColor="cyan"
+                  name="select-color"
+                />
+                <input
+                  type="radio"
+                  data-productColor="blue"
+                  name="select-color"
+                />
+                <input
+                  type="radio"
+                  data-productColor="purple"
+                  name="select-color"
+                />
+                <input
+                  type="radio"
+                  data-productColor="deeppink"
+                  name="select-color"
+                />
+                <input
+                  type="radio"
+                  data-productColor="white"
+                  name="select-color"
+                />
+                <input
+                  type="radio"
+                  data-productColor="black"
+                  name="select-color"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="product-size-properties">
+            <p>choose size</p>
+            <div class="category-size-buttons-container">
+              <button>small</button>
+              <button>medium</button>
+              <button>large</button>
+              <button>x-large</button>
+            </div>
+          </div>
+
+          <div class="product-addToCart">
+            <div class="add-remove-product-from-cart">
+              <button class="minus-product" onclick="MinusProduct()">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <span class="product-adding-counter">0</span>
+              <button class="plus-product" onclick="PlusProduct()">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+            <button
+              class="button-1 add-product-to-cart"
+              onclick="AddToCart(this)"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Product Informations Detail -->
+
+    <!-- Product Details Controll -->
+    <div class="product-about-container">
+      <!-- <button onclick="ProductDetails_Button()">Product Details</button> -->
+      <button
+        onclick="ProductReviews_Button()"
+        class="product-details-active-button"
+      >
+        Rating & Reviews
+      </button>
+      <button onclick="Faq_Button()">FAQs</button>
+    </div>
+    <!-- /Product Details Controll -->
+
+    <!-- Product Details -->
+    <div class="product-rating-and-reviews-container">
+      <div class="title">
+        <h3>
+          all reviews
+          <span>(<span class="reviews-comments-Span"></span>)</span>
+          <!-- <span>(<span class="reviews-comments-Span">451</span>)</span> -->
+        </h3>
+        <div class="product-reviews-buttons-container">
+          <button class="filter-icon">
+            <i class="fa-solid fa-filter"></i>
+          </button>
+          <ul class="menu">
+            <div class="menu-title">
+              <h4>latest</h4>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="submenu">
+              <a href="">item 1</a>
+              <a href="">item 2</a>
+              <a href="">item 3</a>
+              <a href="">item 4</a>
+            </div>
+          </ul>
+          <button class="button-1">Write a Review</button>
+        </div>
+      </div>
+      <!-- Rating & Reviews -->
+      <section id="product-reviews-Elements-ID">
+        <div class="product-reviews-Elements">
+          <div class="customer-reviews-box">
+            <div class="customer-reviews-note">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <div class="customer-review-name">
+              <h5>samantha d.</h5>
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <p>
+              "I absolutely love this t-shirt! The design is unique and the
+              fabric feels so comfortable. As a fellow designer, I appreciate
+              the attention to detail. It's become my favorite go-to shirt."
+            </p>
+            <p class="reviews-date-posted">
+              Posted on <span>August 14, 2023</span>
+            </p>
+          </div>
+          <div class="customer-reviews-box">
+            <div class="customer-reviews-note">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="customer-review-name">
+              <h5>alex m.</h5>
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <p>
+              "The t-shirt exceeded my expectations! The colors are vibrant and
+              the print quality is top-notch. Being a UI/UX designer myself, I'm
+              quite picky about aesthetics, and this t-shirt definitely gets a
+              thumbs up from me."
+            </p>
+            <p class="reviews-date-posted">
+              Posted on <span>August 15, 2023</span>
+            </p>
+          </div>
+          <div class="customer-reviews-box">
+            <div class="customer-reviews-note">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="customer-review-name">
+              <h5>ethan r.</h5>
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <p>
+              "This t-shirt is a must-have for anyone who appreciates good
+              design. The minimalistic yet stylish pattern caught my eye, and
+              the fit is perfect. I can see the designer's touch in every aspect
+              of this shirt."
+            </p>
+            <p class="reviews-date-posted">
+              Posted on <span>August 16, 2023</span>
+            </p>
+          </div>
+          <div class="customer-reviews-box">
+            <div class="customer-reviews-note">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="customer-review-name">
+              <h5>olivia p.</h5>
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <p>
+              "As a UI/UX enthusiast, I value simplicity and functionality. This
+              t-shirt not only represents those principles but also feels great
+              to wear. It's evident that the designer poured their creativity
+              into making this t-shirt stand out."
+            </p>
+            <p class="reviews-date-posted">
+              Posted on <span>August 17, 2023</span>
+            </p>
+          </div>
+          <div class="customer-reviews-box">
+            <div class="customer-reviews-note">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="customer-review-name">
+              <h5>liam k.</h5>
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <p>
+              "This t-shirt is a fusion of comfort and creativity. The fabric is
+              soft, and the design speaks volumes about the designer's skill.
+              It's like wearing a piece of art that reflects my passion for both
+              design and fashion."
+            </p>
+            <p class="reviews-date-posted">
+              Posted on <span>August 18, 2023</span>
+            </p>
+          </div>
+          <div class="customer-reviews-box">
+            <div class="customer-reviews-note">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <div class="customer-review-name">
+              <h5>liam k.</h5>
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <p>
+              "I'm not just wearing a t-shirt; I'm wearing a piece of design
+              philosophy. The intricate details and thoughtful layout of the
+              design make this shirt a conversation starter."
+            </p>
+            <p class="reviews-date-posted">
+              Posted on <span>August 19, 2023</span>
+            </p>
+          </div>
+        </div>
+        <button class="load-more-reviews">load more reviews</button>
+      </section>
+      <!-- /Rating & Reviews -->
+
+      <!-- FAQs -->
+      <div id="Faq-container-ID">
+        <div class="Faq-container">
+          <div class="question-and-answer-container" onclick="OpenFaq(this)">
+            <div class="question-container">
+              <h4>Question 1</h4>
+              <button>
+                <i class="fa-regular fa-square-plus"></i>
+              </button>
+            </div>
+            <div class="answer-container">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                esse maiores tempora ratione totam quasi in dicta facere
+                officiis eaque natus voluptas!
+              </p>
+            </div>
+          </div>
+          <div class="question-and-answer-container" onclick="OpenFaq(this)">
+            <div class="question-container">
+              <h4>Question 2</h4>
+              <button>
+                <i class="fa-regular fa-square-plus"></i>
+              </button>
+            </div>
+            <div class="answer-container">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                esse maiores tempora ratione totam quasi in dicta facere
+                officiis eaque natus voluptas!
+              </p>
+            </div>
+          </div>
+          <div class="question-and-answer-container" onclick="OpenFaq(this)">
+            <div class="question-container">
+              <h4>Question 3</h4>
+              <button>
+                <i class="fa-regular fa-square-plus"></i>
+              </button>
+            </div>
+            <div class="answer-container">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                esse maiores tempora ratione totam quasi in dicta facere
+                officiis eaque natus voluptas!
+              </p>
+            </div>
+          </div>
+          <div class="question-and-answer-container" onclick="OpenFaq(this)">
+            <div class="question-container">
+              <h4>Question 4</h4>
+              <button>
+                <i class="fa-regular fa-square-plus"></i>
+              </button>
+            </div>
+            <div class="answer-container">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                esse maiores tempora ratione totam quasi in dicta facere
+                officiis eaque natus voluptas!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /FAQs -->
+    </div>
+    <!-- /Product Details -->
+
+    <!-- Product May Also Like -->
+    <div class="product-might-like">
+      <h2>you might also like</h2>
+      <div class="product-container">
+        <a onclick="ProductDetails(this)">
+          <div class="single-product">
+            <div class="product-image">
+              <img src="/Assets/Images/blue-tshirt-1.png" alt="" />
+            </div>
+            <div class="product-information">
+              <h6>polo with contrast trims</h6>
+              <div class="product-reviews-container">
+                <div class="stars-container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <span class="review-note"
+                  >4.0/
+                  <p>5</p></span
+                >
+              </div>
+              <div class="product-price-container">
+                <h4 class="product-current-price">$212</h4>
+                <h4 class="product-old-price">$242</h4>
+                <span class="discount">-20%</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a onclick="ProductDetails(this)">
+          <div class="single-product">
+            <div class="product-image">
+              <img src="/Assets/Images/white-tshirt-2.png" alt="" />
+            </div>
+            <div class="product-information">
+              <h6>gradient graphic t-shirt</h6>
+              <div class="product-reviews-container">
+                <div class="stars-container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i
+                  ><i class="fa-regular fa-star"></i>
+                </div>
+                <span class="review-note"
+                  >3.5/
+                  <p>5</p></span
+                >
+              </div>
+              <div class="product-price-container">
+                <h4 class="product-current-price">$145</h4>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a onclick="ProductDetails(this)">
+          <div class="single-product">
+            <div class="product-image">
+              <img src="/Assets/Images/pink-tshirt-1.png" alt="" />
+            </div>
+            <div class="product-information">
+              <h6>polo with tipping details</h6>
+              <div class="product-reviews-container">
+                <div class="stars-container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="review-note"
+                  >4.5/
+                  <p>5</p></span
+                >
+              </div>
+              <div class="product-price-container">
+                <h4 class="product-current-price">$180</h4>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a onclick="ProductDetails(this)">
+          <div class="single-product">
+            <div class="product-image">
+              <img src="/Assets/Images/white-tshirt-1.png" alt="" />
+            </div>
+            <div class="product-information">
+              <h6>black striped t-shirt</h6>
+              <div class="product-reviews-container">
+                <div class="stars-container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="review-note"
+                  >5.0/
+                  <p>5</p></span
+                >
+              </div>
+              <div class="product-price-container">
+                <h4 class="product-current-price">$120</h4>
+                <h4 class="product-old-price">$160</h4>
+                <span class="discount">-30%</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- /Product May Also Like -->
+
+    <!-- Contact Banner  -->
+    <div class="contact-banner">
+      <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+      <div class="contact-banner-inputs">
+        <div class="input-container">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="text" placeholder="Enter your email address" />
+        </div>
+        <button>Subscribe to Newsletter</button>
+      </div>
+    </div>
+    <!-- /Contact Banner  -->
+
+    <!-- Footer  -->
+    <footer>
+      <div class="footer-1">
+        <a href="" class="logo">
+          <h3>Trendora</h3>
+        </a>
+        <p>
+          We have clothes that suits your style and which you’re proud to wear.
+          From women to men.
+        </p>
+        <div class="footer-media-links">
+          <a href="https://wa.me/212635303129">
+            <button>
+              <i class="fa-brands fa-whatsapp"></i>
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/in/younes-amazzal-3152042b0/">
+            <button>
+              <i class="fa-brands fa-linkedin-in"></i>
+            </button>
+          </a>
+          <a href="https://www.instagram.com/amzprod2">
+            <button>
+              <i class="fa-brands fa-instagram"></i>
+            </button>
+          </a>
+          <a href="https://github.com/YounesAmazzalOriginal">
+            <button>
+              <i class="fa-brands fa-github"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+      <ul>
+        <h5>company</h5>
+        <li title="about"><a href="">about</a></li>
+        <li title="features"><a href="">features</a></li>
+        <li title="works"><a href="">works</a></li>
+        <li title="career"><a href="">career</a></li>
+      </ul>
+      <ul>
+        <h5>help</h5>
+        <li title="customer"><a href="">customer support</a></li>
+        <li title="delivery details"><a href="">delivery details</a></li>
+        <li title="terms & conditions"><a href="">terms & conditions</a></li>
+        <li title="privacy policy"><a href="">privacy policy</a></li>
+      </ul>
+      <ul>
+        <h5>faq</h5>
+        <li title="account"><a href="">account</a></li>
+        <li title="manage deliveries"><a href="">manage deliveries</a></li>
+        <li title="orders"><a href="">orders</a></li>
+        <li title="payments"><a href="">payments</a></li>
+      </ul>
+      <ul>
+        <h5>resources</h5>
+        <li title="free eBook"><a href="">free eBook</a></li>
+        <li title="development tutorial">
+          <a href="">development tutorial</a>
+        </li>
+        <li title="how to - blog"><a href="">how to - blog</a></li>
+        <li title="youtube playlist"><a href="">youtube playlist</a></li>
+      </ul>
+    </footer>
+    <div class="under-footer">
+      <p>Website Created By Younes AMAZZAL</p>
+      <div class="payment-icons">
+        <button title="Visa">
+          <img src="/Assets/Images/Visa.png" alt="" />
+        </button>
+        <button title="Master Card">
+          <img src="/Assets/Images/Master-card.png" alt="" />
+        </button>
+        <button title="Paypal">
+          <img src="/Assets/Images/Paypal.png" alt="" />
+        </button>
+        <button title="Apple Pay">
+          <img src="/Assets/Images/Apple-pay.png" alt="" />
+        </button>
+        <button title="Google Pay">
+          <img src="/Assets/Images/Google-Pay.png" alt="" />
+        </button>
+      </div>
+    </div>
+    <!-- /Footer  -->
+  </body>
+</html>

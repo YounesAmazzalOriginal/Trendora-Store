@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trendora - Cart Page</title>
+    <link rel="stylesheet" href="/Css-Files/Cart-Page.css" />
+    <link rel="stylesheet" href="/Css-Files/Shared-Styles.css" />
+    <script src="/Javascript-Files/Cart-Page.js"></script>
+    <script src="/Javascript-Files/Shared-Styles.js"></script>
+
+    <!-- Font Cdn -->
+    <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Favicon -->
+    <link
+      id="Favicon"
+      rel="icon"
+      type="image/x-icon"
+      href="/Assets/Images/favicon-32x32-lightMode.png"
+    />
+  </head>
+  <body>
+    <!-- Nav -->
+    <nav>
+      <a href="/Html-Files/index.html" class="logo">
+        <h3>Trendora</h3>
+      </a>
+      <ul>
+        <li><a href="">home</a></li>
+        <li><a href="">category</a></li>
+        <li><a href="">Page 1</a></li>
+        <li><a href="">Page 2</a></li>
+        <li><a href="">Page 3</a></li>
+        <div class="nav-search-container">
+          <i class="lni lni-search-1"></i>
+          <input type="text" placeholder="Seach for products..." />
+        </div>
+        <div class="nav-icons">
+          <button>
+            <i class="lni lni-cart-2"></i>
+          </button>
+          <button>
+            <i class="lni lni-user-4"></i>
+          </button>
+        </div>
+      </ul>
+    </nav>
+    <!--/ Nav -->
+
+    <h2 class="cart-title">your cart</h2>
+    <div class="cart-checkout-container">
+      <!-- Product-Carts-Container  -->
+      <div class="product-cart-container">
+        <!-- Product Checkout Area -->
+        <div class="single-product">
+          <div class="image-area">
+            <img src="/Assets/Images/white-tshirt-2.png" alt="" />
+          </div>
+          <div class="text-area">
+            <h4>gradient graphic t-shirt</h4>
+            <div class="product-info-container">
+              <span
+                >size :
+                <p>large</p></span
+              >
+              <span
+                >color :
+                <p>white</p></span
+              >
+            </div>
+            <h3 class="product-current-price">145$</h3>
+            <button class="delete-product" onclick="delete_Product(this)">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+            <!-- <div class="product-count-container">
+              <button>
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <span class="product-counter-span">1</span>
+              <button>
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div> -->
+          </div>
+          <h5 class="product-checkout-number">1</h5>
+        </div>
+      </div>
+      <!-- /Product-Carts-Container  -->
+      <!-- ==== -->
+      <!-- Product-Checkout-Container  -->
+      <div class="product-checkout-container">
+        <h3>order summary</h3>
+        <div class="checkout-property-container subtotal">
+          <p>subtotal</p>
+          <h4>$565</h4>
+        </div>
+        <div class="checkout-property-container discount">
+          <p>discount (-20%)</p>
+          <h4>-$113</h4>
+        </div>
+        <div class="checkout-property-container discount-fee">
+          <p>delivery fee</p>
+          <h4>$15</h4>
+        </div>
+        <div id="checkout-end-part">
+          <div class="checkout-property-container total">
+            <p>total</p>
+            <h3>$467</h3>
+          </div>
+          <div class="checkout-input-container">
+            <div class="input-checkout-container">
+              <i class="fa-solid fa-tag"></i>
+              <input type="text" placeholder="Add promo code" />
+            </div>
+            <button class="button-1 apply-btn">apply</button>
+          </div>
+          <button class="button-1 go-to-checkout">
+            <p>Go to Checkout</p>
+            <i class="lni lni-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <!-- /Product-Checkout-Container  -->
+    </div>
+
+    <!-- Contact Banner  -->
+    <div class="contact-banner">
+      <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+      <div class="contact-banner-inputs">
+        <div class="input-container">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="text" placeholder="Enter your email address" />
+        </div>
+        <button>Subscribe to Newsletter</button>
+      </div>
+    </div>
+    <!-- /Contact Banner  -->
+
+    <!-- Footer  -->
+    <footer>
+      <div class="footer-1">
+        <a href="" class="logo">
+          <h3>Trendora</h3>
+        </a>
+        <p>
+          We have clothes that suits your style and which you’re proud to wear.
+          From women to men.
+        </p>
+        <div class="footer-media-links">
+          <a href="https://wa.me/212635303129">
+            <button>
+              <i class="fa-brands fa-whatsapp"></i>
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/in/younes-amazzal-3152042b0/">
+            <button>
+              <i class="fa-brands fa-linkedin-in"></i>
+            </button>
+          </a>
+          <a href="https://www.instagram.com/amzprod2">
+            <button>
+              <i class="fa-brands fa-instagram"></i>
+            </button>
+          </a>
+          <a href="https://github.com/YounesAmazzalOriginal">
+            <button>
+              <i class="fa-brands fa-github"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+      <ul>
+        <h5>company</h5>
+        <li title="about"><a href="">about</a></li>
+        <li title="features"><a href="">features</a></li>
+        <li title="works"><a href="">works</a></li>
+        <li title="career"><a href="">career</a></li>
+      </ul>
+      <ul>
+        <h5>help</h5>
+        <li title="customer"><a href="">customer support</a></li>
+        <li title="delivery details"><a href="">delivery details</a></li>
+        <li title="terms & conditions"><a href="">terms & conditions</a></li>
+        <li title="privacy policy"><a href="">privacy policy</a></li>
+      </ul>
+      <ul>
+        <h5>faq</h5>
+        <li title="account"><a href="">account</a></li>
+        <li title="manage deliveries"><a href="">manage deliveries</a></li>
+        <li title="orders"><a href="">orders</a></li>
+        <li title="payments"><a href="">payments</a></li>
+      </ul>
+      <ul>
+        <h5>resources</h5>
+        <li title="free eBook"><a href="">free eBook</a></li>
+        <li title="development tutorial">
+          <a href="">development tutorial</a>
+        </li>
+        <li title="how to - blog"><a href="">how to - blog</a></li>
+        <li title="youtube playlist"><a href="">youtube playlist</a></li>
+      </ul>
+    </footer>
+    <div class="under-footer">
+      <p>Website Created By Younes AMAZZAL</p>
+      <div class="payment-icons">
+        <button title="Visa">
+          <img src="/Assets/Images/Visa.png" alt="" />
+        </button>
+        <button title="Master Card">
+          <img src="/Assets/Images/Master-card.png" alt="" />
+        </button>
+        <button title="Paypal">
+          <img src="/Assets/Images/Paypal.png" alt="" />
+        </button>
+        <button title="Apple Pay">
+          <img src="/Assets/Images/Apple-pay.png" alt="" />
+        </button>
+        <button title="Google Pay">
+          <img src="/Assets/Images/Google-Pay.png" alt="" />
+        </button>
+      </div>
+    </div>
+    <!-- /Footer  -->
+  </body>
+</html>
