@@ -369,8 +369,8 @@
   border-radius: 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 25px;
+  justify-content: space-between;
+  padding-inline: 25px;
   width: 140px;
   padding-block: 9px;
 }

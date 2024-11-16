@@ -176,33 +176,7 @@ function MinusProduct() {
 // /Number Quantity
 
 // CheckOut
-function AddToCart(target) {
-  const Container =
-    target.parentElement.parentElement.parentElement.parentElement;
-
-  const ProductDetails_Image = Container.querySelector(
-    ".product-information-main-image img"
-  ).src;
-  const ProductDetails_Title = Container.querySelector(
-    ".product-information-texts-container h2"
-  ).textContent;
-  const ProductDetails_CurrentPrice = Container.querySelector(
-    ".product-current-price"
-  ).textContent;
-
-  const newProduct = {
-    image: ProductDetails_Image,
-    title: ProductDetails_Title,
-    price: ProductDetails_CurrentPrice,
-    number: productNumber,
-  };
-
-  const currentCart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  currentCart.push(newProduct);
-
-  localStorage.setItem("cart", JSON.stringify(currentCart));
-
-  window.location.href = "/Html-Files/Cart-Page.html";
-}
+// function AddToCart(target) {
+//   window.location.href = "/Html-Files/Cart-Page.html";
+// }
 // /CheckOut
