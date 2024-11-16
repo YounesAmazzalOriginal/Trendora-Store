@@ -8,7 +8,7 @@
     <script src="/Javascript-Files/Shared-Styles.js"></script>
 
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 
     <!-- Font Cdn -->
     <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
@@ -51,6 +51,44 @@
         </div>
       </ul>
     </nav>
+    <div id="mobile_NavBar">
+      <div class="mobile-navbar-visible-side">
+        <div class="mobile-navbar-left-side">
+          <button class="open-mobile-navbar" onclick="Open_Mobile_Navbar()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="/Html-Files/index.html" class="logo">
+            <!-- <h3>Trendora</h3> -->
+            <img src="/Assets/Images/TRENDORA-black-logo.png" alt="" />
+          </a>
+        </div>
+        <div class="mobile-navbar-right-side">
+          <button>
+            <i class="lni lni-search-1"></i>
+          </button>
+          <button>
+            <i class="lni lni-cart-2"></i>
+          </button>
+          <button>
+            <i class="lni lni-user-4"></i>
+          </button>
+        </div>
+      </div>
+      <ul>
+        <div class="nav-search-container">
+          <i class="lni lni-search-1"></i>
+          <input type="text" placeholder="Seach for products..." />
+        </div>
+        <a href=""><li>home</li></a>
+        <a href=""><li>category</li></a>
+        <a href=""><li>Page 1</li></a>
+        <a href=""><li>Page 2</li></a>
+        <a href=""><li>Page 3</li></a>
+        <button class="close-mobile-navbar" onclick="Close_Mobile_Navbar()">
+          <i class="lni lni-xmark"></i>
+        </button>
+      </ul>
+    </div>
     <!--/ Nav -->
 
     <!-- Header -->
@@ -152,7 +190,7 @@
             </div>
           </div>
         </a>
-        <a onclick="ProductDetails(this)">
+        <a onclick="ProductDetails(this)" id="hidden">
           <div class="single-product">
             <div class="product-image">
               <img src="/Assets/Images/pants-image-2-jean.png" alt="" />
@@ -180,7 +218,7 @@
             </div>
           </div>
         </a>
-        <a onclick="ProductDetails(this)">
+        <a onclick="ProductDetails(this)" id="hidden">
           <div class="single-product">
             <div class="product-image">
               <img src="/Assets/Images/plaid-shirt-1.png" alt="" />
@@ -208,7 +246,7 @@
             </div>
           </div>
         </a>
-        <a onclick="ProductDetails(this)">
+        <a onclick="ProductDetails(this)" id="hidden">
           <div class="single-product">
             <div class="product-image">
               <img src="/Assets/Images/orange-tshirt-2.png" alt="" />
@@ -242,7 +280,7 @@
     <!-- /Product 1 -->
 
     <!-- To Selling Product -->
-    <div class="product-content">
+    <div class="product-content" id="hidden">
       <h2>top seller</h2>
       <div class="product-container">
         <a
@@ -378,7 +416,7 @@
     <!-- /To Selling Product -->
 
     <!-- Browse By Dress Style  -->
-    <div class="clothes-type-container">
+    <div class="clothes-type-container" id="hidden">
       <h2>browse by dress style</h2>
       <div class="browse-img-container">
         <div class="browse-img">
@@ -402,7 +440,7 @@
     <!-- /Browse By Dress Style  -->
 
     <!-- Customers Reviews  -->
-    <div class="customers-reviews-parts-container">
+    <div class="customers-reviews-parts-container" id="hidden">
       <div class="customers-reviews-part1">
         <h2>our happy customers</h2>
         <div class="customers-reviews-arrow-container">
@@ -494,7 +532,7 @@
     <!-- /Customers Reviews  -->
 
     <!-- Contact Banner  -->
-    <div class="contact-banner">
+    <div class="contact-banner" id="hidden">
       <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
       <div class="contact-banner-inputs">
         <div class="input-container">
@@ -507,7 +545,7 @@
     <!-- /Contact Banner  -->
 
     <!-- Footer  -->
-    <footer>
+    <footer id="hidden">
       <div class="footer-1">
         <a href="" class="logo">
           <h3>Trendora</h3>
@@ -570,7 +608,7 @@
         <li title="youtube playlist"><a href="">youtube playlist</a></li>
       </ul>
     </footer>
-    <div class="under-footer">
+    <div class="under-footer" id="hidden">
       <p>Website Created By Younes AMAZZAL</p>
       <div class="payment-icons">
         <button title="Visa">

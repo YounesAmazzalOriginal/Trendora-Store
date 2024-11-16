@@ -63,3 +63,19 @@ function Search() {
 // /Search for product
 
 // localStorage.clear();
+
+// Open-Close Mobile NavBar
+function Open_Mobile_Navbar() {
+  const MobileNavBar = document.querySelector("#mobile_NavBar ul");
+
+  MobileNavBar.classList.toggle("active-mobile-navbar");
+}
+function Close_Mobile_Navbar() {
+  const MobileNavBar = document.querySelector("#mobile_NavBar ul");
+  if (MobileNavBar.classList.contains("active-mobile-navbar")) {
+    MobileNavBar.classList.remove("active-mobile-navbar");
+  } else {
+    MobileNavBar.classList.add("active-mobile-navbar");
+  }
+}
+// /Open-Close Mobile NavBar
