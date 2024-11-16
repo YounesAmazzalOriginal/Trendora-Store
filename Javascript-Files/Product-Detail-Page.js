@@ -169,25 +169,26 @@ function MinusProduct() {
 
 // CheckOut
 function AddToCart(target) {
-  console.log(target.parentElement.parentElement.parentElement.parentElement);
-
-  const ProductContainer =
+  const Container =
     target.parentElement.parentElement.parentElement.parentElement;
 
-  const ProductImage = ProductContainer.querySelector(
+  const ProductDetails_Image = Container.querySelector(
     ".product-information-main-image img"
   ).src;
-
-  const ProductText = ProductContainer.querySelector(
+  const ProductDetails_Title = Container.querySelector(
     ".product-information-texts-container h2"
-  ).innerHTML;
-  const ProductCount = ProductContainer.querySelector(
-    ".product-adding-counter"
-  ).innerHTML;
+  ).textContent;
+  const ProductDetails_CurrentPrice = Container.querySelector(
+    ".product-current-price"
+  ).textContent;
 
-  localStorage.setItem("ProductImage", ProductImage);
-  localStorage.setItem("ProductText", ProductText);
-  localStorage.setItem("ProductCount", ProductCount);
+  localStorage.setItem("ProductDetails_Image", ProductDetails_Image);
+  localStorage.setItem("ProductDetails_Title", ProductDetails_Title);
+  localStorage.setItem(
+    "ProductDetails_CurrentPrice",
+    ProductDetails_CurrentPrice
+  );
+  localStorage.setItem("productNumber", productNumber);
 
   window.location.href = "/Html-Files/Cart-Page.html";
 }
