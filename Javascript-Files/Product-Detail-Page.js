@@ -146,22 +146,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Number Quantity
 let productNumber = 0;
+
 function PlusProduct() {
   productNumber++;
   const Product_Adding_Counter = document.querySelector(
     ".product-adding-counter"
   );
   Product_Adding_Counter.innerHTML = productNumber;
+
+  const Add_Product_To_Cart = document.querySelector(".add-product-to-cart");
+  Add_Product_To_Cart.disabled = false;
 }
 function MinusProduct() {
   const Product_Adding_Counter = document.querySelector(
     ".product-adding-counter"
   );
+  const Add_Product_To_Cart = document.querySelector(".add-product-to-cart");
+
   if (productNumber > 0) {
     productNumber--;
+    Add_Product_To_Cart.disabled = false;
   }
   if (productNumber == 0) {
     productNumber = 0;
+    Add_Product_To_Cart.disabled = true;
   }
   Product_Adding_Counter.innerHTML = productNumber;
 }
@@ -182,13 +190,18 @@ function AddToCart(target) {
     ".product-current-price"
   ).textContent;
 
-  localStorage.setItem("ProductDetails_Image", ProductDetails_Image);
-  localStorage.setItem("ProductDetails_Title", ProductDetails_Title);
-  localStorage.setItem(
-    "ProductDetails_CurrentPrice",
-    ProductDetails_CurrentPrice
-  );
-  localStorage.setItem("productNumber", productNumber);
+  const newProduct = {
+    image: ProductDetails_Image,
+    title: ProductDetails_Title,
+    price: ProductDetails_CurrentPrice,
+    number: productNumber,
+  };
+
+  const currentCart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  currentCart.push(newProduct);
+
+  localStorage.setItem("cart", JSON.stringify(currentCart));
 
   window.location.href = "/Html-Files/Cart-Page.html";
 }

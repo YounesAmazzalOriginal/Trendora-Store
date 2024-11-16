@@ -57,38 +57,6 @@
       <!-- Product-Carts-Container  -->
       <div class="product-cart-container">
         <!-- Product Checkout Area -->
-        <div class="single-product">
-          <div class="image-area">
-            <img src="/Assets/Images/white-tshirt-2.png" alt="" />
-          </div>
-          <div class="text-area">
-            <h4>gradient graphic t-shirt</h4>
-            <div class="product-info-container">
-              <span
-                >size :
-                <p>large</p></span
-              >
-              <span
-                >color :
-                <p>white</p></span
-              >
-            </div>
-            <h3 class="product-current-price">145$</h3>
-            <button class="delete-product" onclick="delete_Product(this)">
-              <i class="fa-solid fa-trash-can"></i>
-            </button>
-            <!-- <div class="product-count-container">
-              <button>
-                <i class="fa-solid fa-minus"></i>
-              </button>
-              <span class="product-counter-span">1</span>
-              <button>
-                <i class="fa-solid fa-plus"></i>
-              </button>
-            </div> -->
-          </div>
-          <h5 class="product-checkout-number">0</h5>
-        </div>
       </div>
       <!-- /Product-Carts-Container  -->
       <!-- ==== -->
@@ -97,20 +65,25 @@
         <h3>order summary</h3>
         <div class="checkout-property-container subtotal">
           <p>subtotal</p>
-          <h4>$565</h4>
+          <!-- <h4>$565</h4> -->
         </div>
-        <div class="checkout-property-container discount">
+        <!-- <div class="checkout-property-container discount">
           <p>discount (-20%)</p>
           <h4>-$113</h4>
+        </div> -->
+        <div class="checkout-property-container discount">
+          <p>total Quantity :</p>
+          <h4 class="total-quantity">-</h4>
         </div>
         <div class="checkout-property-container discount-fee">
           <p>delivery fee</p>
-          <h4>$15</h4>
+          <!-- <h4>$15</h4> -->
         </div>
         <div id="checkout-end-part">
           <div class="checkout-property-container total">
             <p>total</p>
-            <h3>$467</h3>
+            <h3 class="total-Price"></h3>
+            <!-- <h3 class="total-Price">$467</h3> -->
           </div>
           <div class="checkout-input-container">
             <div class="input-checkout-container">

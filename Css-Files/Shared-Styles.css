@@ -371,3 +371,13 @@ footer ul li {
   border-radius: 100px;
 }
 /* /Scroll Customize */
+
+/* Button Disabled */
+button:disabled {
+  opacity: 50%;
+  cursor: no-drop;
+}
+.button-1:hover:disabled {
+  filter: invert(0);
+}
+/* /Button Disabled */
