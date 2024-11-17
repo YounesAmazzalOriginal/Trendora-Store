@@ -370,3 +370,10 @@
   height: 40px;
 }
 /* /Content */
+
+
+/* Media Query */
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+  
+}
+/* /Media Query */

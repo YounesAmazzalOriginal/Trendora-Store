@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <title>Trendora - Product Detail Page dynamic</title>
     <link rel="stylesheet" href="/Css-Files/Product-Detail-Page.css" />
     <link rel="stylesheet" href="/Css-Files/Shared-Styles.css" />
@@ -145,8 +145,9 @@
           </div>
           <!-- Product Paragraph -->
           <p class="product-descreption">
-            <!-- This graphic t-shirt which is perfect for any occasion. Crafted from
-            a soft and breathable fabric, it offers superior comfort and style. -->
+            This graphic t-shirt which is perfect for any occasion. Crafted from
+            a soft and breathable fabric, it offers superior comfort and style.
+            <!--  -->
             Product Descreption
           </p>
 
@@ -245,7 +246,7 @@
     <!-- /Product Informations Detail -->
 
     <!-- Product Details Controll -->
-    <div class="product-about-container">
+    <div class="product-about-container" id="hidden">
       <!-- <button onclick="ProductDetails_Button()">Product Details</button> -->
       <button
         onclick="ProductReviews_Button()"
@@ -258,7 +259,7 @@
     <!-- /Product Details Controll -->
 
     <!-- Product Details -->
-    <div class="product-rating-and-reviews-container">
+    <div class="product-rating-and-reviews-container" id="hidden">
       <div class="title">
         <h3>
           all reviews
@@ -488,7 +489,7 @@
     <!-- /Product Details -->
 
     <!-- Product May Also Like -->
-    <div class="product-might-like">
+    <div class="product-might-like" id="hidden">
       <h2>you might also like</h2>
       <div class="product-container">
         <a onclick="ProductDetails(this)">
@@ -604,7 +605,7 @@
     <!-- /Product May Also Like -->
 
     <!-- Contact Banner  -->
-    <div class="contact-banner">
+    <div class="contact-banner" id="hidden">
       <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
       <div class="contact-banner-inputs">
         <div class="input-container">
@@ -617,7 +618,7 @@
     <!-- /Contact Banner  -->
 
     <!-- Footer  -->
-    <footer>
+    <footer id="hidden">
       <div class="footer-1">
         <a href="" class="logo">
           <h3>Trendora</h3>
@@ -680,7 +681,7 @@
         <li title="youtube playlist"><a href="">youtube playlist</a></li>
       </ul>
     </footer>
-    <div class="under-footer">
+    <div class="under-footer" id="hidden">
       <p>Website Created By Younes AMAZZAL</p>
       <div class="payment-icons">
         <button title="Visa">

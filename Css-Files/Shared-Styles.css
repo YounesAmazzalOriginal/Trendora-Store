@@ -403,7 +403,9 @@ button:disabled {
     justify-content: center;
     background-color: white;
     padding: 30px 35px;
+    /*  */
     width: 100%;
+    /*  */
     position: sticky;
     top: 0px;
     z-index: 100;
