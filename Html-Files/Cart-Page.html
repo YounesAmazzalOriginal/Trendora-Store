@@ -44,12 +44,50 @@
           <button>
             <i class="lni lni-cart-2"></i>
           </button>
-          <button>
+          <!-- <button>
             <i class="lni lni-user-4"></i>
-          </button>
+          </button> -->
         </div>
       </ul>
     </nav>
+    <div id="mobile_NavBar">
+      <div class="mobile-navbar-visible-side">
+        <div class="mobile-navbar-left-side">
+          <button class="open-mobile-navbar" onclick="Open_Mobile_Navbar()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="/Html-Files/index.html" class="logo">
+            <!-- <h3>Trendora</h3> -->
+            <img src="/Assets/Images/TRENDORA-black-logo.png" alt="" />
+          </a>
+        </div>
+        <div class="mobile-navbar-right-side">
+          <button>
+            <i class="lni lni-search-1"></i>
+          </button>
+          <button>
+            <i class="lni lni-cart-2"></i>
+          </button>
+          <!-- <button>
+            <i class="lni lni-user-4"></i>
+          </button> -->
+        </div>
+      </div>
+      <ul>
+        <div class="nav-search-container">
+          <i class="lni lni-search-1"></i>
+          <input type="text" placeholder="Seach for products..." />
+        </div>
+        <a href=""><li>home</li></a>
+        <a href=""><li>category</li></a>
+        <a href=""><li>Page 1</li></a>
+        <a href=""><li>Page 2</li></a>
+        <a href=""><li>Page 3</li></a>
+        <button class="close-mobile-navbar" onclick="Close_Mobile_Navbar()">
+          <i class="lni lni-xmark"></i>
+        </button>
+      </ul>
+    </div>
     <!--/ Nav -->
 
     <h2 class="cart-title">your cart</h2>

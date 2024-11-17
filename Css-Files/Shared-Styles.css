@@ -390,6 +390,9 @@ button:disabled {
 
 /* Shared Media Query */
 @media screen and (min-width: 480px) and (max-width: 1024px) {
+  h2 {
+    font-size: 5rem !important;
+  }
   /* Mobile Nav */
   nav {
     display: none !important;
@@ -401,6 +404,9 @@ button:disabled {
     background-color: white;
     padding: 30px 35px;
     width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
   }
   #mobile_NavBar .mobile-navbar-visible-side {
     display: flex;
@@ -452,7 +458,10 @@ button:disabled {
     /* Remove This To Open Mobile NavBar */
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0.2s, opacity 0.2s;
+    transition: visibility 0.7s, opacity 0.2s;
+  }
+  #mobile_NavBar ul a img {
+    margin-bottom: 60px;
   }
   #mobile_NavBar ul.active-mobile-navbar {
     opacity: 1;
@@ -495,6 +504,105 @@ button:disabled {
     font-size: 2.5rem;
   }
   /* /Mobile Nav */
+
+  /* Mobile Contact Banner */
+  .contact-banner {
+    display: flex;
+    flex-direction: column;
+    width: 93%;
+    gap: 40px;
+  }
+  .contact-banner h2 {
+    width: 100%;
+    font-size: 4rem !important;
+    line-height: 85px;
+  }
+  .contact-banner .contact-banner-inputs {
+    gap: 25px;
+  }
+  .contact-banner .contact-banner-inputs .input-container {
+    width: 800px;
+    height: 100px;
+  }
+  .contact-banner .contact-banner-inputs .input-container input {
+    width: 80%;
+    font-size: 2.5rem;
+    margin-left: 10px;
+  }
+  .contact-banner .contact-banner-inputs .input-container i {
+    font-size: 2.5rem;
+    margin-left: 20px;
+  }
+  .contact-banner .contact-banner-inputs button {
+    font-size: 2.5rem;
+    width: 800px;
+    height: 100px;
+  }
+  /* /Mobile Contact Banner */
+
+  /* Mobile Footer */
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .footer-1 {
+    width: 100%;
+    padding: 50px;
+  }
+  footer .footer-1 a h3 {
+    font-size: 4rem;
+  }
+  footer .footer-1 p {
+    font-size: 2rem;
+    margin-left: 20px;
+  }
+  footer .footer-1 .footer-media-links a button {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+  }
+  footer ul {
+    gap: 30px;
+    width: calc(100% / 3);
+    margin: 20px;
+  }
+  footer ul li {
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  footer ul h5 {
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+  }
+  footer ul li {
+    font-size: 2.5rem;
+  }
+
+  .under-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-bottom: 00px;
+    padding-block: 50px 150px;
+    width: 100%;
+    background-color: var(--input-bg);
+  }
+  .under-footer p {
+    font-size: 2.2rem;
+  }
+  .under-footer .payment-icons {
+    gap: 20px;
+  }
+  .under-footer .payment-icons button {
+    width: 110px;
+    height: 60px;
+    background-color: white;
+  }
+  .under-footer .payment-icons button img {
+    width: 65px;
+  }
+  /* /Mobile Footer */
 }
 /* /Shared Media Query */
 
