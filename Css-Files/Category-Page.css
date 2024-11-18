@@ -405,10 +405,12 @@
     bottom: 0px !important;
     z-index: 110;
     transition: visibility 0.4s, opacity 0.3s;
-  }
-  .left-nav-category.openLeftNavResponsive {
     visibility: hidden;
     opacity: 0;
+  }
+  .left-nav-category.openLeftNavResponsive {
+    visibility: visible;
+    opacity: 1;
   }
   .left-nav-category .category-title {
     padding-inline: 30px;

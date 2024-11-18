@@ -342,11 +342,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // Open & Close LeftNav Responsive
 function OpneLeftNavButtonResponsive() {
   const leftNav = document.querySelector(".left-nav-category");
-  leftNav.classList.remove("openLeftNavResponsive");
+  leftNav.classList.add("openLeftNavResponsive");
 }
 function CloseLeftNavButtonResponsive() {
   const leftNav = document.querySelector(".left-nav-category");
-  leftNav.classList.add("openLeftNavResponsive");
+  leftNav.classList.remove("openLeftNavResponsive");
 }
 // /Open & Close LeftNav Responsive
 

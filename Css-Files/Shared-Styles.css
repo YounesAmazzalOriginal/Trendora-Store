@@ -520,6 +520,7 @@ button:disabled {
     flex-direction: column;
     width: 93%;
     gap: 40px;
+    padding-block: 40px;
   }
   .contact-banner h2 {
     width: 100%;
@@ -598,7 +599,7 @@ button:disabled {
     background-color: var(--input-bg);
   }
   .under-footer p {
-    font-size: 1rem;
+    font-size: 2rem;
   }
   .under-footer .payment-icons {
     gap: 20px;
