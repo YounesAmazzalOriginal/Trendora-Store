@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <title>Trendora - Category Page</title>
     <link rel="stylesheet" href="/Css-Files/Category-Page.css" />
     <link rel="stylesheet" href="/Css-Files/Shared-Styles.css" />
@@ -90,19 +90,25 @@
     </div>
     <!--/ Nav -->
 
-    <div id="content-Id">
+    <div id="content-Id" class="ilakntui">
       <!-- Left Nav Category -->
       <div class="left-nav-category">
         <div class="category-title left-nav-items">
           <h4>Filters</h4>
-          <button>
+          <button class="filter-icon-leftnav">
             <i class="fa-solid fa-filter"></i>
           </button>
+          <button
+            class="close-leftnav"
+            onclick="CloseLeftNavButtonResponsive()"
+          >
+            <i class="fa-solid fa-x"></i>
+          </button>
         </div>
-        <ul class="left-nav-items">
+        <ul class="left-nav-items leftnav-ul-item">
           <a
             data-product-type="t-shirt"
-            class="product-type-link"
+            class="product-type-link left-nav-choice-for-responsive"
             onclick="productTypeLink(this)"
           >
             <li>t-shirt</li>
@@ -110,7 +116,7 @@
           </a>
           <a
             data-product-type="shorts"
-            class="product-type-link"
+            class="product-type-link left-nav-choice-for-responsive"
             onclick="productTypeLink(this)"
           >
             <li>shorts</li>
@@ -118,7 +124,7 @@
           </a>
           <a
             data-product-type="shirts"
-            class="product-type-link"
+            class="product-type-link left-nav-choice-for-responsive"
             onclick="productTypeLink(this)"
           >
             <li>shirts</li>
@@ -126,7 +132,7 @@
           </a>
           <a
             data-product-type="hoodie"
-            class="product-type-link"
+            class="product-type-link left-nav-choice-for-responsive"
             onclick="productTypeLink(this)"
           >
             <li>hoodie</li>
@@ -134,7 +140,7 @@
           </a>
           <a
             data-product-type="jeans"
-            class="product-type-link"
+            class="product-type-link left-nav-choice-for-responsive"
             onclick="productTypeLink(this)"
           >
             <li>jeans</li>
@@ -169,7 +175,10 @@
                 placeholder="Max"
                 maxlength="3"
               />
-              <button class="button-1 apply-price" onclick="ApplyPrice()">
+              <button
+                class="button-1 apply-price left-nav-choice-for-responsive"
+                onclick="ApplyPrice()"
+              >
                 Apply
               </button>
             </div>
@@ -188,60 +197,70 @@
               type="radio"
               data-productColor="green"
               name="select-color"
+              class="left-nav-choice-for-responsive"
             />
             <input
               oninput="RadioColorFilter(this)"
               type="radio"
               data-productColor="red"
               name="select-color"
+              class="left-nav-choice-for-responsive"
             />
             <input
               oninput="RadioColorFilter(this)"
               type="radio"
               data-productColor="yellow"
               name="select-color"
+              class="left-nav-choice-for-responsive"
             />
             <input
               oninput="RadioColorFilter(this)"
               type="radio"
               data-productColor="orange"
               name="select-color"
+              class="left-nav-choice-for-responsive"
             />
             <input
               oninput="RadioColorFilter(this)"
               type="radio"
               data-productColor="cyan"
               name="select-color"
+              class="left-nav-choice-for-responsive"
             />
             <input
               oninput="RadioColorFilter(this)"
               type="radio"
               data-productColor="blue"
               name="select-color"
+              class="left-nav-choice-for-responsive"
             />
             <input
               oninput="RadioColorFilter(this)"
               type="radio"
               data-productColor="purple"
               name="select-color"
+              class="left-nav-choice-for-responsive"
             />
             <input
               oninput="RadioColorFilter(this)"
               type="radio"
               data-productColor="deeppink"
               name="select-color"
+              class="left-nav-choice-for-responsive"
             />
             <input
               oninput="RadioColorFilter(this)"
               type="radio"
               data-productColor="white"
               name="select-color"
+              class="left-nav-choice-for-responsive"
             />
             <input
               oninput="RadioColorFilter(this)"
               type="radio"
               data-productColor="black"
               name="select-color"
+              class="left-nav-choice-for-responsive"
             />
           </div>
         </div>
@@ -253,34 +272,74 @@
             </button>
           </div>
           <div class="category-size-buttons-container">
-            <button onclick="SizeFilter(this)" data-product-size="xx-small">
+            <button
+              onclick="SizeFilter(this)"
+              data-product-size="xx-small"
+              class="left-nav-choice-for-responsive"
+            >
               xx-small
             </button>
-            <button onclick="SizeFilter(this)" data-product-size="s-small">
+            <button
+              onclick="SizeFilter(this)"
+              data-product-size="s-small"
+              class="left-nav-choice-for-responsive"
+            >
               s-small
             </button>
-            <button onclick="SizeFilter(this)" data-product-size="small">
+            <button
+              onclick="SizeFilter(this)"
+              data-product-size="small"
+              class="left-nav-choice-for-responsive"
+            >
               small
             </button>
-            <button onclick="SizeFilter(this)" data-product-size="medium">
+            <button
+              onclick="SizeFilter(this)"
+              data-product-size="medium"
+              class="left-nav-choice-for-responsive"
+            >
               medium
             </button>
-            <button onclick="SizeFilter(this)" data-product-size="large">
+            <button
+              onclick="SizeFilter(this)"
+              data-product-size="large"
+              class="left-nav-choice-for-responsive"
+            >
               large
             </button>
-            <button onclick="SizeFilter(this)" data-product-size="x-large">
+            <button
+              onclick="SizeFilter(this)"
+              data-product-size="x-large"
+              class="left-nav-choice-for-responsive"
+            >
               x-large
             </button>
-            <button onclick="SizeFilter(this)" data-product-size="xx-large">
+            <button
+              onclick="SizeFilter(this)"
+              data-product-size="xx-large"
+              class="left-nav-choice-for-responsive"
+            >
               xx-large
             </button>
-            <button onclick="SizeFilter(this)" data-product-size="3x-large">
+            <button
+              onclick="SizeFilter(this)"
+              data-product-size="3x-large"
+              class="left-nav-choice-for-responsive"
+            >
               3x-large
             </button>
-            <button onclick="SizeFilter(this)" data-product-size="4x-large">
+            <button
+              onclick="SizeFilter(this)"
+              data-product-size="4x-large"
+              class="left-nav-choice-for-responsive"
+            >
               4x-large
             </button>
-            <button onclick="SizeFilter_All(this)" data-product-size="all">
+            <button
+              onclick="SizeFilter_All(this)"
+              data-product-size="all"
+              class="left-nav-choice-for-responsive"
+            >
               all
             </button>
           </div>
@@ -292,10 +351,10 @@
               <i class="fa-solid fa-angle-right"></i>
             </button>
           </div>
-          <ul>
+          <ul class="leftnav-ul-item">
             <a
               data-product-dressStyle="casual"
-              class="product-dressStyle-link"
+              class="product-dressStyle-link left-nav-choice-for-responsive"
               onclick="productDressStyleLink(this)"
             >
               <li>casual</li>
@@ -303,7 +362,7 @@
             </a>
             <a
               data-product-dressStyle="formal"
-              class="product-dressStyle-link"
+              class="product-dressStyle-link left-nav-choice-for-responsive"
               onclick="productDressStyleLink(this)"
             >
               <li>formal</li>
@@ -311,7 +370,7 @@
             </a>
             <a
               data-product-dressStyle="party"
-              class="product-dressStyle-link"
+              class="product-dressStyle-link left-nav-choice-for-responsive"
               onclick="productDressStyleLink(this)"
             >
               <li>party</li>
@@ -319,7 +378,7 @@
             </a>
             <a
               data-product-dressStyle="gym"
-              class="product-dressStyle-link"
+              class="product-dressStyle-link left-nav-choice-for-responsive"
               onclick="productDressStyleLink(this)"
             >
               <li>gym</li>
@@ -327,7 +386,7 @@
             </a>
             <a
               data-product-dressStyle="all"
-              class="product-dressStyle-link"
+              class="product-dressStyle-link left-nav-choice-for-responsive"
               onclick="productDressStyleLink_All(this)"
             >
               <li>all</li>
@@ -362,6 +421,12 @@
               <option value="5.0">5.0</option>
             </select>
           </div>
+          <button
+            class="reponsive-show-and-hide-leftnav"
+            onclick="OpneLeftNavButtonResponsive()"
+          >
+            <i class="fa-solid fa-filter"></i>
+          </button>
         </div>
 
         <h1 class="results-heading">"<span>0</span>" of resault</h1>
@@ -719,7 +784,7 @@
     </div>
 
     <!-- Contact Banner  -->
-    <div class="contact-banner">
+    <div class="contact-banner" id="hidden">
       <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
       <div class="contact-banner-inputs">
         <div class="input-container">
@@ -732,7 +797,7 @@
     <!-- /Contact Banner  -->
 
     <!-- Footer  -->
-    <footer>
+    <footer id="hidden">
       <div class="footer-1">
         <a href="" class="logo">
           <h3>Trendora</h3>
@@ -795,7 +860,7 @@
         <li title="youtube playlist"><a href="">youtube playlist</a></li>
       </ul>
     </footer>
-    <div class="under-footer">
+    <div class="under-footer" id="hidden">
       <p>Website Created By Younes AMAZZAL</p>
       <div class="payment-icons">
         <button title="Visa">

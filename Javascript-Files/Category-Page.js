@@ -338,3 +338,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // /Product Option Filtring
+
+// Open & Close LeftNav Responsive
+function OpneLeftNavButtonResponsive() {
+  const leftNav = document.querySelector(".left-nav-category");
+  leftNav.classList.remove("openLeftNavResponsive");
+}
+function CloseLeftNavButtonResponsive() {
+  const leftNav = document.querySelector(".left-nav-category");
+  leftNav.classList.add("openLeftNavResponsive");
+}
+// /Open & Close LeftNav Responsive
+
+// Close Left Nav Onclick On Choice
+
+// /Close Left Nav Onclick On Choice

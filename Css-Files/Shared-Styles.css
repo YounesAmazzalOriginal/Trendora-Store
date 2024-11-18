@@ -386,6 +386,12 @@ button:disabled {
 #mobile_NavBar {
   display: none;
 }
+.reponsive-show-and-hide-leftnav {
+  display: none;
+}
+.close-leftnav {
+  display: none;
+}
 /* /Elements Not Showing On Desktop */
 
 /* Shared Media Query */
