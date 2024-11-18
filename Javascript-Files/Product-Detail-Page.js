@@ -39,18 +39,20 @@ function ProductReviews_Button() {
 function OpenFaq(target) {
   const FAQ_Answer = target.querySelector(".answer-container");
 
-  if (FAQ_Answer.style.height === "60px") {
-    FAQ_Answer.style.height = "0";
-    target.querySelector("i").classList.remove("fa-solid");
-    target.querySelector("i").classList.add("fa-regular");
-  }
-  //
-  else {
-    FAQ_Answer.style.height = "60px";
-    target.querySelector("i").classList.add("fa-solid");
-    target.querySelector("i").classList.remove("fa-regular");
+  // Toggle the 'openAnswer' class for smooth CSS transitions
+  FAQ_Answer.classList.toggle("openAnswer");
+
+  if (FAQ_Answer.classList.contains("openAnswer")) {
+    // Set the height and padding to display the answer
+    FAQ_Answer.style.height = `${FAQ_Answer.scrollHeight}px`;
+    FAQ_Answer.style.paddingBlock = `${FAQ_Answer.scrollHeight * 1.2}px`;
+  } else {
+    // Reset the height and padding to hide the answer
+    FAQ_Answer.style.height = "0px";
+    FAQ_Answer.style.paddingBlock = "0px";
   }
 }
+
 // /FAQ
 
 // Reviews Comments
