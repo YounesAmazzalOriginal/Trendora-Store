@@ -8,7 +8,7 @@
     <script src="/Javascript-Files/Shared-Styles.js"></script>
 
     <meta charset="UTF-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Font Cdn -->
     <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
@@ -63,31 +63,35 @@
           </a>
         </div>
         <div class="mobile-navbar-right-side">
-          <button>
+          <!-- <button class="mobilenav-search-icon">
             <i class="lni lni-search-1"></i>
-          </button>
+          </button> -->
           <button>
             <i class="lni lni-cart-2"></i>
           </button>
-          <!-- <button>
+          <button>
             <i class="lni lni-user-4"></i>
-          </button> -->
+          </button>
         </div>
       </div>
       <ul>
-        <a href="/Html-Files/index.html" class="logo">
-          <!-- <h3>Trendora</h3> -->
+        <!-- <a href="/Html-Files/index.html" class="logo">
           <img src="/Assets/Images/TRENDORA-black-logo.png" alt="" />
-        </a>
-        <div class="nav-search-container">
-          <i class="lni lni-search-1"></i>
-          <input type="text" placeholder="Seach for products..." />
-        </div>
-        <a href=""><li>home</li></a>
+        </a> -->
+        <a href="" class="active-mobilenav-link"><li>home</li></a>
         <a href=""><li>category</li></a>
         <a href=""><li>Page 1</li></a>
         <a href=""><li>Page 2</li></a>
         <a href=""><li>Page 3</li></a>
+        <div class="nav-search-container mobilenav-search-container">
+          <button class="search-mobile-input-search">
+            <i class="lni lni-search-1"></i>
+          </button>
+          <input type="text" placeholder="Seach for products..." />
+          <button class="field-mobile-input-search">
+            <i class="lni lni-xmark"></i>
+          </button>
+        </div>
         <button class="close-mobile-navbar" onclick="Close_Mobile_Navbar()">
           <i class="lni lni-xmark"></i>
         </button>
@@ -99,7 +103,7 @@
     <div class="header-container">
       <div class="header-text-area">
         <h1>FIND CLOTHES THAT MATCHES YOU STYLE</h1>
-        <p>
+        <p class="header-p">
           Browse through our diverse range of meticulously crafted garments,
           designed to bring out your individuality and cater to your sense of
           style.
@@ -549,7 +553,7 @@
     <!-- /Contact Banner  -->
 
     <!-- Footer  -->
-    <footer>
+    <footer id="hidden">
       <div class="footer-1">
         <a href="" class="logo">
           <h3>Trendora</h3>
@@ -612,7 +616,7 @@
         <li title="youtube playlist"><a href="">youtube playlist</a></li>
       </ul>
     </footer>
-    <div class="under-footer">
+    <div class="under-footer" id="hidden">
       <p>Website Created By Younes AMAZZAL</p>
       <div class="payment-icons">
         <button title="Visa">

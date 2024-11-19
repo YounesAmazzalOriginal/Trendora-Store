@@ -389,236 +389,165 @@ button:disabled {
 .reponsive-show-and-hide-leftnav {
   display: none;
 }
-.close-leftnav {
+.close-mobile-navbar {
   display: none;
 }
 /* /Elements Not Showing On Desktop */
 
-/* Shared Media Query */
-@media screen and (min-width: 480px) and (max-width: 1024px) {
-  h2 {
-    font-size: 5rem !important;
-    white-space: wrap;
-  }
+/* /Shared Media Query */
+
+#hidden {
+  display: none;
+}
+
+@media screen and (min-width: 400px) and (max-width: 1024px) {
   /* Mobile Nav */
   nav {
     display: none !important;
   }
   #mobile_NavBar {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-    background-color: white;
-    padding: 30px 35px;
-    /*  */
+    display: block !important;
     width: 100%;
-    /*  */
-    position: sticky;
-    top: 0px;
-    z-index: 100;
   }
   #mobile_NavBar .mobile-navbar-visible-side {
+    background-color: white;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    gap: 100px;
-    /* gap: 100px; */
+    padding: 15px 20px;
   }
   #mobile_NavBar .mobile-navbar-visible-side .mobile-navbar-left-side {
     display: flex;
-    gap: 30px;
     align-items: center;
   }
-  #mobile_NavBar
-    .mobile-navbar-visible-side
-    .mobile-navbar-left-side
-    .open-mobile-navbar
-    i {
-    font-size: 3.5rem;
+  #mobile_NavBar .mobile-navbar-visible-side .mobile-navbar-left-side i {
+    font-size: 1.35rem;
   }
+  #mobile_NavBar .mobile-navbar-visible-side .mobile-navbar-left-side a img {
+    width: 150px;
+    margin-left: 10px;
+  }
+
   #mobile_NavBar .mobile-navbar-visible-side .mobile-navbar-right-side {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    gap: 10px;
   }
   #mobile_NavBar
     .mobile-navbar-visible-side
     .mobile-navbar-right-side
     button
     i {
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
-
   #mobile_NavBar ul {
-    font-family: var(--font-sat-M);
-    position: absolute;
-    background-color: var(--white-color);
-    width: 100%;
-    text-align: center;
-    text-transform: capitalize;
-    font-size: 3rem;
+    background-color: white;
+    padding-block: 20px 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: var(--font-sat-M);
     gap: 10px;
-    padding-block: 50px 0px;
+    z-index: 90;
+    position: fixed;
+    width: 100%;
 
-    /* Remove This To Open Mobile NavBar */
-    visibility: hidden;
+    /*  */
     opacity: 0;
-    transition: visibility 0.7s, opacity 0.2s;
+    visibility: hidden;
+    /* transition: all 0.5s; */
+    transition: visibility 0.3s, opacity 0.3s;
   }
-  #mobile_NavBar ul a img {
-    margin-bottom: 60px;
-  }
-  #mobile_NavBar ul.active-mobile-navbar {
+  #mobile_NavBar ul.close-mobilenav {
     opacity: 1;
     visibility: visible;
   }
 
-  #mobile_NavBar ul li {
-    border-radius: 100px;
-    width: 900px;
-    padding-block: 20px;
+  #mobile_NavBar ul a li {
+    font-size: 1.4rem;
+    text-transform: capitalize;
   }
-  #mobile_NavBar ul li:hover {
+  #mobile_NavBar ul a {
+    padding-block: 5px;
+    width: 100%;
+    text-align: center;
+  }
+  #mobile_NavBar ul a.active-mobilenav-link {
     background-color: black;
-    color: white;
-  }
-
-  #mobile_NavBar ul .nav-search-container {
-    background-color: var(--input-bg);
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0px;
-    width: 800px;
-    margin-bottom: 20px;
+    color: var(--input-bg);
+    transition: all 1s;
   }
   #mobile_NavBar ul .close-mobile-navbar {
-    font-size: 5.5rem;
+    display: block;
+    font-size: 2rem;
     margin-top: 10px;
+  }
+  #mobile_NavBar ul .nav-search-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 40px;
+    background-color: var(--input-bg);
+    border-radius: 100px;
+    overflow: hidden;
   }
   #mobile_NavBar ul .nav-search-container input {
     width: 90%;
-    font-size: 2.5rem;
+    height: 100%;
+    font-size: 1.2rem;
+    padding-right: 10px;
     background-color: transparent;
   }
-  #mobile_NavBar ul .nav-search-container i {
+  #mobile_NavBar ul .nav-search-container button {
     width: calc(100% - 90%);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 1.2rem;
+    height: 100%;
+    margin-left: 5px;
+  }
+  #mobile_NavBar ul .nav-search-container .field-mobile-input-search {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+  }
+  #mobile_NavBar ul .nav-search-container .field-mobile-input-search i {
+    font-size: 1.5rem;
+    margin-right: 10px;
   }
   /* /Mobile Nav */
 
-  /* Mobile Contact Banner */
+  /* /Contact Banner */
   .contact-banner {
     display: flex;
     flex-direction: column;
-    width: 93%;
-    gap: 40px;
-    padding-block: 40px;
+    gap: 10px;
+    width: 90%;
+    padding: 15px 5px;
   }
   .contact-banner h2 {
     width: 100%;
-    font-size: 4rem !important;
-    line-height: 85px;
+    padding: 0px;
+    width: 90%;
+    font-size: 1.8rem;
   }
   .contact-banner .contact-banner-inputs {
-    gap: 25px;
+    width: 100%;
+    padding: 20px;
   }
   .contact-banner .contact-banner-inputs .input-container {
-    width: 800px;
-    height: 100px;
+    width: 100%;
   }
   .contact-banner .contact-banner-inputs .input-container input {
-    width: 80%;
-    font-size: 2.5rem;
-    margin-left: 10px;
-  }
-  .contact-banner .contact-banner-inputs .input-container i {
-    font-size: 2.5rem;
-    margin-left: 20px;
+    font-size: 1rem;
   }
   .contact-banner .contact-banner-inputs button {
-    font-size: 2.5rem;
-    width: 800px;
-    height: 100px;
-  }
-  /* /Mobile Contact Banner */
-
-  /* Mobile Footer */
-  footer {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  footer .footer-1 {
+    font-size: 1rem;
     width: 100%;
-    padding: 50px;
   }
-  footer .footer-1 a h3 {
-    font-size: 4rem;
-  }
-  footer .footer-1 p {
-    font-size: 2rem;
-    margin-left: 20px;
-  }
-  footer .footer-1 .footer-media-links a button {
-    width: 80px;
-    height: 80px;
-    font-size: 2.5rem;
-  }
-  footer ul {
-    gap: 30px;
-    width: calc(100% / 3);
-    margin: 20px;
-  }
-  footer ul li {
-    text-wrap: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  footer ul h5 {
-    font-size: 2.5rem;
-    letter-spacing: 5px;
-  }
-  footer ul li {
-    font-size: 2.5rem;
-  }
-
-  .under-footer {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-    margin-bottom: 00px;
-    padding-block: 50px 150px;
-    width: 100%;
-    background-color: var(--input-bg);
-  }
-  .under-footer p {
-    font-size: 2rem;
-  }
-  .under-footer .payment-icons {
-    gap: 20px;
-  }
-  .under-footer .payment-icons button {
-    width: 140px;
-    height: 80px;
-    background-color: white;
-  }
-
-  .under-footer .payment-icons button img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-  }
-  /* /Mobile Footer */
-}
-/* /Shared Media Query */
-
-#hidden {
-  display: none;
+  /* Contact Banner */
 }

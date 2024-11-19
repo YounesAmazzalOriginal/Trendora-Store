@@ -66,16 +66,64 @@ function Search() {
 
 // Open-Close Mobile NavBar
 function Open_Mobile_Navbar() {
-  const MobileNavBar = document.querySelector("#mobile_NavBar ul");
+  const navUnvisiblePart = document.querySelector("#mobile_NavBar ul");
+  navUnvisiblePart.classList.add("close-mobilenav");
 
-  MobileNavBar.classList.toggle("active-mobile-navbar");
+  const MobileNavSearchBar = document.querySelector(
+    ".mobilenav-search-container input"
+  );
+  MobileNavSearchBar.blur();
 }
 function Close_Mobile_Navbar() {
-  const MobileNavBar = document.querySelector("#mobile_NavBar ul");
-  if (MobileNavBar.classList.contains("active-mobile-navbar")) {
-    MobileNavBar.classList.remove("active-mobile-navbar");
-  } else {
-    MobileNavBar.classList.add("active-mobile-navbar");
-  }
+  const navUnvisiblePart = document.querySelector("#mobile_NavBar ul");
+  navUnvisiblePart.classList.remove("close-mobilenav");
 }
 // /Open-Close Mobile NavBar
+
+// Field MobileNav Search
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelector(".field-mobile-input-search")
+    .addEventListener("click", () => {
+      const MobileNavSearch = document.querySelector(
+        ".mobilenav-search-container input"
+      );
+      MobileNavSearch.value = "";
+    });
+});
+// /Field MobileNav Search
+
+// MobileNav Search Product
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelector(".search-mobile-input-search")
+    .addEventListener("click", () => {
+      const search_bar = document.querySelector(".search-bar");
+      if (search_bar.value !== "") {
+        if (search_bar) {
+          search_bar.value = search_bar.value.toLowerCase();
+        }
+
+        document.querySelectorAll(".single-product").forEach((eachProduct) => {
+          const ProductType = eachProduct
+            .getAttribute("data-product-search-type")
+            .split(",");
+
+          if (ProductType.includes(search_bar.value)) {
+            eachProduct.style.display = "block";
+            ProductResault.push(eachProduct);
+          } else {
+            eachProduct.style.display = "none";
+          }
+        });
+      }
+      //
+      else {
+        document.querySelectorAll(".single-product").forEach((eachProduct) => {
+          eachProduct.style.display = "block";
+        });
+      }
+    });
+});
+// /MobileNav Search Product
+
