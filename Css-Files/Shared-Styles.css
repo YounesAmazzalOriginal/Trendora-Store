@@ -426,7 +426,6 @@ button:disabled {
   }
   #mobile_NavBar .mobile-navbar-visible-side .mobile-navbar-left-side a img {
     width: 150px;
-    margin-left: 10px;
   }
 
   #mobile_NavBar .mobile-navbar-visible-side .mobile-navbar-right-side {
@@ -440,86 +439,91 @@ button:disabled {
     i {
     font-size: 1.5rem;
   }
-  #mobile_NavBar ul {
-    background-color: white;
-    padding-block: 20px 5px;
+
+  #mobile_NavBar .mobilenav-icons-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: var(--font-sat-M);
-    gap: 10px;
-    z-index: 90;
+    justify-content: center;
+    background-color: white;
     position: fixed;
+    bottom: 0px;
+    z-index: 1000;
     width: 100%;
-
-    /*  */
-    opacity: 0;
-    visibility: hidden;
-    /* transition: all 0.5s; */
-    transition: visibility 0.3s, opacity 0.3s;
   }
-  #mobile_NavBar ul.close-mobilenav {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  #mobile_NavBar ul a li {
-    font-size: 1.4rem;
+  #mobile_NavBar .mobilenav-icons-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 4);
+    padding-block: 15px 10px;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
     text-transform: capitalize;
   }
-  #mobile_NavBar ul a {
-    padding-block: 5px;
-    width: 100%;
-    text-align: center;
+  #mobile_NavBar .mobilenav-icons-container a button {
+    display: grid;
+    gap: 7px;
   }
-  #mobile_NavBar ul a.active-mobilenav-link {
-    background-color: black;
-    color: var(--input-bg);
-    transition: all 1s;
+  #mobile_NavBar .mobilenav-icons-container a button p {
+    text-transform: capitalize;
   }
-  #mobile_NavBar ul .close-mobile-navbar {
-    display: block;
-    font-size: 2rem;
-    margin-top: 10px;
+  #mobile_NavBar .mobilenav-icons-container a button i {
+    font-size: 1.4rem;
   }
-  #mobile_NavBar ul .nav-search-container {
-    display: flex;
-    align-items: center;
-    width: 90%;
-    height: 40px;
+  #mobile_NavBar .mobilenav-icons-container a.activeMobileNavLink {
+    background-color: var(--black-color);
+    border-radius: 15px 15px 0px 0px;
+  }
+  #mobile_NavBar .mobilenav-icons-container a.activeMobileNavLink button p,
+  #mobile_NavBar .mobilenav-icons-container a.activeMobileNavLink button i {
+    color: var(--white-color);
+    font-weight: 900;
+  }
+
+  .mobilenav-search-container {
     background-color: var(--input-bg);
-    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*  */
+    height: 0px;
+    padding: 0px;
+    opacity: 0;
+    /* transition: padding 0.5s, height 0.5s; */
+    transition: all 0.5s;
+  }
+  .mobilenav-search-container.open-responsive-search {
+    padding: 10px;
+    height: 70px;
+    opacity: 1;
+    /*  */
+  }
+  .mobilenav-search-container .mobilenav-search {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    border-radius: 10px;
     overflow: hidden;
+    background-color: var(--input-bg);
   }
-  #mobile_NavBar ul .nav-search-container input {
-    width: 90%;
-    height: 100%;
-    font-size: 1.2rem;
-    padding-right: 10px;
-    background-color: transparent;
+  .mobilenav-search-container .mobilenav-search input {
+    width: 85%;
+    font-size: 1.1rem;
     padding-left: 20px;
+    background-color: transparent;
   }
-  #mobile_NavBar ul .nav-search-container button {
-    width: calc(100% - 90%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .mobilenav-search-container .mobilenav-search button {
+    width: 50px;
+    /* width: calc(100% - 85%); */
     font-size: 1.2rem;
-    height: 100%;
-    margin-left: 5px;
-  }
-  #mobile_NavBar ul .nav-search-container .field-mobile-input-search {
-    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10%;
-    height: 100%;
   }
-  #mobile_NavBar ul .nav-search-container .field-mobile-input-search i {
-    font-size: 1.5rem;
-    margin-right: 10px;
+  .mobilenav-search-container .mobilenav-search .mobilenav-search-button {
+    /* font-size: 2rem; */
   }
+
   /* /Mobile Nav */
 
   /* Mobile Contact Banner */

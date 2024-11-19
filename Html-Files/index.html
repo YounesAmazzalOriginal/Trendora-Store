@@ -54,9 +54,9 @@
     <div id="mobile_NavBar">
       <div class="mobile-navbar-visible-side">
         <div class="mobile-navbar-left-side">
-          <button class="open-mobile-navbar" onclick="Open_Mobile_Navbar()">
+          <!-- <button class="open-mobile-navbar" onclick="Open_Mobile_Navbar()">
             <i class="fa-solid fa-bars"></i>
-          </button>
+          </button> -->
           <a href="/Html-Files/index.html" class="logo">
             <!-- <h3>Trendora</h3> -->
             <img src="/Assets/Images/TRENDORA-black-logo.png" alt="" />
@@ -66,36 +66,57 @@
           <!-- <button class="mobilenav-search-icon">
             <i class="lni lni-search-1"></i>
           </button> -->
-          <button>
+          <!-- <button>
             <i class="lni lni-cart-2"></i>
           </button>
           <button>
             <i class="lni lni-user-4"></i>
+          </button> -->
+        </div>
+      </div>
+      <div class="mobilenav-icons-container">
+        <a class="activeMobileNavLink">
+          <button>
+            <i class="fa-solid fa-house"></i>
+            <!-- <img src="/Assets/Icons/home.svg" alt="" /> -->
+            <p>home</p>
+          </button>
+        </a>
+        <a class="mobilenav-search-icon">
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- <img src="/Assets/Icons/search.svg" alt="" /> -->
+            <p>search</p>
+          </button>
+        </a>
+        <a>
+          <button>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <!-- <img src="/Assets/Icons/cart.svg" alt="" /> -->
+            <p>cart</p>
+          </button>
+        </a>
+        <a>
+          <button>
+            <i class="fa-solid fa-user"></i>
+            <!-- <img src="/Assets/Icons/user.svg" alt="" /> -->
+            <p>account</p>
+          </button>
+        </a>
+      </div>
+      <div class="mobilenav-search-container">
+        <div class="mobilenav-search">
+          <input type="text" placeholder="Seach for products..." />
+          <button class="mobilenav-search-button">
+            <!-- <i class="lni lni-search-1"></i> -->
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="mobilenav-search-button">
+            <!-- <i class="lni lni-xmark"></i> -->
+            <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
       </div>
-      <ul>
-        <!-- <a href="/Html-Files/index.html" class="logo">
-          <img src="/Assets/Images/TRENDORA-black-logo.png" alt="" />
-        </a> -->
-        <a href="" class="active-mobilenav-link"><li>home</li></a>
-        <a href=""><li>category</li></a>
-        <a href=""><li>Page 1</li></a>
-        <a href=""><li>Page 2</li></a>
-        <a href=""><li>Page 3</li></a>
-        <div class="nav-search-container mobilenav-search-container">
-          <input type="text" placeholder="Seach for products..." />
-          <button class="search-mobile-input-search">
-            <i class="lni lni-search-1"></i>
-          </button>
-          <button class="field-mobile-input-search">
-            <i class="lni lni-xmark"></i>
-          </button>
-        </div>
-        <button class="close-mobile-navbar" onclick="Close_Mobile_Navbar()">
-          <i class="lni lni-xmark"></i>
-        </button>
-      </ul>
     </div>
     <!--/ Nav -->
 

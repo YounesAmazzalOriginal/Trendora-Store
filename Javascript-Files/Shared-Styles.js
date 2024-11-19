@@ -64,66 +64,32 @@ function Search() {
 
 // localStorage.clear();
 
-// Open-Close Mobile NavBar
-function Open_Mobile_Navbar() {
-  const navUnvisiblePart = document.querySelector("#mobile_NavBar ul");
-  navUnvisiblePart.classList.add("close-mobilenav");
-
-  const MobileNavSearchBar = document.querySelector(
-    ".mobilenav-search-container input"
-  );
-  MobileNavSearchBar.blur();
-}
-function Close_Mobile_Navbar() {
-  const navUnvisiblePart = document.querySelector("#mobile_NavBar ul");
-  navUnvisiblePart.classList.remove("close-mobilenav");
-}
-// /Open-Close Mobile NavBar
-
-// Field MobileNav Search
+// Mobile Nav Icons Active
 document.addEventListener("DOMContentLoaded", () => {
   document
-    .querySelector(".field-mobile-input-search")
-    .addEventListener("click", () => {
-      const MobileNavSearch = document.querySelector(
-        ".mobilenav-search-container input"
-      );
-      MobileNavSearch.value = "";
+    .querySelectorAll(".mobilenav-icons-container a")
+    .forEach((eachMobileNavLink) => {
+      eachMobileNavLink.addEventListener("click", () => {
+        document
+          .querySelectorAll(".mobilenav-icons-container a")
+          .forEach((disactivated) => {
+            disactivated.classList.remove("activeMobileNavLink");
+          });
+        //
+        eachMobileNavLink.classList.add("activeMobileNavLink");
+      });
     });
 });
-// /Field MobileNav Search
+// /Mobile Nav Icons Active
 
-// MobileNav Search Product
-document.addEventListener("DOMContentLoaded", () => {
-  document
-    .querySelector(".search-mobile-input-search")
-    .addEventListener("click", () => {
-      const search_bar = document.querySelector(".search-bar");
-      if (search_bar.value !== "") {
-        if (search_bar) {
-          search_bar.value = search_bar.value.toLowerCase();
-        }
 
-        document.querySelectorAll(".single-product").forEach((eachProduct) => {
-          const ProductType = eachProduct
-            .getAttribute("data-product-search-type")
-            .split(",");
 
-          if (ProductType.includes(search_bar.value)) {
-            eachProduct.style.display = "block";
-            ProductResault.push(eachProduct);
-          } else {
-            eachProduct.style.display = "none";
-          }
-        });
-      }
-      //
-      else {
-        document.querySelectorAll(".single-product").forEach((eachProduct) => {
-          eachProduct.style.display = "block";
-        });
-      }
-    });
-});
-// /MobileNav Search Product
+// Open & Close Responsive Search
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelector('.mobilenav-search-icon').addEventListener('click',()=>{
+    const X =  document.querySelector('.mobilenav-search-container')
+    X.classList.toggle('open-responsive-search')
+  })
+})
 
+  // /Open & Close Responsive Search
