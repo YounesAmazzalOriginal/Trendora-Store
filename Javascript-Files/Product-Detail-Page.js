@@ -22,16 +22,26 @@ function Faq_Button() {
   const Reviews_Content = document.querySelector(
     "#product-reviews-Elements-ID"
   );
+  const Reviews_Content_title = document.querySelector(
+    ".product-rating-and-reviews-container .title"
+  );
   FAQ_Content.style.display = "block";
   Reviews_Content.style.display = "none";
+  Reviews_Content_title.style.display = "none";
 }
 function ProductReviews_Button() {
   const FAQ_Content = document.querySelector("#Faq-container-ID");
   const Reviews_Content = document.querySelector(
     "#product-reviews-Elements-ID"
   );
+
+  const Reviews_Content_title = document.querySelector(
+    ".product-rating-and-reviews-container .title"
+  );
+
   FAQ_Content.style.display = "none";
   Reviews_Content.style.display = "block";
+  Reviews_Content_title.style.display = "flex";
 }
 // /Product Info FAQs / Rating Reviews
 

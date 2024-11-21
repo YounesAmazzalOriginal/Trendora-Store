@@ -31,6 +31,12 @@ html {
   --font-int-M: integral-Medium;
   --font-sat-M: Satoshi-Medium;
   --font-sat-L: Satoshi-Light;
+  --pTitleResponsive: 1.2rem;
+  --pDescreptionResponsive: 1.1rem;
+  --MargTopTitle: 1.1rem;
+
+  --pTitleTablet: 2.1rem;
+  --h2TitleTablet: 3rem;
 }
 body {
   font-family: var(--font-int-M);
@@ -213,6 +219,7 @@ button {
   border-radius: 20px;
   width: 1100px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 20px 50px;
@@ -385,6 +392,7 @@ button:disabled {
 /* Elements Not Showing On Desktop */
 #mobile_NavBar {
   display: none;
+  z-index: 100;
 }
 .reponsive-show-and-hide-leftnav {
   display: none;
@@ -400,208 +408,282 @@ button:disabled {
   display: none;
 }
 
-@media screen and (min-width: 400px) and (max-width: 1024px) {
-  /* Mobile Nav */
+/* Phones and smaller devices (up to 600px) */
+/* Shared Properties */
+@media screen and (max-width: 600px) {
   nav {
-    display: none !important;
+    display: none;
   }
+  /* Mobile Nav */
   #mobile_NavBar {
-    display: block !important;
+    display: flex !important;
+    flex-direction: column;
     width: 100%;
+    align-items: center;
   }
-  #mobile_NavBar .mobile-navbar-visible-side {
+  #mobile_NavBar .mobilenav-icons-container {
     background-color: white;
     z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 20px;
-  }
-  #mobile_NavBar .mobile-navbar-visible-side .mobile-navbar-left-side {
-    display: flex;
-    align-items: center;
-  }
-  #mobile_NavBar .mobile-navbar-visible-side .mobile-navbar-left-side i {
-    font-size: 1.35rem;
-  }
-  #mobile_NavBar .mobile-navbar-visible-side .mobile-navbar-left-side a img {
-    width: 150px;
-  }
-
-  #mobile_NavBar .mobile-navbar-visible-side .mobile-navbar-right-side {
-    display: flex;
-    gap: 10px;
-  }
-  #mobile_NavBar
-    .mobile-navbar-visible-side
-    .mobile-navbar-right-side
-    button
-    i {
-    font-size: 1.5rem;
-  }
-
-  #mobile_NavBar .mobilenav-icons-container {
-    display: flex;
-    justify-content: center;
-    background-color: white;
     position: fixed;
     bottom: 0px;
-    z-index: 1000;
     width: 100%;
-  }
-  #mobile_NavBar .mobilenav-icons-container a {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(100% / 4);
-    padding-block: 15px 10px;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
-    text-transform: capitalize;
+    justify-content: space-evenly;
   }
   #mobile_NavBar .mobilenav-icons-container a button {
-    display: grid;
-    gap: 7px;
+    padding-block: 10px;
+    height: 100%;
+    width: 80px;
   }
   #mobile_NavBar .mobilenav-icons-container a button p {
+    color: black;
     text-transform: capitalize;
   }
   #mobile_NavBar .mobilenav-icons-container a button i {
-    font-size: 1.4rem;
+    margin-bottom: 3spx;
+    font-size: 1rem;
   }
-  #mobile_NavBar .mobilenav-icons-container a.activeMobileNavLink {
-    background-color: var(--black-color);
-    border-radius: 15px 15px 0px 0px;
+  #mobile_NavBar .mobile-navbar-visible-side .logo img {
+    width: 250px;
+    padding-block: 15px;
   }
-  #mobile_NavBar .mobilenav-icons-container a.activeMobileNavLink button p,
-  #mobile_NavBar .mobilenav-icons-container a.activeMobileNavLink button i {
-    color: var(--white-color);
-    font-weight: 900;
-  }
-
-  .mobilenav-search-container {
-    background-color: var(--input-bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*  */
-    height: 0px;
-    padding: 0px;
-    opacity: 0;
-    /* transition: padding 0.5s, height 0.5s; */
-    transition: all 0.5s;
-  }
-  .mobilenav-search-container.open-responsive-search {
-    padding: 10px;
-    height: 70px;
-    opacity: 1;
-    /*  */
-  }
-  .mobilenav-search-container .mobilenav-search {
-    width: 100%;
+  #mobile_NavBar .mobilenav-search-container {
+    width: 95%;
+    /* height: 0; */
     height: 50px;
-    display: flex;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: var(--input-bg);
+    transition: all 0.4s;
   }
-  .mobilenav-search-container .mobilenav-search input {
-    width: 85%;
-    font-size: 1.1rem;
+  #mobile_NavBar .mobilenav-search-container .mobilenav-search {
+    height: 40px;
+    display: flex;
+  }
+  #mobile_NavBar .mobilenav-search-container .mobilenav-search input {
+    width: 80%;
+    height: 100%;
     padding-left: 20px;
-    background-color: transparent;
   }
-  .mobilenav-search-container .mobilenav-search button {
-    width: 50px;
-    /* width: calc(100% - 85%); */
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  #mobile_NavBar .mobilenav-search-container .mobilenav-search button {
+    width: 10%;
+    height: 100%;
+    background-color: white;
   }
-  .mobilenav-search-container .mobilenav-search .mobilenav-search-button {
-    /* font-size: 2rem; */
-  }
-
   /* /Mobile Nav */
 
-  /* Mobile Contact Banner */
+  /* Contact Banner */
   .contact-banner {
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
     gap: 20px;
-    width: 90%;
-    padding: 15px 25px;
+    padding: 0px;
+    padding: 20px 0px;
   }
   .contact-banner h2 {
     width: 100%;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    padding-inline: 20px;
   }
   .contact-banner .contact-banner-inputs {
     width: 100%;
-    gap: 10px;
+    padding-inline: 20px;
+    gap: 7px;
   }
   .contact-banner .contact-banner-inputs .input-container {
     width: 100%;
-    height: 40px;
+    height: 45px;
   }
   .contact-banner .contact-banner-inputs .input-container input {
     font-size: 1rem;
   }
-  .contact-banner .contact-banner-inputs button {
+  .contact-banner .contact-banner-inputs .input-container i {
     font-size: 1rem;
-    height: 40px;
+  }
+  .contact-banner .contact-banner-inputs button {
+    height: 45px;
     width: 100%;
+    font-size: 1rem;
   }
-  /* Mobile Contact Banner */
+  /* /Contact Banner */
 
-  /* Mobile Footer */
+  /* Footer */
   footer {
-    /* display: flex; */
+    display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding-inline: 30px;
-    gap: 40px;
-  }
-  footer ul {
-    gap: 10px;
-    width: 40%;
-  }
-  footer ul h5 {
-    font-size: 1.1rem;
-    letter-spacing: 5px;
-  }
-  footer ul li {
-    font-size: 1.1rem;
-    white-space: nowrap;
+    /* gap: 10px; */
+    gap: 0px;
   }
   footer .footer-1 {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin: 0px;
+    gap: 20px;
+    padding-inline: 20px 10px;
     margin-bottom: 20px;
   }
   footer .footer-1 .logo h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   footer .footer-1 p {
-    font-size: 1.1rem;
+    margin-top: 0px;
+    font-size: var(--pDescreptionResponsive);
+    /* width: 80%; */
+  }
+  footer .footer-1 .footer-media-links {
+    margin-top: 0px;
   }
   footer .footer-1 .footer-media-links a button {
-    width: 42px;
-    height: 42px;
-    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
   }
-  /* /Mobile Footer */
+  footer ul {
+    width: calc(100% / 2);
+    margin-top: 20px;
+    gap: 10px;
+    padding: 10px;
+    padding-inline: 20px;
+    margin-top: 0px;
+  }
+  footer ul h5 {
+    font-size: 1rem;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+  }
+  footer ul li {
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  /* /Footer */
 
-  /* Mobile Under Footer */
+  /* Under Footer */
   .under-footer {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 70px;
   }
   .under-footer p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
-  /* /Mobile Under Footer */
+  /* /Under Footer */
+}
+
+/* Tablets (601px to 768px) */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  /* Tablet Nav */
+  nav {
+    display: none;
+  }
+  #mobile_NavBar {
+    display: block;
+    width: 100%;
+  }
+  #mobile_NavBar
+    .mobile-navbar-visible-side
+    .mobile-navbar-left-side
+    .logo
+    img {
+    width: 250px;
+    padding: 20px 20px;
+  }
+  #mobile_NavBar .mobilenav-icons-container {
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+  }
+  #mobile_NavBar .mobilenav-icons-container a button {
+    padding-block: 15px 10px;
+  }
+  #mobile_NavBar .mobilenav-icons-container a button i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  #mobile_NavBar .mobilenav-icons-container a button p {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: black;
+  }
+  /* Tablet Nav */
+
+  /* Tablet Contact Banner */
+  .contact-banner {
+    width: 90%;
+    gap: 30px;
+    flex-direction: column;
+    align-items: start;
+    padding: 30px 40px;
+  }
+  .contact-banner h2 {
+    width: 100%;
+    font-size: 3.5rem;
+  }
+  .contact-banner .contact-banner-inputs {
+    width: 100%;
+    height: 170px;
+    gap: 10px;
+  }
+  .contact-banner .contact-banner-inputs .input-container {
+    width: 100%;
+    height: 100%;
+  }
+  .contact-banner .contact-banner-inputs .input-container input {
+    font-size: 2.1rem;
+    height: 100%;
+    margin-left: 10px;
+  }
+  .contact-banner .contact-banner-inputs .input-container i {
+    font-size: 2.1rem;
+    margin-left: 20px;
+  }
+  .contact-banner .contact-banner-inputs button {
+    width: 100%;
+    font-size: 2.1rem;
+    height: 100%;
+  }
+  /* /Tablet Contact Banner */
+
+  /* Tablet Banner */
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+  footer .footer-1 {
+    width: 100%;
+    padding-inline: 40px;
+  }
+  footer .footer-1 .logo h3 {
+    font-size: 2.5rem;
+  }
+  footer .footer-1 p {
+    font-size: 2rem;
+  }
+  footer .footer-1 .footer-media-links a button {
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
+  }
+
+  footer ul {
+    width: calc(100% / 2);
+    padding: 50px;
+    gap: 20px;
+  }
+  footer ul h5 {
+    font-size: 2rem;
+  }
+  footer ul li {
+    font-size: 2rem;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  /* /Tablet Banner */
 }

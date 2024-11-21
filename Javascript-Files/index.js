@@ -22,7 +22,7 @@ function customers_rightArrow() {
     .querySelectorAll(".customer-reviews-box")
     .forEach((each_CommentCart) => {
       const cartWidth = each_CommentCart.getBoundingClientRect().width;
-      console.log(cartWidth);
+
       const customers_slider_container = document.querySelector(
         ".customers-reviews-part2"
       );

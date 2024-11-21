@@ -82,14 +82,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // /Mobile Nav Icons Active
 
-
-
-// Open & Close Responsive Search
-document.addEventListener('DOMContentLoaded',()=>{
-  document.querySelector('.mobilenav-search-icon').addEventListener('click',()=>{
-    const X =  document.querySelector('.mobilenav-search-container')
-    X.classList.toggle('open-responsive-search')
-  })
-})
-
-  // /Open & Close Responsive Search
+// Clear Mobilenav Search
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelector(".mobilenav-clear-search-button")
+    .addEventListener("click", () => {
+      const MobileNav_Search = document.querySelector(
+        ".mobilenav-search input"
+      );
+      MobileNav_Search.value = "";
+      MobileNav_Search.focus();
+    });
+});
+// /Clear Mobilenav Search

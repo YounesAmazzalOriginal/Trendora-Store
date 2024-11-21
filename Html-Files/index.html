@@ -82,7 +82,8 @@
             <p>home</p>
           </button>
         </a>
-        <a class="mobilenav-search-icon">
+        <a href="Category-Page.html" class="mobilenav-search-icon">
+          <!-- <a href="#mobile_NavBar" class="mobilenav-search-icon"> -->
           <button>
             <i class="fa-solid fa-magnifying-glass"></i>
             <!-- <img src="/Assets/Icons/search.svg" alt="" /> -->
@@ -104,19 +105,19 @@
           </button>
         </a>
       </div>
+      <!--
       <div class="mobilenav-search-container">
         <div class="mobilenav-search">
           <input type="text" placeholder="Seach for products..." />
-          <button class="mobilenav-search-button">
-            <!-- <i class="lni lni-search-1"></i> -->
+          <button class="mobilenav-search-button" onclick="MobileSearch()">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
-          <button class="mobilenav-search-button">
-            <!-- <i class="lni lni-xmark"></i> -->
+          <button class="mobilenav-clear-search-button">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
       </div>
+      -->
     </div>
     <!--/ Nav -->
 
@@ -197,7 +198,7 @@
               <img src="/Assets/Images/blacktshirt-1.png" alt="" />
             </div>
             <div class="product-information">
-              <h6>T-shirt With Tape Details</h6>
+              <h6>T-Shirt With Tape Details</h6>
               <div class="product-reviews-container">
                 <div class="stars-container">
                   <i class="fa-solid fa-star"></i>
@@ -637,7 +638,7 @@
         <li title="youtube playlist"><a href="">youtube playlist</a></li>
       </ul>
     </footer>
-    <div class="under-footer">
+    <div class="under-footer" id="hidden">
       <p>Website Created By Younes AMAZZAL</p>
       <div class="payment-icons">
         <button title="Visa">
