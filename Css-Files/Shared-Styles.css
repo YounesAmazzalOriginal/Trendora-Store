@@ -36,6 +36,8 @@ html {
   --MargTopTitle: 1.1rem;
 
   --pTitleTablet: 2.1rem;
+  --pTitleTablet2: 1.6rem;
+  --pDescreptionTablet: 1.6rem;
   --h2TitleTablet: 3rem;
 }
 body {
@@ -572,7 +574,8 @@ button:disabled {
 }
 
 /* Tablets (601px to 768px) */
-@media screen and (min-width: 601px) and (max-width: 768px) {
+/* @media screen and (min-width: 601px) and (max-width: 768px) { */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
   /* Tablet Nav */
   nav {
     display: none;

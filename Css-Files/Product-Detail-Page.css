@@ -1055,16 +1055,400 @@
 }
 
 /* Tablets (601px to 768px) */
-@media screen and (min-width: 601px) and (max-width: 768px) {
-  /*  */
-}
+/* @media screen and (min-width: 601px) and (max-width: 768px) { */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Product Informations Detail */
+  .product-detail-informations-container {
+    flex-wrap: wrap;
+  }
+  .product-detail-informations-container
+    .product-information-sides-images-container {
+    padding-inline: 30px;
+    width: 100%;
+  }
+  .product-detail-informations-container
+    .product-information-sides-images-container
+    .product-information-main-image {
+    width: 700px !important;
+    height: 700px !important;
+  }
+  .product-detail-informations-container
+    .product-information-sides-images-container
+    .product-information-side-image-c
+    .img-c {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  .product-detail-informations-container {
+    /* gap: 0px; */
+    width: 100%;
+  }
+  .product-detail-informations-container .product-information-texts-container {
+    width: 100%;
+    padding-inline: 40px;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    h2 {
+    font-size: 3rem;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .reviews-container
+    .stars-container {
+    font-size: 1.5rem;
+    gap: 10px;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .reviews-container
+    .Product-Detail-reviewNote {
+    font-size: 1.5rem;
+    gap: 10px;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .product-price-container
+    .product-current-price {
+    font-size: 2rem;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .product-price-container
+    .product-old-price {
+    font-size: 1.9rem;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .product-price-container
+    .discount {
+    font-size: 1rem;
+    border-radius: 100px;
+    padding: 13px 30px;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .product-descreption {
+    font-size: var(--pDescreptionTablet);
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .color-product-container
+    p {
+    font-size: var(--pTitleTablet2);
+  }
 
-/* Small laptops and large tablets (769px to 1024px) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  /*  */
-}
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .color-product-container
+    .colors-inputs-container
+    input {
+    width: 50px;
+    height: 50px;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .color-product-container
+    .colors-inputs-container
+    input::after {
+    font-size: 1.5rem;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .product-size-properties
+    p {
+    font-size: var(--pTitleTablet2);
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .product-size-properties
+    .category-size-buttons-container
+    button {
+    font-size: 1.6rem;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 25px;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .product-addToCart {
+    height: 60px;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .product-addToCart
+    .add-remove-product-from-cart {
+    width: 20%;
+    height: 100%;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .product-addToCart
+    .add-remove-product-from-cart
+    button {
+    font-size: 1.1rem;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .product-addToCart
+    .add-remove-product-from-cart
+    span {
+    font-size: 1.2rem;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .product-addToCart
+    .add-product-to-cart {
+    width: calc(100% - 20%);
+    height: 100%;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    .product-rating-container
+    .product-addToCart
+    button {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* /Product Informations Detail */
 
-/* Desktops and larger screens (1025px and up) */
-@media screen and (min-width: 1025px) {
-  /*  */
+  /* Product Details Controll */
+  .product-about-container {
+    width: 100%;
+  }
+  .product-about-container button {
+    width: 50%;
+    font-size: 2rem;
+  }
+  /* /Product Details Controll */
+
+  /* Product Details */
+  .product-rating-and-reviews-container {
+    width: 100%;
+  }
+  .product-rating-and-reviews-container .title {
+    gap: 0px;
+    justify-content: space-between;
+  }
+  .product-rating-and-reviews-container .title h3 {
+    font-size: 2.1rem;
+  }
+  .product-rating-and-reviews-container .title h3 span {
+    font-size: 1.5rem;
+  }
+  .product-rating-and-reviews-container .title button {
+    font-size: 1.5rem;
+    width: fit-content;
+    padding: 0px 30px;
+    height: 60px;
+  }
+  .product-rating-and-reviews-container
+    .title
+    .product-reviews-buttons-container
+    .menu
+    .menu-title {
+    font-size: 1.5rem;
+    width: fit-content;
+    padding: 0px 30px;
+    height: 60px;
+  }
+  .product-rating-and-reviews-container
+    .title
+    .product-reviews-buttons-container
+    .menu
+    .menu-title
+    h4 {
+    font-size: 1.5rem;
+  }
+  .product-rating-and-reviews-container
+    .title
+    .product-reviews-buttons-container
+    .menu
+    .menu-title
+    i {
+    font-size: 1.5rem;
+  }
+  .product-rating-and-reviews-container #product-reviews-Elements-ID {
+    flex-direction: column;
+    width: 90%;
+  }
+  .product-rating-and-reviews-container
+    #product-reviews-Elements-ID
+    .product-reviews-Elements {
+    width: 100%;
+  }
+  .product-rating-and-reviews-container
+    #product-reviews-Elements-ID
+    .product-reviews-Elements
+    .customer-reviews-box {
+    min-width: 100%;
+  }
+  .product-rating-and-reviews-container
+    #product-reviews-Elements-ID
+    .product-reviews-Elements
+    .customer-reviews-box
+    .customer-reviews-note {
+    font-size: 1.2rem;
+    display: flex;
+    gap: 5px;
+  }
+  .product-rating-and-reviews-container
+    #product-reviews-Elements-ID
+    .product-reviews-Elements
+    .customer-reviews-box
+    .customer-review-name
+    h5 {
+    font-size: 1.5rem;
+  }
+  .product-rating-and-reviews-container
+    #product-reviews-Elements-ID
+    .product-reviews-Elements
+    .customer-reviews-box
+    .customer-review-name
+    i {
+    font-size: 1.1rem;
+  }
+  .product-rating-and-reviews-container
+    #product-reviews-Elements-ID
+    .product-reviews-Elements
+    .customer-reviews-box
+    p {
+    font-size: 1.5rem;
+  }
+  .product-rating-and-reviews-container
+    #product-reviews-Elements-ID
+    .product-reviews-Elements
+    .customer-reviews-box
+    .reviews-date-posted {
+    margin-top: 20px;
+  }
+  #product-reviews-Elements-ID button {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .product-rating-and-reviews-container #Faq-container-ID {
+  }
+  .product-rating-and-reviews-container
+    #Faq-container-ID
+    .Faq-container
+    .question-and-answer-container
+    .question-container {
+    padding: 30px 20px;
+  }
+  .product-rating-and-reviews-container
+    #Faq-container-ID
+    .Faq-container
+    .question-and-answer-container
+    .question-container
+    h4 {
+    font-size: 1.5rem;
+  }
+  .product-rating-and-reviews-container
+    #Faq-container-ID
+    .Faq-container
+    .question-and-answer-container
+    .question-container
+    button
+    i {
+    font-size: 1.3rem;
+  }
+  .product-rating-and-reviews-container #Faq-container-ID .Faq-container {
+  }
+  .product-rating-and-reviews-container
+    #Faq-container-ID
+    .Faq-container
+    .question-and-answer-container
+    .answer-container {
+    font-size: 1.35rem;
+  }
+  /* /Product Details */
+
+  /* Product May Also Like */
+  .product-might-like h2 {
+    font-size: 2rem;
+  }
+  .product-might-like .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0px;
+  }
+  .product-might-like .product-container .single-product .product-image {
+    width: 300px;
+    height: 300px;
+  }
+  .product-might-like
+    .product-container
+    .single-product
+    .product-information
+    h6 {
+    font-size: 1.5rem;
+  }
+  .product-might-like
+    .product-container
+    .single-product
+    .product-information
+    .product-reviews-container
+    .stars-container {
+    font-size: 1rem;
+    gap: 0px;
+  }
+  .product-might-like
+    .product-container
+    .single-product
+    .product-information
+    .product-reviews-container
+    .review-note {
+    font-size: 1rem;
+  }
+  .product-might-like
+    .product-container
+    .single-product
+    .product-information
+    .product-price-container
+    .product-current-price {
+    font-size: 1.3rem;
+  }
+  .product-might-like
+    .product-container
+    .single-product
+    .product-information
+    .product-price-container
+    .product-old-price {
+    font-size: 1.2rem;
+  }
+  .product-might-like
+    .product-container
+    .single-product
+    .product-information
+    .product-price-container
+    .discount {
+    font-size: 1.2rem;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 100px;
+    padding: 1px 10px;
+    font-size: 1rem;
+  }
+  /* /Product May Also Like */
 }

@@ -884,13 +884,44 @@ input {
     font-size: 1.6rem;
   }
   /* /Tablet Customers Reviews */
-
-
 }
 
 /* Small laptops and large tablets (769px to 1024px) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  /*  */
+  /* Small laptops Header Banner */
+  .banner-container {
+    width: 100%;
+  }
+  /* /Small laptops Header Banner */
+
+  /* Small laptops Browse By Dress Style */
+  .clothes-type-container {
+    width: 95%;
+  }
+  /* /Small laptops Browse By Dress Style */
+
+  /* Small laptops Customers Reviews */
+  .customers-reviews-parts-container .customers-reviews-part1 {
+    width: 90%;
+    gap: 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .customers-reviews-parts-container
+    .customers-reviews-part1
+    .customers-reviews-arrow-container
+    button {
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+  }
+  .customers-reviews-parts-container .customers-reviews-part2 {
+    width: 100%;
+    /* justify-content: start; */
+  }
+
+  /* /Small laptops Customers Reviews */
 }
 
 /* Desktops and larger screens (1025px and up) */
