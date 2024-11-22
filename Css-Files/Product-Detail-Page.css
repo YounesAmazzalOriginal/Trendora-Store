@@ -1055,7 +1055,6 @@
 }
 
 /* Tablets (601px to 768px) */
-/* @media screen and (min-width: 601px) and (max-width: 768px) { */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   /* Product Informations Detail */
   .product-detail-informations-container {
@@ -1344,14 +1343,16 @@
     font-size: 1.5rem;
     width: 100%;
   }
-  .product-rating-and-reviews-container #Faq-container-ID {
+  .product-rating-and-reviews-container #Faq-container-ID .Faq-container {
   }
+
   .product-rating-and-reviews-container
     #Faq-container-ID
     .Faq-container
     .question-and-answer-container
     .question-container {
     padding: 30px 20px;
+    width: 90%;
   }
   .product-rating-and-reviews-container
     #Faq-container-ID
@@ -1371,6 +1372,7 @@
     font-size: 1.3rem;
   }
   .product-rating-and-reviews-container #Faq-container-ID .Faq-container {
+    width: 50%;
   }
   .product-rating-and-reviews-container
     #Faq-container-ID

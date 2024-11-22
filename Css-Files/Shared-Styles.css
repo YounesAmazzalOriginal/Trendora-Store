@@ -394,8 +394,14 @@ button:disabled {
 /* Elements Not Showing On Desktop */
 #mobile_NavBar {
   display: none;
+}
+#mobile_NavBar .mobile-navbar-visible-side {
+  z-index: 90;
+}
+#mobile_NavBar .mobilenav-icons-container {
   z-index: 100;
 }
+
 .reponsive-show-and-hide-leftnav {
   display: none;
 }
