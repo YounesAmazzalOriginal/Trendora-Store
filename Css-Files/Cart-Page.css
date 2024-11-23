@@ -5,6 +5,7 @@
 }
 .cart-checkout-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
 }
@@ -12,147 +13,15 @@
   display: flex;
   flex-direction: column;
   border: 1px solid hsl(0, 0%, 90%);
-  border-radius: 20px;
+  border-radius: 15px;
   margin-top: 20px;
-  gap: 20px;
+  gap: 5px;
 
   height: 400px;
   overflow-y: scroll;
-  padding: 0px 5px;
+  padding: 5px 5px;
 }
 /*  */
-.cart-checkout-container
-  .product-cart-container
-  .single-product
-  .product-checkout-number {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  margin: 10px 12px;
-}
-.cart-checkout-container .product-cart-container .single-product {
-  border-top: 1px solid hsl(0, 0%, 90%);
-  border-bottom: 1px solid hsl(0, 0%, 90%);
-  /* margin: 10px; */
-  height: 100px;
-
-  display: flex;
-  align-items: center;
-  font-family: var(--font-sat-M);
-  width: 527px;
-  position: relative;
-  border-top: 1px solid hsl(0, 0%, 90%);
-  border-bottom: 1px solid hsl(0, 0%, 90%);
-  /* padding: 10px 10px; */
-  margin: 0px 10px;
-  padding: 10px 0px;
-}
-.cart-checkout-container .product-cart-container .single-product:first-child,
-.cart-checkout-container .product-cart-container .single-product:last-child {
-  border-top: 0px solid;
-  border-bottom: 0px solid;
-}
-.cart-checkout-container .product-cart-container .single-product .text-area {
-  display: grid;
-  margin-inline: 10px;
-}
-.cart-checkout-container
-  .product-cart-container
-  .single-product
-  .text-area
-  .product-current-price {
-  font-size: 1rem;
-  margin-top: 5px;
-}
-.cart-checkout-container .product-cart-container .single-product .text-area h4 {
-  text-transform: capitalize;
-}
-.cart-checkout-container
-  .product-cart-container
-  .single-product
-  .text-area
-  .product-info-container {
-  margin-top: 3px;
-  font-size: 0.8rem;
-}
-.cart-checkout-container
-  .product-cart-container
-  .single-product
-  .text-area
-  .product-info-container
-  span {
-  display: flex;
-  gap: 5px;
-  text-transform: capitalize;
-  /* color: black; */
-  color: hsl(0, 0%, 30%);
-}
-.cart-checkout-container
-  .product-cart-container
-  .single-product
-  .text-area
-  .product-info-container
-  span
-  p {
-  color: hsl(0, 0%, 40%);
-}
-
-.cart-checkout-container
-  .product-cart-container
-  .single-product
-  .text-area
-  .product-count-container {
-  background-color: var(--input-bg);
-  border-radius: 100px;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 5px 15px;
-  font-size: 0.8rem;
-}
-.cart-checkout-container
-  .product-cart-container
-  .single-product
-  .text-area
-  .product-count-container
-  button {
-  font-size: 0.8rem;
-}
-.cart-checkout-container
-  .product-cart-container
-  .single-product
-  .text-area
-  .delete-product {
-  color: #ff3333;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  margin-block: 10px;
-  /* margin: 15px 10px; */
-  width: 25px;
-  height: 25px;
-}
-
-.cart-checkout-container .product-cart-container .single-product .image-area {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 8.6px;
-}
-.cart-checkout-container
-  .product-cart-container
-  .single-product
-  .image-area
-  img {
-  width: 100%;
-}
-/* /Product-Carts-Container */
 
 /* Product-Carts-Container */
 .cart-checkout-container .product-checkout-container {
@@ -160,7 +29,6 @@
   width: 458px;
   display: grid;
   gap: 10px;
-
   border: 1px solid hsl(0, 0%, 90%);
   border-radius: 20px;
   padding: 20px 24px;
@@ -255,4 +123,119 @@
   padding-top: 10px;
   border-top: 2px solid hsl(0, 0%, 90%);
 }
+
+/* - */
+
+.cart-checkout-container .product-cart-container .single-product {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid hsl(0, 0%, 90%);
+}
+.cart-checkout-container .product-cart-container .single-product {
+  font-family: var(--font-sat-M);
+  position: relative;
+}
+.cart-checkout-container
+  .product-cart-container
+  .single-product
+  .delete-product-from-checkout {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 5px 10px;
+}
+.cart-checkout-container
+  .product-cart-container
+  .single-product
+  .delete-product-from-checkout
+  i {
+  font-size: 0.9rem;
+  color: red;
+}
+.cart-checkout-container
+  .product-cart-container
+  .single-product
+  .product-information {
+  padding-inline: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  height: 100%;
+}
+.cart-checkout-container
+  .product-cart-container
+  .single-product
+  .product-information
+  h6 {
+  font-size: 0.8rem;
+}
+
+.cart-checkout-container
+  .product-cart-container
+  .single-product
+  .product-information
+  .product-size-and-color-container {
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+.cart-checkout-container
+  .product-cart-container
+  .single-product
+  .product-information
+  .product-size-and-color-container
+  p
+  span {
+  color: black;
+}
+.cart-checkout-container
+  .product-cart-container
+  .single-product
+  .product-image {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: var(--input-bg);
+}
+.cart-checkout-container
+  .product-cart-container
+  .single-product
+  .product-image
+  img {
+  width: 80%;
+}
 /* /Product-Carts-Container */
+
+/* Phones and smaller devices (up to 600px) */
+/* iphone 12 Mini */
+@media screen and (max-width: 600px) {
+  .cart-checkout-container {
+    gap: 0px;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .cart-checkout-container .product-cart-container {
+    width: 95%;
+  }
+  .cart-checkout-container .product-cart-container .single-product {
+    width: 100%;
+  }
+}
+
+/* Tablets (601px to 768px) */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+}
+
+/* Small laptops and large tablets (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}

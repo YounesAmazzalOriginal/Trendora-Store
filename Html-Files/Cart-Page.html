@@ -53,40 +53,70 @@
     <div id="mobile_NavBar">
       <div class="mobile-navbar-visible-side">
         <div class="mobile-navbar-left-side">
-          <button class="open-mobile-navbar" onclick="Open_Mobile_Navbar()">
+          <!-- <button class="open-mobile-navbar" onclick="Open_Mobile_Navbar()">
             <i class="fa-solid fa-bars"></i>
-          </button>
+          </button> -->
           <a href="/Html-Files/index.html" class="logo">
             <!-- <h3>Trendora</h3> -->
             <img src="/Assets/Images/TRENDORA-black-logo.png" alt="" />
           </a>
         </div>
         <div class="mobile-navbar-right-side">
-          <button>
+          <!-- <button class="mobilenav-search-icon">
             <i class="lni lni-search-1"></i>
-          </button>
-          <button>
+          </button> -->
+          <!-- <button>
             <i class="lni lni-cart-2"></i>
           </button>
-          <!-- <button>
+          <button>
             <i class="lni lni-user-4"></i>
           </button> -->
         </div>
       </div>
-      <ul>
-        <div class="nav-search-container">
-          <i class="lni lni-search-1"></i>
+      <div class="mobilenav-icons-container">
+        <a class="activeMobileNavLink">
+          <button>
+            <i class="fa-solid fa-house"></i>
+            <!-- <img src="/Assets/Icons/home.svg" alt="" /> -->
+            <p>home</p>
+          </button>
+        </a>
+        <a href="Category-Page.html" class="mobilenav-search-icon">
+          <!-- <a href="#mobile_NavBar" class="mobilenav-search-icon"> -->
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- <img src="/Assets/Icons/search.svg" alt="" /> -->
+            <p>search</p>
+          </button>
+        </a>
+        <a>
+          <button>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <!-- <img src="/Assets/Icons/cart.svg" alt="" /> -->
+            <p>cart</p>
+          </button>
+        </a>
+        <a>
+          <button>
+            <i class="fa-solid fa-user"></i>
+            <!-- <img src="/Assets/Icons/user.svg" alt="" /> -->
+            <p>account</p>
+          </button>
+        </a>
+      </div>
+      <!--
+      <div class="mobilenav-search-container">
+        <div class="mobilenav-search">
           <input type="text" placeholder="Seach for products..." />
+          <button class="mobilenav-search-button" onclick="MobileSearch()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="mobilenav-clear-search-button">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </div>
-        <a href=""><li>home</li></a>
-        <a href=""><li>category</li></a>
-        <a href=""><li>Page 1</li></a>
-        <a href=""><li>Page 2</li></a>
-        <a href=""><li>Page 3</li></a>
-        <button class="close-mobile-navbar" onclick="Close_Mobile_Navbar()">
-          <i class="lni lni-xmark"></i>
-        </button>
-      </ul>
+      </div>
+      -->
     </div>
     <!--/ Nav -->
 
@@ -94,11 +124,135 @@
     <div class="cart-checkout-container">
       <!-- Product-Carts-Container  -->
       <div class="product-cart-container">
-        <!-- Product Checkout Area -->
+        <!-- Product Checkout Area Here -->
+        <div class="single-product">
+          <div class="product-image">
+            <img src="/Assets/Images/blacktshirt-1.png" alt="" />
+          </div>
+          <div class="product-information">
+            <h6>T-Shirt With Tape Details</h6>
+            <div class="product-size-and-color-container">
+              <p><span>Size:</span> Large</p>
+              <p><span>Color:</span> White</p>
+            </div>
+            <div class="product-price-container">
+              <h4 class="product-current-price">$120</h4>
+              <h4 class="product-old-price"></h4>
+              <span class="discount"></span>
+            </div>
+          </div>
+
+          <button class="delete-product-from-checkout">
+            <i class="lni lni-trash-3"></i>
+          </button>
+        </div>
+        <div class="single-product">
+          <div class="product-image">
+            <img src="/Assets/Images/blacktshirt-1.png" alt="" />
+          </div>
+          <div class="product-information">
+            <h6>T-Shirt With Tape Details</h6>
+            <div class="product-size-and-color-container">
+              <p><span>Size:</span> Large</p>
+              <p><span>Color:</span> White</p>
+            </div>
+            <div class="product-price-container">
+              <h4 class="product-current-price">$120</h4>
+              <h4 class="product-old-price"></h4>
+              <span class="discount"></span>
+            </div>
+          </div>
+
+          <button class="delete-product-from-checkout">
+            <i class="lni lni-trash-3"></i>
+          </button>
+        </div>
+        <div class="single-product">
+          <div class="product-image">
+            <img src="/Assets/Images/blacktshirt-1.png" alt="" />
+          </div>
+          <div class="product-information">
+            <h6>T-Shirt With Tape Details</h6>
+            <div class="product-size-and-color-container">
+              <p><span>Size:</span> Large</p>
+              <p><span>Color:</span> White</p>
+            </div>
+            <div class="product-price-container">
+              <h4 class="product-current-price">$120</h4>
+              <h4 class="product-old-price"></h4>
+              <span class="discount"></span>
+            </div>
+          </div>
+
+          <button class="delete-product-from-checkout">
+            <i class="lni lni-trash-3"></i>
+          </button>
+        </div>
+        <div class="single-product">
+          <div class="product-image">
+            <img src="/Assets/Images/blacktshirt-1.png" alt="" />
+          </div>
+          <div class="product-information">
+            <h6>T-Shirt With Tape Details</h6>
+            <div class="product-size-and-color-container">
+              <p><span>Size:</span> Large</p>
+              <p><span>Color:</span> White</p>
+            </div>
+            <div class="product-price-container">
+              <h4 class="product-current-price">$120</h4>
+              <h4 class="product-old-price"></h4>
+              <span class="discount"></span>
+            </div>
+          </div>
+
+          <button class="delete-product-from-checkout">
+            <i class="lni lni-trash-3"></i>
+          </button>
+        </div>
+        <div class="single-product">
+          <div class="product-image">
+            <img src="/Assets/Images/blacktshirt-1.png" alt="" />
+          </div>
+          <div class="product-information">
+            <h6>T-Shirt With Tape Details</h6>
+            <div class="product-size-and-color-container">
+              <p><span>Size:</span> Large</p>
+              <p><span>Color:</span> White</p>
+            </div>
+            <div class="product-price-container">
+              <h4 class="product-current-price">$120</h4>
+              <h4 class="product-old-price"></h4>
+              <span class="discount"></span>
+            </div>
+          </div>
+
+          <button class="delete-product-from-checkout">
+            <i class="lni lni-trash-3"></i>
+          </button>
+        </div>
+        <div class="single-product">
+          <div class="product-image">
+            <img src="/Assets/Images/blacktshirt-1.png" alt="" />
+          </div>
+          <div class="product-information">
+            <h6>T-Shirt With Tape Details</h6>
+            <div class="product-size-and-color-container">
+              <p><span>Size:</span> Large</p>
+              <p><span>Color:</span> White</p>
+            </div>
+            <div class="product-price-container">
+              <h4 class="product-current-price">$120</h4>
+              <h4 class="product-old-price"></h4>
+              <span class="discount"></span>
+            </div>
+          </div>
+
+          <button class="delete-product-from-checkout">
+            <i class="lni lni-trash-3"></i>
+          </button>
+        </div>
       </div>
       <!-- /Product-Carts-Container  -->
-      <!-- ==== -->
-      <!-- Product-Checkout-Container  -->
       <div class="product-checkout-container">
         <h3>order summary</h3>
         <div class="checkout-property-container subtotal">
@@ -111,11 +265,11 @@
         </div> -->
         <div class="checkout-property-container discount">
           <p>total Quantity :</p>
-          <h4 class="total-quantity">-</h4>
+          <h4 class="total-quantity">50</h4>
         </div>
         <div class="checkout-property-container discount-fee">
           <p>delivery fee</p>
-          <!-- <h4>$15</h4> -->
+          <h4>$15</h4>
         </div>
         <div id="checkout-end-part">
           <div class="checkout-property-container total">
