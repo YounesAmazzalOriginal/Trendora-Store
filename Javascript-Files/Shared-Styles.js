@@ -95,3 +95,58 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 // /Clear Mobilenav Search
+
+// Close Mobile Search Bar
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelector(".close-mobile-search")
+    .addEventListener("click", () => {
+      const Search_Content_Container = document.querySelector(
+        ".search-content-container"
+      );
+      Search_Content_Container.classList.remove("show-mobile-search");
+    });
+  document
+    .querySelector(".mobilenav-search-icon")
+    .addEventListener("click", () => {
+      const Search_Content_Container = document.querySelector(
+        ".search-content-container"
+      );
+      Search_Content_Container.classList.add("show-mobile-search");
+    });
+});
+// /Close Mobile Search Bar
+
+// Mobile Search for product
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelector(".mobile-search-product")
+    .addEventListener("click", () => {
+      const search_bar = document.querySelector(".search-bar");
+      if (search_bar.value !== "") {
+        if (search_bar) {
+          search_bar.value = search_bar.value.toLowerCase();
+        }
+
+        document.querySelectorAll(".single-product").forEach((eachProduct) => {
+          const ProductType = eachProduct
+            .getAttribute("data-product-search-type")
+            .split(",");
+
+          if (ProductType.includes(search_bar.value)) {
+            eachProduct.style.display = "block";
+            ProductResault.push(eachProduct);
+          } else {
+            eachProduct.style.display = "none";
+          }
+        });
+      }
+      //
+      else {
+        document.querySelectorAll(".single-product").forEach((eachProduct) => {
+          eachProduct.style.display = "block";
+        });
+      }
+    });
+});
+// /Mobile Search for product

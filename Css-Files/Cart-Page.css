@@ -212,6 +212,45 @@
   img {
   width: 80%;
 }
+
+.cart-checkout-container
+  .product-cart-container
+  .single-product
+  .product-information
+  .product-price-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.cart-checkout-container
+  .product-cart-container
+  .single-product
+  .product-information
+  .product-price-container
+  .product-old-price {
+  color: gray;
+  font-size: 0.9rem;
+  text-decoration: line-through;
+}
+.cart-checkout-container
+  .product-cart-container
+  .single-product
+  .product-information
+  .product-price-container
+  .discount {
+  color: #ff3333;
+  background-color: hsl(0, 100%, 95%);
+  border-radius: 2px;
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 20px;
+  margin-left: 5px;
+}
 /* /Product-Carts-Container */
 
 /* Phones and smaller devices (up to 600px) */
@@ -230,12 +269,176 @@
   .cart-checkout-container .product-cart-container .single-product {
     width: 100%;
   }
+  .cart-title {
+    width: 100%;
+    padding-inline: 20px;
+  }
 }
 
 /* Tablets (601px to 768px) */
 @media screen and (min-width: 601px) and (max-width: 768px) {
+  .cart-checkout-container {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .cart-checkout-container .product-cart-container {
+    width: 95%;
+  }
+  .cart-checkout-container .product-cart-container .single-product {
+    width: 100%;
+  }
+  .cart-checkout-container
+    .product-cart-container
+    .single-product
+    .product-information
+    h6 {
+    font-size: 1.2rem;
+  }
+  .cart-checkout-container
+    .product-cart-container
+    .single-product
+    .product-information
+    .product-size-and-color-container
+    p {
+    font-size: 1rem;
+  }
+  .cart-checkout-container
+    .product-cart-container
+    .single-product
+    .product-information
+    .product-price-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .cart-checkout-container
+    .product-cart-container
+    .single-product
+    .product-information
+    .product-price-container
+    .product-current-price {
+    font-size: 1.2rem;
+  }
+  .cart-checkout-container
+    .product-cart-container
+    .single-product
+    .product-information
+    .product-price-container
+    .product-old-price {
+    font-size: 1.1rem;
+  }
+  .cart-checkout-container
+    .product-cart-container
+    .single-product
+    .product-information
+    .product-price-container
+    .discount {
+    font-size: 0.9rem;
+    padding: 5px 30px;
+    border-radius: 100px;
+  }
+  .cart-checkout-container
+    .product-cart-container
+    .single-product
+    .delete-product-from-checkout
+    i {
+    font-size: 1.2rem;
+  }
+  .cart-title {
+    width: 100%;
+    padding-inline: 50px;
+  }
+  .cart-checkout-container .product-cart-container {
+    width: 90%;
+  }
+  .cart-checkout-container .product-checkout-container {
+    width: 80%;
+  }
 }
 
 /* Small laptops and large tablets (769px to 1024px) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+  .cart-checkout-container {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .cart-checkout-container .product-cart-container {
+    width: 95%;
+  }
+  .cart-checkout-container .product-cart-container .single-product {
+    width: 100%;
+  }
+  .cart-checkout-container
+    .product-cart-container
+    .single-product
+    .product-information
+    h6 {
+    font-size: 1.2rem;
+  }
+  .cart-checkout-container
+    .product-cart-container
+    .single-product
+    .product-information
+    .product-size-and-color-container
+    p {
+    font-size: 1rem;
+  }
+  .cart-checkout-container
+    .product-cart-container
+    .single-product
+    .product-information
+    .product-price-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .cart-checkout-container
+    .product-cart-container
+    .single-product
+    .product-information
+    .product-price-container
+    .product-current-price {
+    font-size: 1.2rem;
+  }
+  .cart-checkout-container
+    .product-cart-container
+    .single-product
+    .product-information
+    .product-price-container
+    .product-old-price {
+    font-size: 1.1rem;
+  }
+  .cart-checkout-container
+    .product-cart-container
+    .single-product
+    .product-information
+    .product-price-container
+    .discount {
+    font-size: 0.9rem;
+    padding: 5px 30px;
+    border-radius: 100px;
+  }
+  .cart-checkout-container
+    .product-cart-container
+    .single-product
+    .delete-product-from-checkout
+    i {
+    font-size: 1.2rem;
+  }
+  .cart-title {
+    width: 100%;
+    padding-inline: 50px;
+  }
+  .cart-checkout-container .product-cart-container {
+    width: 90%;
+  }
+  .cart-checkout-container .product-checkout-container {
+    width: 80%;
+  }
 }

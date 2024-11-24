@@ -132,6 +132,21 @@ nav ul .nav-icons {
   display: flex;
   gap: 10px;
   margin-left: 10px;
+
+  position: relative;
+}
+nav ul .nav-icons .product-checkout-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  font-size: 0.7rem;
+  font-family: sans-serif;
+  background-color: black;
+  border-radius: 100px;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 0px 2px;
 }
 nav ul .nav-icons button {
   font-size: 1.1rem;
@@ -408,6 +423,9 @@ button:disabled {
 .close-mobile-navbar {
   display: none;
 }
+.search-content-container {
+  display: none;
+}
 /* /Elements Not Showing On Desktop */
 
 /* /Shared Media Query */
@@ -577,6 +595,83 @@ button:disabled {
     font-size: 1rem;
   }
   /* /Under Footer */
+
+  /* Search Content */
+  .search-content-container {
+    background-color: hsla(0, 0%, 0%, 0.4);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: visibility 0.5s, opacity 0.5s ease;
+  }
+  .search-content-container.show-mobile-search {
+    visibility: visible;
+    opacity: 1;
+  }
+  .search-content {
+    background-color: white;
+    width: 80%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .search-content input {
+    width: 80%;
+    background-color: transparent;
+    padding-left: 15px;
+  }
+  .search-content .mobile-search-product {
+    width: calc(100% - 80%);
+
+    background-color: var(--input-bg);
+    border-radius: 100px 0px 0px 100px;
+    width: 50px;
+    height: 40px;
+    transition: all 0.4s;
+  }
+  .search-content .mobile-search-product:hover {
+    filter: invert();
+  }
+  .search-content-container .close-mobile-search {
+    font-size: 1.1rem;
+    background-color: white;
+    width: 27px;
+    height: 27px;
+  }
+  /* /Search Content */
+
+  /* Mobile Cart Count */
+  .mobile-cart-a {
+    position: relative;
+  }
+  .mobile-product-checkout-count {
+    position: absolute;
+    right: 18px;
+    top: 5px;
+    border-radius: 100px;
+    background-color: black;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 3px;
+  }
+  /* /Mobile Cart Count */
 }
 
 /* Tablets (601px to 768px) */
@@ -695,4 +790,52 @@ button:disabled {
     text-overflow: ellipsis;
   }
   /* /Tablet Banner */
+
+  /* Search Content */
+  .search-content-container {
+    background-color: hsla(0, 0%, 0%, 0.4);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .search-content {
+    background-color: white;
+    width: 80%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .search-content input {
+    width: 80%;
+    background-color: transparent;
+    padding-left: 15px;
+  }
+  .search-content .mobile-search-product {
+    width: calc(100% - 80%);
+
+    background-color: var(--input-bg);
+    border-radius: 100px 0px 0px 100px;
+    width: 50px;
+    height: 40px;
+  }
+  .search-content-container .close-mobile-search {
+    font-size: 1.1rem;
+    background-color: white;
+    width: 27px;
+    height: 27px;
+  }
+
+  /* /Search Content */
 }

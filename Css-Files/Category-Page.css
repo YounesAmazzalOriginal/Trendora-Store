@@ -234,6 +234,7 @@
 
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
   /* font-family: var(--font-sat-L); */
   font-family: var(--font-sat-M);
 }
@@ -368,6 +369,10 @@
   height: 40px;
 }
 /* /Content */
+
+.filter-icon-leftnav {
+  display: none;
+}
 
 /* Phones and smaller devices (up to 600px) */
 /* iphone 12 Mini */
