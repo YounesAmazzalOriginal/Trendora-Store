@@ -133,10 +133,19 @@
   padding: 5px;
   border-radius: 10px;
   border: 1px solid hsl(0, 0%, 90%);
-}
-.cart-checkout-container .product-cart-container .single-product {
+
   font-family: var(--font-sat-M);
   position: relative;
+}
+.cart-checkout-container
+  .product-cart-container
+  .single-product
+  .product-checkout-number {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  margin: 8px 10px;
+  font-size: 0.9rem;
 }
 .cart-checkout-container
   .product-cart-container

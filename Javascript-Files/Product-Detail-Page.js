@@ -187,8 +187,25 @@ function MinusProduct() {
 }
 // /Number Quantity
 
-// CheckOut
-// function AddToCart(target) {
-//   window.location.href = "/Html-Files/Cart-Page.html";
-// }
-// /CheckOut
+// Send Data From Details TO Cart
+function AddToCart() {
+  // Get product details
+  const title = document.querySelector("h2").innerText;
+  const price = document.querySelector(".product-current-price").innerText;
+  const image = document.querySelector(
+    ".product-information-main-image img"
+  ).src;
+  const number = document.querySelector(".product-adding-counter").innerText;
+
+  // Create product object
+  const product = { title, price, image, number };
+
+  // Store product in localStorage
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(product);
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  alert("Product added to cart!");
+}
+
+// /Send Data From Details TO Cart

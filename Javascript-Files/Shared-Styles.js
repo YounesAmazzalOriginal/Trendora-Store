@@ -82,20 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // /Mobile Nav Icons Active
 
-// Clear Mobilenav Search
-document.addEventListener("DOMContentLoaded", () => {
-  document
-    .querySelector(".mobilenav-clear-search-button")
-    .addEventListener("click", () => {
-      const MobileNav_Search = document.querySelector(
-        ".mobilenav-search input"
-      );
-      MobileNav_Search.value = "";
-      MobileNav_Search.focus();
-    });
-});
-// /Clear Mobilenav Search
-
 // Close Mobile Search Bar
 document.addEventListener("DOMContentLoaded", () => {
   document
@@ -150,3 +136,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 // /Mobile Search for product
+
+// CheckOut
+
+// /CheckOut
+
+// localStorage.clear();
+
+// Get NavBag Notification Number From Cart Page
+document.addEventListener("DOMContentLoaded", function () {
+  const Product_Checkout_Count = document.querySelector(
+    ".product-checkout-count"
+  );
+
+  const SavedBagNotification = localStorage.getItem("navbag-number");
+  if (SavedBagNotification) {
+    Product_Checkout_Count.innerHTML = SavedBagNotification;
+  }
+});
+// /Get NavBag Notification Number From Cart Page
