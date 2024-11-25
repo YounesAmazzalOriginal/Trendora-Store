@@ -40,6 +40,19 @@ document.addEventListener("DOMContentLoaded", function () {
       Product_Checkout_Count.innerHTML = SavedBagNotification;
     }
 
+    // Mobile Nav Bag Notification Number
+    const Mobile_Product_Checkout_Count = document.querySelector(
+      ".mobile-product-checkout-count"
+    );
+    localStorage.setItem("mobile-navbag-number", cart.length);
+
+    const Mobile_SavedBagNotification = localStorage.getItem(
+      "mobile-navbag-number"
+    );
+    if (Mobile_SavedBagNotification) {
+      Mobile_Product_Checkout_Count.innerHTML = Mobile_SavedBagNotification;
+    }
+
     // Total Quantity
     const Total_Quantity = document.querySelector(".total-quantity");
     Total_Quantity.innerHTML = cart.length;

@@ -153,8 +153,20 @@ document.addEventListener("DOMContentLoaded", function () {
   if (SavedBagNotification) {
     Product_Checkout_Count.innerHTML = SavedBagNotification;
   }
+  // /Get NavBag Notification Number From Cart Page
+  // Mobile
+  const Mobile_Product_Checkout_Count = document.querySelector(
+    ".mobile-product-checkout-count"
+  );
+
+  const Mobile_SavedBagNotification = localStorage.getItem(
+    "mobile-navbag-number"
+  );
+  if (Mobile_SavedBagNotification) {
+    Mobile_Product_Checkout_Count.innerHTML = Mobile_SavedBagNotification;
+  }
+  // /Mobile
 });
-// /Get NavBag Notification Number From Cart Page
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".search-li").addEventListener("click", () => {

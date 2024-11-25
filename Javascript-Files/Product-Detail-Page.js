@@ -206,7 +206,8 @@ function AddToCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 
   alert("Product added to cart!");
+
+  window.location.href = "cart-page.html";
 }
 
 // /Send Data From Details TO Cart
-
