@@ -350,6 +350,15 @@ function CloseLeftNavButtonResponsive() {
 }
 // /Open & Close LeftNav Responsive
 
-// Close Left Nav Onclick On Choice
-
-// /Close Left Nav Onclick On Choice
+// Close LeftNav On Click On Category
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelectorAll(".left-nav-choice-for-responsive")
+    .forEach((eachChoise) => {
+      eachChoise.addEventListener("click", () => {
+        const leftNav = document.querySelector(".left-nav-category");
+        leftNav.classList.remove("openLeftNavResponsive");
+      });
+    });
+});
+// /Close LeftNav On Click On Category

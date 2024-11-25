@@ -155,3 +155,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 // /Get NavBag Notification Number From Cart Page
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".search-li").addEventListener("click", () => {
+    const search_nar = document.querySelector(".nav-search-container input");
+    search_nar.focus();
+  });
+});

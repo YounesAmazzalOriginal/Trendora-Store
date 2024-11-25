@@ -432,6 +432,7 @@
   }
   #content-Id .content .product-container {
     width: 100%;
+    flex-wrap: nowrap;
     overflow-x: scroll;
     margin: 0px;
 

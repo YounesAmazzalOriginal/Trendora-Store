@@ -762,7 +762,6 @@
   height: 20px;
 }
 
-
 /* Phones and smaller devices (up to 600px) */
 /* iphone 12 Mini */
 @media screen and (max-width: 600px) {
@@ -772,7 +771,6 @@
     margin: 0px;
     display: flex;
     flex-wrap: wrap;
-    background-color: lightseagreen;
     width: 100%;
   }
   .product-detail-informations-container
@@ -786,6 +784,11 @@
     background-color: var(--input-bg);
     height: calc(100vw - 20px);
     width: calc(100vw - 20px);
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    h2 {
+    font-family: var(--font-int-M);
   }
   .product-detail-informations-container
     .product-information-sides-images-container
@@ -802,7 +805,6 @@
 
     gap: 10px;
     width: 100%;
-    background-color: green;
   }
   .product-detail-informations-container
     .product-information-sides-images-container
@@ -822,9 +824,19 @@
   }
 
   .product-detail-informations-container .product-information-texts-container {
-    /* background-color: lightblue; */
+    /* background-color: red; */
     width: 100%;
     padding-inline: 20px;
+  }
+  .product-detail-informations-container
+    .product-information-texts-container
+    h2 {
+    font-family: var(--font-int-M);
+    /* X */
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .product-detail-informations-container
     .product-information-texts-container
@@ -880,7 +892,6 @@
     p {
     font-size: var(--pDescreptionResponsive);
     white-space: wrap;
-    background-color: lightblue;
     width: 100%;
   }
 
