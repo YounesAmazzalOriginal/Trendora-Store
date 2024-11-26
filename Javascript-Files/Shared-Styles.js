@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelector(".mobile-search-product")
     .addEventListener("click", () => {
-      const search_bar = document.querySelector(".search-bar");
+      const search_bar = document.querySelector(".search-content input");
       if (search_bar.value !== "") {
         if (search_bar) {
           search_bar.value = search_bar.value.toLowerCase();

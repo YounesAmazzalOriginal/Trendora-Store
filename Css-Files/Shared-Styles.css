@@ -676,7 +676,7 @@ button:disabled {
 
 /* Tablets (601px to 768px) */
 /* @media screen and (min-width: 601px) and (max-width: 768px) { */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (min-width: 601px) and (max-width: 768px) {
   /* Tablet Nav */
   nav {
     display: none;
@@ -694,7 +694,7 @@ button:disabled {
     padding: 20px 20px;
   }
   #mobile_NavBar .mobilenav-icons-container {
-    background-color: lightblue;
+    background-color: white;
     display: flex;
     justify-content: space-evenly;
     position: fixed;
@@ -807,11 +807,20 @@ button:disabled {
     justify-content: center;
     align-items: center;
     gap: 20px;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: visibility 0.5s, opacity 0.5s ease;
+  }
+  .search-content-container.show-mobile-search {
+    visibility: visible;
+    opacity: 1;
   }
   .search-content {
     background-color: white;
-    width: 80%;
-    height: 40px;
+    width: 83%;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -821,9 +830,11 @@ button:disabled {
     width: 80%;
     background-color: transparent;
     padding-left: 15px;
+    font-size: 1.2rem;
   }
   .search-content .mobile-search-product {
     width: calc(100% - 80%);
+    font-size: 1.1rem;
 
     background-color: var(--input-bg);
     border-radius: 100px 0px 0px 100px;
@@ -836,6 +847,123 @@ button:disabled {
     width: 27px;
     height: 27px;
   }
-
   /* /Search Content */
+
+  /* Under Footer */
+  .under-footer {
+    margin-bottom: 155px;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .under-footer p {
+    font-size: 1.3rem;
+  }
+  .under-footer .payment-icons button {
+    width: 80px;
+    height: 40px;
+  }
+  .under-footer .payment-icons button img {
+    width: 40px;
+  }
+  /* /Under Footer */
+}
+
+/* Small laptops and large tablets (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  nav {
+    display: none;
+  }
+
+  /* Mobile Nav */
+  #mobile_NavBar {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  #mobile_NavBar .mobilenav-icons-container {
+    background-color: white;
+    z-index: 100;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #mobile_NavBar .mobilenav-icons-container a button {
+    padding-block: 10px;
+    height: 100%;
+    width: 80px;
+  }
+  #mobile_NavBar .mobilenav-icons-container a button p {
+    color: black;
+    text-transform: capitalize;
+  }
+  #mobile_NavBar .mobilenav-icons-container a button i {
+    margin-bottom: 3spx;
+    font-size: 1rem;
+  }
+  #mobile_NavBar .mobile-navbar-visible-side .logo img {
+    width: 250px;
+    padding-block: 15px;
+  }
+  #mobile_NavBar .mobilenav-search-container {
+    width: 95%;
+    /* height: 0; */
+    height: 50px;
+    transition: all 0.4s;
+  }
+  #mobile_NavBar .mobilenav-search-container .mobilenav-search {
+    height: 40px;
+    display: flex;
+  }
+  #mobile_NavBar .mobilenav-search-container .mobilenav-search input {
+    width: 80%;
+    height: 100%;
+    padding-left: 20px;
+  }
+  #mobile_NavBar .mobilenav-search-container .mobilenav-search button {
+    width: 10%;
+    height: 100%;
+    background-color: white;
+  }
+
+  .mobile-cart-a {
+    position: relative;
+  }
+  .mobile-product-checkout-count {
+    position: absolute;
+    right: 18px;
+    top: 5px;
+    border-radius: 100px;
+    background-color: black;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 3px;
+  }
+
+  /* /Mobile Nav */
+
+  /* Contact Banner */
+  .contact-banner {
+    gap: 0px;
+    width: 90%;
+  }
+  /* /Contact Banner */
+
+  /* Footer */
+  footer {
+    flex-wrap: wrap;
+    align-content: start;
+  }
+  .under-footer {
+    display: flex;
+    padding-inline: 100px;
+    width: 100%;
+    gap: initial;
+    justify-content: space-between;
+    margin-bottom: 65px;
+  }
+  /* /Footer */
 }

@@ -442,6 +442,7 @@
     i {
     font-size: 1.2rem;
   }
+
   .cart-title {
     width: 100%;
     padding-inline: 50px;
@@ -450,4 +451,15 @@
   .cart-checkout-container .product-checkout-container {
     width: 80%;
   }
+}
+
+/*  */
+
+.cart-checkout-container
+  .product-cart-container
+  .single-product
+  .product-information
+  h6 {
+  font-size: 1rem;
+  text-transform: capitalize;
 }

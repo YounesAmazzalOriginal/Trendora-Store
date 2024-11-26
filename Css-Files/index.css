@@ -622,19 +622,23 @@ input {
     margin-top: 10px;
   }
   .header-container .header-text-area button {
-    font-size: 2.5rem;
-    width: 80%;
-    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 35px;
+    font-size: 2.2rem;
+    width: 90%;
+    height: 50px;
     margin-top: 40px;
   }
   .header-container .header-text-area .header-num-container {
     gap: 30px;
   }
   .header-container .header-text-area .header-num-container div h4 {
-    font-size: 3.2rem;
+    font-size: 2.6rem;
   }
   .header-container .header-text-area .header-num-container div p {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .header-container .header-image-area {
     width: 100%;
@@ -646,6 +650,7 @@ input {
   .header-container .header-image-area img {
     width: 100%;
   }
+
   .header-container .header-image-area .header-svg:nth-child(2) {
     width: 180px;
     height: 180px;
@@ -888,6 +893,11 @@ input {
 
 /* Small laptops and large tablets (769px to 1024px) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+  .header-container {
+    padding-inline: 50px;
+    width: 100%;
+  }
+
   /* Small laptops Header Banner */
   .banner-container {
     width: 100%;
@@ -920,6 +930,25 @@ input {
     width: 100%;
     /* justify-content: start; */
   }
+
+  /* Svg */
+  .header-container .header-image-area .header-svg:nth-child(2) {
+    right: 0px;
+  }
+  .header-container .header-image-area .header-svg:nth-child(3) {
+    left: 0px;
+    top: 40%;
+  }
+  /* /Svg */
+
+  /* Product Container */
+  .product-content .product-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: start;
+  }
+  /* /Product Container */
 
   /* /Small laptops Customers Reviews */
 }
