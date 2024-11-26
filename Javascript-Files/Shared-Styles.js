@@ -137,12 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // /Mobile Search for product
 
-// CheckOut
-
-// /CheckOut
-
-// localStorage.clear();
-
 // Get NavBag Notification Number From Cart Page
 document.addEventListener("DOMContentLoaded", function () {
   const Product_Checkout_Count = document.querySelector(
@@ -168,9 +162,26 @@ document.addEventListener("DOMContentLoaded", function () {
   // /Mobile
 });
 
+// Mobile input Focus
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".search-li").addEventListener("click", () => {
     const search_nar = document.querySelector(".nav-search-container input");
     search_nar.focus();
   });
+});
+// /Mobile input Focus
+
+document.addEventListener("scroll", () => {
+  const MobileNav = document.querySelector(".mobilenav-icons-container");
+
+  if (MobileNav) {
+    const ComputedStyle = window.getComputedStyle(MobileNav);
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+      MobileNav.style.bottom = `-${parseFloat(ComputedStyle.height)}px`;
+    }
+    //
+    else {
+      MobileNav.style.bottom = "0";
+    }
+  }
 });
