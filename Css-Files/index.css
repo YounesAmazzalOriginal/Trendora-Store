@@ -588,7 +588,7 @@ input {
   }
   .customers-reviews-parts-container .customers-reviews-part2 {
     width: 100%;
-    gap: 0px;
+    gap: 10px;
   }
   .customers-reviews-parts-container
     .customers-reviews-part2
@@ -597,6 +597,10 @@ input {
     max-width: 100%;
   }
   /* /Customers Reviews */
+
+  /* .under-footer {
+    margin-bottom: 100px;
+  } */
 }
 
 /* Tablets (601px to 768px) */
@@ -848,7 +852,7 @@ input {
   }
   .customers-reviews-parts-container .customers-reviews-part2 {
     width: 100%;
-    gap: 0px;
+    gap: 10px;
   }
   .customers-reviews-parts-container
     .customers-reviews-part2

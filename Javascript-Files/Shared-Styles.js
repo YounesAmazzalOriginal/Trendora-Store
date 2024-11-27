@@ -171,17 +171,28 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // /Mobile input Focus
 
+// Hide Mobile Nav Icons If in Footer
 document.addEventListener("scroll", () => {
-  const MobileNav = document.querySelector(".mobilenav-icons-container");
-
-  if (MobileNav) {
-    const ComputedStyle = window.getComputedStyle(MobileNav);
-    if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
-      MobileNav.style.bottom = `-${parseFloat(ComputedStyle.height)}px`;
-    }
-    //
-    else {
-      MobileNav.style.bottom = "0";
-    }
+  const footer = document.querySelector("footer");
+  const MobileNavIconsContainer = document.querySelector(
+    ".mobilenav-icons-container"
+  );
+  const footerHeight = MobileNavIconsContainer.getBoundingClientRect().height;
+  if (
+    footer.getBoundingClientRect().bottom <= window.innerHeight &&
+    footer.getBoundingClientRect().top <= window.innerHeight
+  ) {
+    MobileNavIconsContainer.style.bottom = `-${footerHeight}px`;
+  }
+  //
+  else {
+    MobileNavIconsContainer.style.bottom = "0px";
   }
 });
+// /Hide Mobile Nav Icons If in Footer
+
+// website on (0,0)
+window.onload = () => {
+  window.scrollTo(0, 0);
+};
+// /website on (0,0)

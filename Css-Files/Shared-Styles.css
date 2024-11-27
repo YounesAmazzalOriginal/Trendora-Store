@@ -333,7 +333,6 @@ footer ul li {
   display: flex;
   align-items: center;
   gap: 500px;
-  margin-bottom: 30px;
 }
 .under-footer .payment-icons {
   display: flex;
@@ -590,6 +589,7 @@ button:disabled {
     flex-direction: column;
     gap: 15px;
     width: 100%;
+    margin-bottom: 30px;
   }
   .under-footer p {
     font-size: 1rem;
@@ -675,7 +675,6 @@ button:disabled {
 }
 
 /* Tablets (601px to 768px) */
-/* @media screen and (min-width: 601px) and (max-width: 768px) { */
 @media screen and (min-width: 601px) and (max-width: 768px) {
   /* Tablet Nav */
   nav {
@@ -790,6 +789,10 @@ button:disabled {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .under-footer {
+    margin-bottom: 40px;
   }
   /* /Tablet Banner */
 
@@ -966,6 +969,7 @@ button:disabled {
     width: 100%;
     gap: initial;
     justify-content: space-between;
+    margin-bottom: 30px;
   }
   /* /Footer */
 }
