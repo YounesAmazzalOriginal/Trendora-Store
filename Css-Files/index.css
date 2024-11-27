@@ -852,7 +852,6 @@ input {
   }
   .customers-reviews-parts-container .customers-reviews-part2 {
     width: 100%;
-    gap: 10px;
   }
   .customers-reviews-parts-container
     .customers-reviews-part2
@@ -904,7 +903,9 @@ input {
 
   /* Small laptops Header Banner */
   .banner-container {
-    width: 100%;
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 0px 80px;
   }
   /* /Small laptops Header Banner */
 
