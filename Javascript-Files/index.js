@@ -16,6 +16,7 @@ function customers_rightArrow() {
       });
     });
 }
+
 function customers_leftArrow() {
   document
     .querySelectorAll(".customer-reviews-box")

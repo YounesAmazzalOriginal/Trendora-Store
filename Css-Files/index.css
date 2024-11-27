@@ -588,7 +588,12 @@ input {
   }
   .customers-reviews-parts-container .customers-reviews-part2 {
     width: 100%;
+    overflow-x: scroll;
     gap: 10px;
+  }
+  .customers-reviews-parts-container
+    .customers-reviews-part2::-webkit-scrollbar {
+    display: none;
   }
   .customers-reviews-parts-container
     .customers-reviews-part2
@@ -852,12 +857,20 @@ input {
   }
   .customers-reviews-parts-container .customers-reviews-part2 {
     width: 100%;
+    overflow-x: scroll;
+    gap: 10px;
+  }
+  .customers-reviews-parts-container
+    .customers-reviews-part2::-webkit-scrollbar {
+    display: none;
   }
   .customers-reviews-parts-container
     .customers-reviews-part2
     .customer-reviews-box {
     min-width: 100% !important;
     max-width: 100% !important;
+
+    padding: 30px 40px;
   }
   .customers-reviews-parts-container
     .customers-reviews-part2
@@ -870,6 +883,7 @@ input {
     .customer-reviews-box
     .customer-review-name {
     gap: 10px;
+    align-items: center;
   }
   .customers-reviews-parts-container
     .customers-reviews-part2
@@ -883,13 +897,15 @@ input {
     .customer-reviews-box
     .customer-review-name
     i {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-top: 5px;
   }
   .customers-reviews-parts-container
     .customers-reviews-part2
     .customer-reviews-box
     p {
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
+    font-size: 1.8rem;
   }
   /* /Tablet Customers Reviews */
 }

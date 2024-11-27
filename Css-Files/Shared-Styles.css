@@ -333,6 +333,7 @@ footer ul li {
   display: flex;
   align-items: center;
   gap: 500px;
+  margin-bottom: 30px;
 }
 .under-footer .payment-icons {
   display: flex;
@@ -753,7 +754,7 @@ button:disabled {
   }
   /* /Tablet Contact Banner */
 
-  /* Tablet Banner */
+  /* Footer Banner */
   footer {
     display: flex;
     flex-wrap: wrap;
@@ -776,25 +777,39 @@ button:disabled {
   }
 
   footer ul {
-    width: calc(100% / 2);
+    width: calc(100% / 3);
     padding: 50px;
     gap: 20px;
   }
   footer ul h5 {
-    font-size: 2rem;
+    /* background-color: red; */
+    font-size: 1.7rem;
   }
   footer ul li {
-    font-size: 2rem;
+    font-size: 1.5rem;
 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
+  /* Under Footer */
   .under-footer {
-    margin-bottom: 40px;
+    gap: 20px;
+    flex-direction: column;
   }
-  /* /Tablet Banner */
+  .under-footer p {
+    font-size: 1.3rem;
+  }
+  .under-footer .payment-icons button {
+    width: 80px;
+    height: 40px;
+  }
+  .under-footer .payment-icons button img {
+    width: 40px;
+  }
+  /* /Under Footer */
+  /* /Footer Banner */
 
   /* Search Content */
   .search-content-container {
@@ -853,23 +868,6 @@ button:disabled {
     height: 27px;
   }
   /* /Search Content */
-
-  /* Under Footer */
-  .under-footer {
-    gap: 20px;
-    flex-direction: column;
-  }
-  .under-footer p {
-    font-size: 1.3rem;
-  }
-  .under-footer .payment-icons button {
-    width: 80px;
-    height: 40px;
-  }
-  .under-footer .payment-icons button img {
-    width: 40px;
-  }
-  /* /Under Footer */
 }
 
 /* Small laptops and large tablets (769px to 1024px) */
@@ -955,6 +953,25 @@ button:disabled {
   .contact-banner {
     gap: 0px;
     width: 90%;
+    padding: 20px 40px;
+  }
+  .contact-banner .contact-banner-inputs {
+    width: 50%;
+  }
+  .contact-banner .contact-banner-inputs .input-container {
+    width: 100%;
+    height: 45px !important;
+  }
+  .contact-banner .contact-banner-inputs .input-container input {
+    font-size: 1.3rem !important;
+  }
+  .contact-banner .contact-banner-inputs .input-container i {
+    font-size: 1.3rem !important;
+  }
+  .contact-banner .contact-banner-inputs button {
+    width: 100%;
+    height: 45px !important;
+    font-size: 1.2rem !important;
   }
   /* /Contact Banner */
 
@@ -963,13 +980,42 @@ button:disabled {
     flex-wrap: wrap;
     align-content: start;
   }
+  footer .footer-1 {
+    width: 100%;
+
+    margin-right: 0;
+    margin-inline: 100px;
+  }
+  footer .footer-1 .logo h3 {
+    font-size: 1.8rem;
+  }
+  footer .footer-1 p {
+    font-size: 1.4rem;
+  }
+  footer .footer-1 .footer-media-links {
+    display: flex;
+    gap: 20px;
+  }
+  footer .footer-1 .footer-media-links a button {
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+  }
+  footer ul h5 {
+    font-size: 1.2rem !important;
+    padding-bottom: 0px;
+  }
+  footer ul li {
+    font-size: 1.2rem !important;
+  }
   .under-footer {
     display: flex;
     padding-inline: 100px;
     width: 100%;
     gap: initial;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
   }
+
   /* /Footer */
 }

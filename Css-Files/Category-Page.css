@@ -331,8 +331,8 @@
 .content .page-numbers-container {
   margin-bottom: 100px;
   margin-inline: 50px;
-
   display: flex;
+  justify-content: center;
 }
 .content .page-numbers-container .skip-button {
   display: flex;
@@ -540,6 +540,7 @@
     display: none;
   }
   #content-Id .content .product-container {
+    justify-content: center;
     width: 100%;
     overflow-x: scroll;
     margin: 0px;
@@ -788,14 +789,14 @@
     margin: 0px;
     gap: 10px;
     padding-inline: 10px;
+    justify-content: center;
     /* Gap & PaddingInnline Same Value */
   }
   #content-Id .content .page-numbers-container {
     overflow-x: scroll;
     align-items: center;
     justify-content: center;
-    margin: 0px !important;
-    width: 100%;
+    margin-inline: 30px;
     gap: 5px;
   }
   #content-Id .content .page-numbers-container .skip-button {
