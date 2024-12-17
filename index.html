@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Trendora - Home</title>
+    <link rel="stylesheet" href="/Css-Files/index.css" />
+    <link rel="stylesheet" href="/Css-Files/Shared-Styles.css" />
+    <script src="/Javascript-Files/index.js"></script>
+    <script src="/Javascript-Files/Shared-Styles.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Cdn -->
+    <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Favicon -->
+    <link
+      id="Favicon"
+      rel="icon"
+      type="image/x-icon"
+      href="/Assets/Images/favicon-32x32-lightMode.png"
+    />
+  </head>
+  <body>
+    <!-- Nav -->
+    <nav>
+      <a href="/Html-Files/index.html" class="logo">
+        <h3>Trendora</h3>
+      </a>
+      <ul>
+        <li class="selected"><a href="index.html">home</a></li>
+        <li><a href="Category-Page.html">category</a></li>
+        <li><a class="search-li">search</a></li>
+        <div class="nav-search-container">
+          <i class="lni lni-search-1"></i>
+          <input type="text" placeholder="Seach for products..." />
+        </div>
+        <a href="Cart-Page.html">
+          <div class="nav-icons">
+            <button>
+              <i class="lni lni-cart-2"></i>
+            </button>
+            <span class="product-checkout-count">0</span>
+          </div>
+        </a>
+      </ul>
+    </nav>
+    <div id="mobile_NavBar">
+      <div class="mobile-navbar-visible-side">
+        <div class="mobile-navbar-left-side">
+          <a href="/Html-Files/index.html" class="logo">
+            <!-- <h3>Trendora</h3> -->
+            <img src="/Assets/Images/TRENDORA-black-logo.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="mobilenav-icons-container">
+        <a href="index.html" class="activeMobileNavLink">
+          <button>
+            <i class="fa-solid fa-house"></i>
+            <p>home</p>
+          </button>
+        </a>
+        <a class="mobilenav-search-icon">
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <p>search</p>
+          </button>
+        </a>
+        <a class="mobile-cart-a" href="Cart-Page.html">
+          <button>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="mobile-product-checkout-count">0</span>
+            <p>cart</p>
+          </button>
+        </a>
+        <a href="Category-Page.html">
+          <button>
+            <i class="fa-solid fa-list"></i>
+            <p>categories</p>
+          </button>
+        </a>
+      </div>
+    </div>
+    <!-- Search Section -->
+    <div class="search-content-container">
+      <div class="search-content">
+        <input type="text" placeholder="Search for Product ..." />
+        <button class="mobile-search-product">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <button class="close-mobile-search">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <!-- /Search Section -->
+    <!--/ Nav -->
+
+    <!-- Header -->
+    <div class="header-container">
+      <div class="header-text-area">
+        <h1>FIND CLOTHES THAT MATCHES YOU STYLE</h1>
+        <p class="header-p">
+          Browse through our diverse range of meticulously crafted garments,
+          designed to bring out your individuality and cater to your sense of
+          style.
+        </p>
+        <button class="button-1">shop now</button>
+        <div class="header-num-container">
+          <div>
+            <h4>200+</h4>
+            <p>International Brands</p>
+          </div>
+          <div>
+            <h4>2,000+</h4>
+            <p>High-Quality Products</p>
+          </div>
+          <div>
+            <h4>30,000+</h4>
+            <p>Happy Customers</p>
+          </div>
+        </div>
+      </div>
+      <div class="header-image-area">
+        <img src="/Assets/Images/man-and-woman-1.jpeg" alt="" />
+        <svg
+          class="header-svg"
+          width="56"
+          height="56"
+          viewBox="0 0 56 56"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M28 0C28.9506 15.0527 40.9472 27.0495 56 28C40.9472 28.9506 28.9506 40.9472 28 56C27.0495 40.9472 15.0527 28.9506 0 28C15.0527 27.0495 27.0495 15.0527 28 0Z"
+            fill="black"
+          />
+        </svg>
+        <svg
+          class="header-svg"
+          width="56"
+          height="56"
+          viewBox="0 0 56 56"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M28 0C28.9506 15.0527 40.9472 27.0495 56 28C40.9472 28.9506 28.9506 40.9472 28 56C27.0495 40.9472 15.0527 28.9506 0 28C15.0527 27.0495 27.0495 15.0527 28 0Z"
+            fill="black"
+          />
+        </svg>
+      </div>
+    </div>
+    <!-- /Header -->
+
+    <!-- Banner -->
+    <div class="banner-container">
+      <img src="/Assets/Images/Versace.png" alt="" />
+      <img src="/Assets/Images/Zara.png" alt="" />
+      <img src="/Assets/Images/Gucci.png" alt="" />
+      <img src="/Assets/Images/Prada.png" alt="" />
+      <img src="/Assets/Images/Calvin-Klein.png" alt="" />
+    </div>
+    <!-- /Banner -->
+
+    <!-- Product 1 -->
+    <div class="product-content">
+      <h2>new arrivals</h2>
+      <div class="product-container">
+        <a onclick="ProductDetails(this)">
+          <div class="single-product">
+            <div class="product-image">
+              <img src="/Assets/Images/blacktshirt-1.png" alt="" />
+            </div>
+            <div class="product-information">
+              <h6>T-Shirt With Tape Details</h6>
+              <div class="product-reviews-container">
+                <div class="stars-container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="review-note"
+                  >4.5/
+                  <p>5</p></span
+                >
+              </div>
+              <div class="product-price-container">
+                <h4 class="product-current-price">$120</h4>
+                <h4 class="product-old-price"></h4>
+                <span class="discount"></span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a onclick="ProductDetails(this)">
+          <div class="single-product">
+            <div class="product-image">
+              <img src="/Assets/Images/pants-image-2-jean.png" alt="" />
+            </div>
+            <div class="product-information">
+              <h6>Skinny Fit Jeans</h6>
+              <div class="product-reviews-container">
+                <div class="stars-container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <span class="review-note"
+                  >3.5/
+                  <p>5</p></span
+                >
+              </div>
+              <div class="product-price-container">
+                <h4 class="product-current-price">$240</h4>
+                <h4 class="product-old-price">$260</h4>
+                <span class="discount">-20%</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a onclick="ProductDetails(this)">
+          <div class="single-product">
+            <div class="product-image">
+              <img src="/Assets/Images/plaid-shirt-1.png" alt="" />
+            </div>
+            <div class="product-information">
+              <h6>Checkered Shirt</h6>
+              <div class="product-reviews-container">
+                <div class="stars-container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="review-note"
+                  >4.5/
+                  <p>5</p></span
+                >
+              </div>
+              <div class="product-price-container">
+                <h4 class="product-current-price">$180</h4>
+                <h4 class="product-old-price"></h4>
+                <span class="discount"></span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a onclick="ProductDetails(this)">
+          <div class="single-product">
+            <div class="product-image">
+              <img src="/Assets/Images/orange-tshirt-2.png" alt="" />
+            </div>
+            <div class="product-information">
+              <h6>Sleeve Striped T-shirt</h6>
+              <div class="product-reviews-container">
+                <div class="stars-container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="review-note"
+                  >4.5/
+                  <p>5</p></span
+                >
+              </div>
+              <div class="product-price-container">
+                <h4 class="product-current-price">$130</h4>
+                <h4 class="product-old-price">$160</h4>
+                <span class="discount">-50%</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <button class="button-2"><a>View All</a></button>
+    </div>
+    <!-- /Product 1 -->
+
+    <!-- To Selling Product -->
+    <div class="product-content">
+      <h2>top seller</h2>
+      <div class="product-container">
+        <a
+          href="/Html-Files/Product-Detail-Page-dynamic.html"
+          onclick="ProductDetails(this)"
+        >
+          <div class="single-product">
+            <div class="product-image">
+              <img src="/Assets/Images/plaid-shirt-2.png" />
+            </div>
+            <div class="product-information">
+              <h6>vertical stripped shirt</h6>
+              <div class="product-reviews-container">
+                <div class="stars-container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="review-note"
+                  >5.5/
+                  <p>5</p></span
+                >
+              </div>
+              <div class="product-price-container">
+                <h4 class="product-current-price">$212</h4>
+                <h4 class="product-old-price">$232</h4>
+                <span class="discount">-20%</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="/Html-Files/Product-Detail-Page-dynamic.html"
+          onclick="ProductDetails(this)"
+        >
+          <div class="single-product">
+            <div class="product-image">
+              <img src="/Assets/Images/orange-tshirt-1.png" alt="" />
+            </div>
+            <div class="product-information">
+              <h6>courage graphic t-shirt</h6>
+              <div class="product-reviews-container">
+                <div class="stars-container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <span class="review-note"
+                  >4.0/
+                  <p>5</p></span
+                >
+              </div>
+              <div class="product-price-container">
+                <h4 class="product-current-price">$145</h4>
+                <h4 class="product-old-price"></h4>
+                <span class="discount"></span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="/Html-Files/Product-Detail-Page-dynamic.html"
+          onclick="ProductDetails(this)"
+        >
+          <div class="single-product">
+            <div class="product-image">
+              <img src="/Assets/Images/blue-jean-shorts.png" alt="" />
+            </div>
+            <div class="product-information">
+              <h6>loose fit bermuda shorts</h6>
+              <div class="product-reviews-container">
+                <div class="stars-container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <span class="review-note"
+                  >3.0/
+                  <p>5</p></span
+                >
+              </div>
+              <div class="product-price-container">
+                <h4 class="product-current-price">$80</h4>
+                <h4 class="product-old-price"></h4>
+                <span class="discount"></span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="/Html-Files/Product-Detail-Page-dynamic.html"
+          onclick="ProductDetails(this)"
+        >
+          <div class="single-product">
+            <div class="product-image">
+              <img src="/Assets/Images/pants-image-1.png" alt="" />
+            </div>
+            <div class="product-information">
+              <h6>faded skinny jeans</h6>
+              <div class="product-reviews-container">
+                <div class="stars-container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="review-note"
+                  >4.5/
+                  <p>5</p></span
+                >
+              </div>
+              <div class="product-price-container">
+                <h4 class="product-current-price">$210</h4>
+                <h4 class="product-old-price"></h4>
+                <span class="discount"></span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <button class="button-2"><a>View All</a></button>
+    </div>
+    <!-- /To Selling Product -->
+
+    <!-- Browse By Dress Style  -->
+    <div class="clothes-type-container">
+      <h2>browse by dress style</h2>
+      <div class="browse-img-container">
+        <div class="browse-img">
+          <h5>Casual</h5>
+          <img src="/Assets/Images/man-image-2.png" alt="" />
+        </div>
+        <div class="browse-img">
+          <h5>Formal</h5>
+          <img src="/Assets/Images/man-image-1.png" alt="" />
+        </div>
+        <div class="browse-img">
+          <h5>Party</h5>
+          <img src="/Assets/Images/woman-image-1.png" alt="" />
+        </div>
+        <div class="browse-img">
+          <h5>Gym</h5>
+          <img src="/Assets/Images/sport-man-1.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- /Browse By Dress Style  -->
+
+    <!-- Customers Reviews  -->
+    <div class="customers-reviews-parts-container">
+      <div class="customers-reviews-part1">
+        <h2>our happy customers</h2>
+        <div class="customers-reviews-arrow-container">
+          <button onclick="customers_leftArrow()">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button onclick="customers_rightArrow()">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="customers-reviews-part2">
+        <div class="customer-reviews-box">
+          <div class="customer-reviews-note">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="customer-review-name">
+            <h5>alex k.</h5>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <p>
+            "Finding clothes that align with my personal style used to be a
+            challenge until I discovered Shop.co. The range of options they
+            offer is truly remarkable, catering to a variety of tastes and
+            occasions.”
+          </p>
+        </div>
+        <div class="customer-reviews-box">
+          <div class="customer-reviews-note">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="customer-review-name">
+            <h5>sarah m.</h5>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <p>
+            "I'm blown away by the quality and style of the clothes I received
+            from Shop.co. From casual wear to elegant dresses, every piece I've
+            bought has exceeded my expectations.”
+          </p>
+        </div>
+        <div class="customer-reviews-box">
+          <div class="customer-reviews-note">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="customer-review-name">
+            <h5>james l.</h5>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <p>
+            "As someone who's always on the lookout for unique fashion pieces,
+            I'm thrilled to have stumbled upon Shop.co. The selection of clothes
+            is not only diverse but also on-point with the latest trends.”
+          </p>
+        </div>
+        <div class="customer-reviews-box">
+          <div class="customer-reviews-note">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="customer-review-name">
+            <h5>mooen</h5>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <p>
+            "As someone who's always on the lookout for unique fashion pieces,
+            I'm thrilled to have stumbled upon Shop.co. The selection of clothes
+            is not only diverse but also on-point with the latest trends.”
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- /Customers Reviews  -->
+
+    <!-- Contact Banner  -->
+    <div class="contact-banner">
+      <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+      <div class="contact-banner-inputs">
+        <div class="input-container">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="text" placeholder="Enter your email address" />
+        </div>
+        <button>Subscribe to Newsletter</button>
+      </div>
+    </div>
+    <!-- /Contact Banner  -->
+
+    <!-- Footer  -->
+    <footer>
+      <div class="footer-1">
+        <a href="" class="logo">
+          <h3>Trendora</h3>
+        </a>
+        <p>
+          We have clothes that suits your style and which you’re proud to wear.
+          From women to men.
+        </p>
+        <div class="footer-media-links">
+          <a href="https://wa.me/212635303129">
+            <button>
+              <i class="fa-brands fa-whatsapp"></i>
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/in/younes-amazzal-3152042b0/">
+            <button>
+              <i class="fa-brands fa-linkedin-in"></i>
+            </button>
+          </a>
+          <a href="https://www.instagram.com/amzprod2">
+            <button>
+              <i class="fa-brands fa-instagram"></i>
+            </button>
+          </a>
+          <a href="https://github.com/YounesAmazzalOriginal">
+            <button>
+              <i class="fa-brands fa-github"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+      <ul>
+        <h5>company</h5>
+        <li title="about"><a href="">about</a></li>
+        <li title="features"><a href="">features</a></li>
+        <li title="works"><a href="">works</a></li>
+        <li title="career"><a href="">career</a></li>
+      </ul>
+      <ul>
+        <h5>help</h5>
+        <li title="customer"><a href="">customer support</a></li>
+        <li title="delivery details"><a href="">delivery details</a></li>
+        <li title="terms & conditions"><a href="">terms & conditions</a></li>
+        <li title="privacy policy"><a href="">privacy policy</a></li>
+      </ul>
+      <ul>
+        <h5>faq</h5>
+        <li title="account"><a href="">account</a></li>
+        <li title="manage deliveries"><a href="">manage deliveries</a></li>
+        <li title="orders"><a href="">orders</a></li>
+        <li title="payments"><a href="">payments</a></li>
+      </ul>
+      <ul>
+        <h5>resources</h5>
+        <li title="free eBook"><a href="">free eBook</a></li>
+        <li title="development tutorial">
+          <a href="">development tutorial</a>
+        </li>
+        <li title="how to"><a href="">how to - blog</a></li>
+        <li title="youtube playlist"><a href="">youtube playlist</a></li>
+      </ul>
+    </footer>
+    <div class="under-footer">
+      <p>Website Created By Younes AMAZZAL</p>
+      <div class="payment-icons">
+        <button title="Visa">
+          <img src="/Assets/Images/Visa.png" alt="" />
+        </button>
+        <button title="Master Card">
+          <img src="/Assets/Images/Master-card.png" alt="" />
+        </button>
+        <button title="Paypal">
+          <img src="/Assets/Images/Paypal.png" alt="" />
+        </button>
+        <button title="Apple Pay">
+          <img src="/Assets/Images/Apple-pay.png" alt="" />
+        </button>
+        <button title="Google Pay">
+          <img src="/Assets/Images/Google-Pay.png" alt="" />
+        </button>
+      </div>
+    </div>
+    <!-- /Footer  -->
+  </body>
+</html>
