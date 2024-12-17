@@ -8,19 +8,21 @@ html {
 }
 /* Integral */
 @font-face {
-  font-family: integral-Medium;
-  src: url(Assets/Fonts/Integral/Fontspring-DEMO-integralcf-medium.otf);
+  font-family: "integral-Medium";
+  src: url("/Assets/Fonts/Integral/Fontspring-DEMO-integralcf-medium.otf")
+    format("opentype");
 }
-/* Satoshi */
 
 @font-face {
-  font-family: Satoshi-Medium;
-  src: url(Assets/Fonts/Satoshi/Satoshi-Medium.otf);
+  font-family: "Satoshi-Medium";
+  src: url("/Assets/Fonts/Satoshi/Satoshi-Medium.otf") format("opentype");
 }
+
 @font-face {
-  font-family: Satoshi-Light;
-  src: url(Assets/Fonts/Satoshi/Satoshi-Light.otf);
+  font-family: "Satoshi-Light";
+  src: url("/Assets/Fonts/Satoshi/Satoshi-Light.otf") format("opentype");
 }
+
 :root {
   --black-color: #000000;
   --white-color: #fff;
