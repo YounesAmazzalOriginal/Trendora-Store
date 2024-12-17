@@ -1,39 +1,3 @@
-/* Integral */
-@font-face {
-  font-family: integral-Medium;
-  src: url(/Assets/Fonts/Integral/Fontspring-DEMO-integralcf-medium.otf);
-}
-/* Satoshi */
-
-@font-face {
-  font-family: Satoshi-Medium;
-  src: url(/Assets/Fonts/Satoshi/Satoshi-Medium.otf);
-}
-@font-face {
-  font-family: Satoshi-Light;
-  src: url(/Assets/Fonts/Satoshi/Satoshi-Light.otf);
-}
-:root {
-  --black-color: #000000;
-  --white-color: #fff;
-  --input-bg: #f0f0f0;
-  --bg-1: #f2f0f1;
-  --product-bg: #f0eeed;
-  --product-bg: #f0eeed;
-  --font-int-M: integral-Medium;
-  --font-sat-M: Satoshi-Medium;
-  --font-sat-L: Satoshi-Light;
-  --pTitleResponsive: 1.2rem;
-  --pDescreptionResponsive: 1.1rem;
-  --MargTopTitle: 1.1rem;
-
-  --pTitleTablet: 2.1rem;
-  --pTitleTablet2: 1.6rem;
-  --pDescreptionTablet: 1.6rem;
-  --h2TitleTablet: 3rem;
-}
-
-
 /* Index Assets */
 /* Integral */
 @font-face {
