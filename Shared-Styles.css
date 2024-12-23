@@ -9,17 +9,17 @@ html {
 /* Integral */ 
 @font-face {
   font-family: integral-Medium;
-  src: url(Assets/Fonts/Integral/Fontspring-DEMO-integralcf-medium.otf);
+  src: url(./Assets/Fonts/Integral/Fontspring-DEMO-integralcf-medium.otf);
 }
 /* Satoshi */
 
 @font-face {
   font-family: Satoshi-Medium;
-  src: url(Assets/Fonts/Satoshi/Satoshi-Medium.otf);
+  src: url(./Assets/Fonts/Satoshi/Satoshi-Medium.otf);
 }
 @font-face {
   font-family: Satoshi-Light;
-  src: url(Assets/Fonts/Satoshi/Satoshi-Light.otf);
+  src: url(./Assets/Fonts/Satoshi/Satoshi-Light.otf);
 }
 :root {
   --black-color: #000000;
