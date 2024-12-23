@@ -207,7 +207,8 @@ function AddToCart() {
 
   alert("Product added to cart!");
 
-  window.location.href = "../Html-Files/cart-page.html";
+  // window.location.href = "../cart-page.html";
+  window.location.href = "../Html-Files/Product-Detail-Page-dynamic.html";
 }
 
 // /Send Data From Details TO Cart
