@@ -28,7 +28,7 @@ function ProductDetails(target) {
   localStorage.setItem("ReviewsNote_p", ReviewsNote_p);
   localStorage.setItem("ProductStars_p", ProductStars_p);
 
-  window.location.href = "../Html-Files/Product-Detail-Page-dynamic.html";
+  window.location.href = "../Product-Detail-Page-dynamic.html";
 }
 // /Send Data To Product Details Page
 
